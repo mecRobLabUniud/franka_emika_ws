@@ -1,0 +1,6 @@
+float64[] q_s
+float64[] q_e
+float64 traj_duration
+float64 traj_step
+---
+uint8 flag_valid

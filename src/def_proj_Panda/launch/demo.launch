@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+
+<launch>
+    <!-- ##################################################### -->
+    <arg name="tester" default="collision_avoidance_test" />
+
+    <!-- Launch calc_valid_traj_server node -->
+
+    <node pkg="def_proj" name="calc_valid_traj_server" type="calc_valid_traj_server.py">
+    </node>
+
+    <!-- Launch calc_stop_duration_for_server node -->
+
+    <node pkg="def_proj" name="calc_stop_duration_server" type="calc_stop_duration_server.py">
+    </node>
+
+    <!-- Launch flag_stop_server node -->
+
+    <node pkg="def_proj" name="flag_stop_server" type="flag_stop_server.py" output="screen">
+    <param name="tester" value="$(arg tester)"/>
+    </node>
+
+</launch>
+
