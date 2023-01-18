@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lab/franka_emika_ws/install/setup.sh

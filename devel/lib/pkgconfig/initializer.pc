@@ -1,0 +1,8 @@
+prefix=/home/lab/franka_emika_ws/devel
+
+Name: initializer
+Description: Description of initializer
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
