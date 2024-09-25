@@ -516,21 +516,20 @@ def load_skeleton():
 def receive_skeleton(): 
     global skeleton
 
-    #while True:
-    with open("/home/panda/Documents/Data_Collision_Avoidance/skeleton_temp.txt", 'r') as temp:
-        keypoint = []
-        data = temp.read()
-        for line in data.split("\n"):
-            joint = []
-            jnt = line.split("\t")
-            if not jnt == ['']:
-                for i in range(1, 4):
-                    joint.append(float(jnt[i]))
+    while True:
+        with open("/home/panda/Documents/Data_Collision_Avoidance/skeleton_temp.txt", 'r') as temp:
+            keypoint = []
+            data = temp.read()
+            for line in data.split("\n"):
+                joint = []
+                jnt = line.split("\t")
+                if not jnt == ['']:
+                    for i in range(1, 4):
+                        joint.append(float(jnt[i]))
 
-                keypoint.append(joint)
-    
-        skeleton = keypoint
-        print(skeleton)
+                    keypoint.append(joint)
+        
+            skeleton = keypoint
                     
 
     
@@ -590,7 +589,7 @@ def FlagStopServer(T_stop, q, q_p, q_pp):
             else:
                 flag_stop = False
 
-    print(flag_stop)
+    print(min_distance[0])
     return(flag_stop)
               
 
@@ -642,7 +641,7 @@ if __name__ == "__main__":
     else:
         t1 = threading.Thread(target = receive_skeleton)
         t1.start()
-    quit()
+    
     FlagStopServer1()
     t1.join()
 

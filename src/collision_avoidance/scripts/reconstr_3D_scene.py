@@ -156,7 +156,7 @@ if __name__ == '__main__':
     print(R_cam2base)
  
     try:
-        for t_exe in range(0, 100, 10):
+        for t_exe in range(0, 30, 2):
             load_skeleton()
             load_configuration()
             print_3D_plot(R_cam2base)

@@ -6,15 +6,15 @@
     <arg name="virt" default="false" />
 
     <!-- Launch franka_control node -->
-    <!--<include file="$(find franka_control)/launch/franka_control.launch">
+    <include file="$(find franka_control)/launch/franka_control.launch">
         <arg name="robot_ip" value="$(arg robot_ip)" />
 	    <arg name="load_gripper" value="$(arg load_gripper)" />
-    </include>-->
+    </include>
 
     <!-- Launch move_group -->
-    <!--<include file="$(find panda_moveit_config)/launch/panda_moveit.launch">
+    <include file="$(find panda_moveit_config)/launch/panda_moveit.launch">
 	    <arg name="load_gripper" value="$(arg load_gripper)" />
-    </include>-->
+    </include>
 
     <!-- Launch calc_stop_duration_for_server node -->
     <node pkg="collision_avoidance" name="calc_stop_duration_server" type="calc_stop_duration_server.py">

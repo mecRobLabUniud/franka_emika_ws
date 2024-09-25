@@ -226,7 +226,7 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
             point.velocities = [0, 0, 0, 0, 0, 0, 0]
             point.accelerations = [0, 0, 0, 0, 0, 0, 0]
             point.effort = []
-            point.time_from_start = rospy.Duration(stop_duration*2) #####################################
+            point.time_from_start = rospy.Duration(stop_duration)
             msg.goal.trajectory.points.append(deepcopy(point))
 
             # Move to stop configuration
