@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lab/franka_emika_ws/src
+CMAKE_SOURCE_DIR = /home/panda/franka_emika_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lab/franka_emika_ws/build
+CMAKE_BINARY_DIR = /home/panda/franka_emika_ws/build
 
 # Utility rule file for diagnostic_msgs_generate_messages_py.
 
@@ -74,10 +74,10 @@ realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
 
 realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean:
-	cd /home/lab/franka_emika_ws/build/realsense-ros/realsense2_camera && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/panda/franka_emika_ws/build/realsense-ros/realsense2_camera && $(CMAKE_COMMAND) -P CMakeFiles/diagnostic_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
 
 realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/depend:
-	cd /home/lab/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lab/franka_emika_ws/src /home/lab/franka_emika_ws/src/realsense-ros/realsense2_camera /home/lab/franka_emika_ws/build /home/lab/franka_emika_ws/build/realsense-ros/realsense2_camera /home/lab/franka_emika_ws/build/realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/franka_emika_ws/src /home/panda/franka_emika_ws/src/realsense-ros/realsense2_camera /home/panda/franka_emika_ws/build /home/panda/franka_emika_ws/build/realsense-ros/realsense2_camera /home/panda/franka_emika_ws/build/realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/depend
 

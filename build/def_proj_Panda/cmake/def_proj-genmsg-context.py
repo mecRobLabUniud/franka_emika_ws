@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/lab/franka_emika_ws/src/def_proj_Panda/srv/CalcStopDuration.srv;/home/lab/franka_emika_ws/src/def_proj_Panda/srv/CalcValidTraj.srv;/home/lab/franka_emika_ws/src/def_proj_Panda/srv/FlagStop.srv"
+services_str = "/home/panda/franka_emika_ws/src/def_proj_Panda/srv/CalcStopDuration.srv;/home/panda/franka_emika_ws/src/def_proj_Panda/srv/CalcValidTraj.srv;/home/panda/franka_emika_ws/src/def_proj_Panda/srv/FlagStop.srv"
 pkg_name = "def_proj"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

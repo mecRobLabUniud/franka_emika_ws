@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/lib/libaruco.pdb"
-  "/home/lab/franka_emika_ws/devel/lib/libaruco.so"
+  "/home/panda/franka_emika_ws/devel/lib/libaruco.pdb"
+  "/home/panda/franka_emika_ws/devel/lib/libaruco.so"
   "CMakeFiles/aruco.dir/src/aruco/cameraparameters.cpp.o"
   "CMakeFiles/aruco.dir/src/aruco/cameraparameters.cpp.o.d"
   "CMakeFiles/aruco.dir/src/aruco/cvdrawingutils.cpp.o"

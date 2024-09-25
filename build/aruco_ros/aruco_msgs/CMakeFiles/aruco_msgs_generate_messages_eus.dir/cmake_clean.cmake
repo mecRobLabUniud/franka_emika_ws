@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/share/roseus/ros/aruco_msgs/manifest.l"
-  "/home/lab/franka_emika_ws/devel/share/roseus/ros/aruco_msgs/msg/Marker.l"
-  "/home/lab/franka_emika_ws/devel/share/roseus/ros/aruco_msgs/msg/MarkerArray.l"
+  "/home/panda/franka_emika_ws/devel/share/roseus/ros/aruco_msgs/manifest.l"
+  "/home/panda/franka_emika_ws/devel/share/roseus/ros/aruco_msgs/msg/Marker.l"
+  "/home/panda/franka_emika_ws/devel/share/roseus/ros/aruco_msgs/msg/MarkerArray.l"
   "CMakeFiles/aruco_msgs_generate_messages_eus"
 )
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/include/def_proj/CalcStopDuration.h"
-  "/home/lab/franka_emika_ws/devel/include/def_proj/CalcValidTraj.h"
-  "/home/lab/franka_emika_ws/devel/include/def_proj/FlagStop.h"
+  "/home/panda/franka_emika_ws/devel/include/def_proj/CalcStopDuration.h"
+  "/home/panda/franka_emika_ws/devel/include/def_proj/CalcValidTraj.h"
+  "/home/panda/franka_emika_ws/devel/include/def_proj/FlagStop.h"
   "CMakeFiles/def_proj_generate_messages_cpp"
 )
 

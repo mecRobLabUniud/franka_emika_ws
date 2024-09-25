@@ -21,7 +21,6 @@ find_package(catkin REQUIRED COMPONENTS
     tf
     ddynamic_reconfigure
     diagnostic_updater
-    image_geometry
     )
 
 if(BUILD_WITH_OPENMP)

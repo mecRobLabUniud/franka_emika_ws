@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lab/franka_emika_ws/src
+CMAKE_SOURCE_DIR = /home/panda/franka_emika_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lab/franka_emika_ws/build
+CMAKE_BINARY_DIR = /home/panda/franka_emika_ws/build
 
 # Utility rule file for tf_generate_messages_nodejs.
 
@@ -74,10 +74,10 @@ aruco_ros/aruco_ros/CMakeFiles/tf_generate_messages_nodejs.dir/build: tf_generat
 .PHONY : aruco_ros/aruco_ros/CMakeFiles/tf_generate_messages_nodejs.dir/build
 
 aruco_ros/aruco_ros/CMakeFiles/tf_generate_messages_nodejs.dir/clean:
-	cd /home/lab/franka_emika_ws/build/aruco_ros/aruco_ros && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/panda/franka_emika_ws/build/aruco_ros/aruco_ros && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : aruco_ros/aruco_ros/CMakeFiles/tf_generate_messages_nodejs.dir/clean
 
 aruco_ros/aruco_ros/CMakeFiles/tf_generate_messages_nodejs.dir/depend:
-	cd /home/lab/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lab/franka_emika_ws/src /home/lab/franka_emika_ws/src/aruco_ros/aruco_ros /home/lab/franka_emika_ws/build /home/lab/franka_emika_ws/build/aruco_ros/aruco_ros /home/lab/franka_emika_ws/build/aruco_ros/aruco_ros/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/franka_emika_ws/src /home/panda/franka_emika_ws/src/aruco_ros/aruco_ros /home/panda/franka_emika_ws/build /home/panda/franka_emika_ws/build/aruco_ros/aruco_ros /home/panda/franka_emika_ws/build/aruco_ros/aruco_ros/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : aruco_ros/aruco_ros/CMakeFiles/tf_generate_messages_nodejs.dir/depend
 

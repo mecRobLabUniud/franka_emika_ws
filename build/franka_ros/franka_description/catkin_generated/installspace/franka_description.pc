@@ -1,4 +1,4 @@
-prefix=/home/lab/franka_emika_ws/install
+prefix=/home/panda/franka_emika_ws/install
 
 Name: franka_description
 Description: Description of franka_description

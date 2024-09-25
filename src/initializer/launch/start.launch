@@ -7,14 +7,15 @@
 
     <!-- Launch franka_control node -->
 
-    <include file="$(find ur_robot_driver)/launch/ur5e_bringup.launch">
+    <include file="$(find franka_control)/launch/franka_control.launch">
         <arg name="robot_ip" value="$(arg robot_ip)" />
+	<arg name="load_gripper" value="$(arg load_gripper)" />
     </include>
 
     <!-- Launch move_group -->
 
-    <include file="$(find ur5e_moveit_config)/launch/ur5e_moveit_planning_execution.launch">
+    <include file="$(find panda_moveit_config)/launch/panda_moveit.launch">
+	<arg name="load_gripper" value="$(arg load_gripper)" />
     </include>
 
 </launch>
-

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/lib/aruco_ros/marker_publisher"
-  "/home/lab/franka_emika_ws/devel/lib/aruco_ros/marker_publisher.pdb"
+  "/home/panda/franka_emika_ws/devel/lib/aruco_ros/marker_publisher"
+  "/home/panda/franka_emika_ws/devel/lib/aruco_ros/marker_publisher.pdb"
   "CMakeFiles/marker_publisher.dir/src/aruco_ros_utils.cpp.o"
   "CMakeFiles/marker_publisher.dir/src/aruco_ros_utils.cpp.o.d"
   "CMakeFiles/marker_publisher.dir/src/marker_publish.cpp.o"

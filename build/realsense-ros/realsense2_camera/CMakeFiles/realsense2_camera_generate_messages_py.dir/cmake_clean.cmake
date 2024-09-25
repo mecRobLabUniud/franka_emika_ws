@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Extrinsics.py"
-  "/home/lab/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_IMUInfo.py"
-  "/home/lab/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Metadata.py"
-  "/home/lab/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/__init__.py"
-  "/home/lab/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/srv/_DeviceInfo.py"
-  "/home/lab/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/srv/__init__.py"
+  "/home/panda/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Extrinsics.py"
+  "/home/panda/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_IMUInfo.py"
+  "/home/panda/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/_Metadata.py"
+  "/home/panda/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/msg/__init__.py"
+  "/home/panda/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/srv/_DeviceInfo.py"
+  "/home/panda/franka_emika_ws/devel/lib/python2.7/dist-packages/realsense2_camera/srv/__init__.py"
   "CMakeFiles/realsense2_camera_generate_messages_py"
 )
 

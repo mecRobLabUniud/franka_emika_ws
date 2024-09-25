@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/share/common-lisp/ros/realsense2_camera/msg/Extrinsics.lisp"
-  "/home/lab/franka_emika_ws/devel/share/common-lisp/ros/realsense2_camera/msg/IMUInfo.lisp"
-  "/home/lab/franka_emika_ws/devel/share/common-lisp/ros/realsense2_camera/msg/Metadata.lisp"
-  "/home/lab/franka_emika_ws/devel/share/common-lisp/ros/realsense2_camera/srv/DeviceInfo.lisp"
+  "/home/panda/franka_emika_ws/devel/share/common-lisp/ros/realsense2_camera/msg/Extrinsics.lisp"
+  "/home/panda/franka_emika_ws/devel/share/common-lisp/ros/realsense2_camera/msg/IMUInfo.lisp"
+  "/home/panda/franka_emika_ws/devel/share/common-lisp/ros/realsense2_camera/msg/Metadata.lisp"
+  "/home/panda/franka_emika_ws/devel/share/common-lisp/ros/realsense2_camera/srv/DeviceInfo.lisp"
   "CMakeFiles/realsense2_camera_generate_messages_lisp"
 )
 

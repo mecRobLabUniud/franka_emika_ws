@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lab/franka_emika_ws/src
+CMAKE_SOURCE_DIR = /home/panda/franka_emika_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lab/franka_emika_ws/build
+CMAKE_BINARY_DIR = /home/panda/franka_emika_ws/build
 
 # Utility rule file for run_tests_franka_gazebo_rostest.
 
@@ -74,10 +74,10 @@ franka_ros/franka_gazebo/test/CMakeFiles/run_tests_franka_gazebo_rostest.dir/bui
 .PHONY : franka_ros/franka_gazebo/test/CMakeFiles/run_tests_franka_gazebo_rostest.dir/build
 
 franka_ros/franka_gazebo/test/CMakeFiles/run_tests_franka_gazebo_rostest.dir/clean:
-	cd /home/lab/franka_emika_ws/build/franka_ros/franka_gazebo/test && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_franka_gazebo_rostest.dir/cmake_clean.cmake
+	cd /home/panda/franka_emika_ws/build/franka_ros/franka_gazebo/test && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_franka_gazebo_rostest.dir/cmake_clean.cmake
 .PHONY : franka_ros/franka_gazebo/test/CMakeFiles/run_tests_franka_gazebo_rostest.dir/clean
 
 franka_ros/franka_gazebo/test/CMakeFiles/run_tests_franka_gazebo_rostest.dir/depend:
-	cd /home/lab/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lab/franka_emika_ws/src /home/lab/franka_emika_ws/src/franka_ros/franka_gazebo/test /home/lab/franka_emika_ws/build /home/lab/franka_emika_ws/build/franka_ros/franka_gazebo/test /home/lab/franka_emika_ws/build/franka_ros/franka_gazebo/test/CMakeFiles/run_tests_franka_gazebo_rostest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/franka_emika_ws/src /home/panda/franka_emika_ws/src/franka_ros/franka_gazebo/test /home/panda/franka_emika_ws/build /home/panda/franka_emika_ws/build/franka_ros/franka_gazebo/test /home/panda/franka_emika_ws/build/franka_ros/franka_gazebo/test/CMakeFiles/run_tests_franka_gazebo_rostest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : franka_ros/franka_gazebo/test/CMakeFiles/run_tests_franka_gazebo_rostest.dir/depend
 

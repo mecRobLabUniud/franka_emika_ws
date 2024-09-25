@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lab/franka_emika_ws/src
+CMAKE_SOURCE_DIR = /home/panda/franka_emika_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lab/franka_emika_ws/build
+CMAKE_BINARY_DIR = /home/panda/franka_emika_ws/build
 
 # Utility rule file for std_srvs_generate_messages_nodejs.
 
@@ -74,10 +74,10 @@ def_proj_Panda/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build: std_srvs_
 .PHONY : def_proj_Panda/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
 
 def_proj_Panda/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean:
-	cd /home/lab/franka_emika_ws/build/def_proj_Panda && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/panda/franka_emika_ws/build/def_proj_Panda && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : def_proj_Panda/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
 
 def_proj_Panda/CMakeFiles/std_srvs_generate_messages_nodejs.dir/depend:
-	cd /home/lab/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lab/franka_emika_ws/src /home/lab/franka_emika_ws/src/def_proj_Panda /home/lab/franka_emika_ws/build /home/lab/franka_emika_ws/build/def_proj_Panda /home/lab/franka_emika_ws/build/def_proj_Panda/CMakeFiles/std_srvs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/franka_emika_ws/src /home/panda/franka_emika_ws/src/def_proj_Panda /home/panda/franka_emika_ws/build /home/panda/franka_emika_ws/build/def_proj_Panda /home/panda/franka_emika_ws/build/def_proj_Panda/CMakeFiles/std_srvs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : def_proj_Panda/CMakeFiles/std_srvs_generate_messages_nodejs.dir/depend
 

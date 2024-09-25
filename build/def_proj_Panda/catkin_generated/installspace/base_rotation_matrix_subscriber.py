@@ -26,8 +26,7 @@ def callback(data, arg):
     w_q = data.pose.orientation.w
 
     # dati inseriti da print di marker_pos_calculator
-    marker_pos = [-0.19725676978461032, -0.4984491424832961, 0.01945771448239159] #left robot
-    #marker_pos = [0.049402565834284096, 0.7040407832738316, 0.017939943684736254] #right robot 
+    marker_pos = [-0.37159989739893884, 0.01897127927626493, 0.02098280599081283]
     x = a
     y = c
     z = -b

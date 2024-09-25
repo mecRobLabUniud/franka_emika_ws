@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/share/common-lisp/ros/aruco_msgs/msg/Marker.lisp"
-  "/home/lab/franka_emika_ws/devel/share/common-lisp/ros/aruco_msgs/msg/MarkerArray.lisp"
+  "/home/panda/franka_emika_ws/devel/share/common-lisp/ros/aruco_msgs/msg/Marker.lisp"
+  "/home/panda/franka_emika_ws/devel/share/common-lisp/ros/aruco_msgs/msg/MarkerArray.lisp"
   "CMakeFiles/aruco_msgs_generate_messages_lisp"
 )
 

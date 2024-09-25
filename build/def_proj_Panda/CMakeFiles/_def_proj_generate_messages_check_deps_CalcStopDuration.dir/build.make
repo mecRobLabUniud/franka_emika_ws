@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lab/franka_emika_ws/src
+CMAKE_SOURCE_DIR = /home/panda/franka_emika_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lab/franka_emika_ws/build
+CMAKE_BINARY_DIR = /home/panda/franka_emika_ws/build
 
 # Utility rule file for _def_proj_generate_messages_check_deps_CalcStopDuration.
 
@@ -67,7 +67,7 @@ include def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcSto
 include def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/progress.make
 
 def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration:
-	cd /home/lab/franka_emika_ws/build/def_proj_Panda && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py def_proj /home/lab/franka_emika_ws/src/def_proj_Panda/srv/CalcStopDuration.srv 
+	cd /home/panda/franka_emika_ws/build/def_proj_Panda && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py def_proj /home/panda/franka_emika_ws/src/def_proj_Panda/srv/CalcStopDuration.srv 
 
 _def_proj_generate_messages_check_deps_CalcStopDuration: def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration
 _def_proj_generate_messages_check_deps_CalcStopDuration: def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/build.make
@@ -78,10 +78,10 @@ def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuratio
 .PHONY : def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/build
 
 def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/clean:
-	cd /home/lab/franka_emika_ws/build/def_proj_Panda && $(CMAKE_COMMAND) -P CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/cmake_clean.cmake
+	cd /home/panda/franka_emika_ws/build/def_proj_Panda && $(CMAKE_COMMAND) -P CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/cmake_clean.cmake
 .PHONY : def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/clean
 
 def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/depend:
-	cd /home/lab/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lab/franka_emika_ws/src /home/lab/franka_emika_ws/src/def_proj_Panda /home/lab/franka_emika_ws/build /home/lab/franka_emika_ws/build/def_proj_Panda /home/lab/franka_emika_ws/build/def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/franka_emika_ws/src /home/panda/franka_emika_ws/src/def_proj_Panda /home/panda/franka_emika_ws/build /home/panda/franka_emika_ws/build/def_proj_Panda /home/panda/franka_emika_ws/build/def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : def_proj_Panda/CMakeFiles/_def_proj_generate_messages_check_deps_CalcStopDuration.dir/depend
 

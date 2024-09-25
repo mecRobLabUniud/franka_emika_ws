@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lab/franka_emika_ws/src
+CMAKE_SOURCE_DIR = /home/panda/franka_emika_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lab/franka_emika_ws/build
+CMAKE_BINARY_DIR = /home/panda/franka_emika_ws/build
 
 # Utility rule file for franka_example_controllers_geneus.
 
@@ -74,10 +74,10 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_gene
 .PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_geneus.dir/build
 
 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_geneus.dir/clean:
-	cd /home/lab/franka_emika_ws/build/franka_ros/franka_example_controllers && $(CMAKE_COMMAND) -P CMakeFiles/franka_example_controllers_geneus.dir/cmake_clean.cmake
+	cd /home/panda/franka_emika_ws/build/franka_ros/franka_example_controllers && $(CMAKE_COMMAND) -P CMakeFiles/franka_example_controllers_geneus.dir/cmake_clean.cmake
 .PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_geneus.dir/clean
 
 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_geneus.dir/depend:
-	cd /home/lab/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lab/franka_emika_ws/src /home/lab/franka_emika_ws/src/franka_ros/franka_example_controllers /home/lab/franka_emika_ws/build /home/lab/franka_emika_ws/build/franka_ros/franka_example_controllers /home/lab/franka_emika_ws/build/franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_geneus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/franka_emika_ws/src /home/panda/franka_emika_ws/src/franka_ros/franka_example_controllers /home/panda/franka_emika_ws/build /home/panda/franka_emika_ws/build/franka_ros/franka_example_controllers /home/panda/franka_emika_ws/build/franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_geneus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers_geneus.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/lab/franka_emika_ws/src/initializer
+# Install script for directory: /home/panda/franka_emika_ws/src/initializer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/lab/franka_emika_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/panda/franka_emika_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -43,17 +43,17 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lab/franka_emika_ws/build/initializer/catkin_generated/installspace/initializer.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/panda/franka_emika_ws/build/initializer/catkin_generated/installspace/initializer.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/initializer/cmake" TYPE FILE FILES
-    "/home/lab/franka_emika_ws/build/initializer/catkin_generated/installspace/initializerConfig.cmake"
-    "/home/lab/franka_emika_ws/build/initializer/catkin_generated/installspace/initializerConfig-version.cmake"
+    "/home/panda/franka_emika_ws/build/initializer/catkin_generated/installspace/initializerConfig.cmake"
+    "/home/panda/franka_emika_ws/build/initializer/catkin_generated/installspace/initializerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/initializer" TYPE FILE FILES "/home/lab/franka_emika_ws/src/initializer/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/initializer" TYPE FILE FILES "/home/panda/franka_emika_ws/src/initializer/package.xml")
 endif()
 

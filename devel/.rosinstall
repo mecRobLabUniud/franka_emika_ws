@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/lab/franka_emika_ws/devel/setup.sh
+    local-name: /home/panda/franka_emika_ws/devel/setup.sh

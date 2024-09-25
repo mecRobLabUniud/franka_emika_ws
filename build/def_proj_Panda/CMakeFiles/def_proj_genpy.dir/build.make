@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lab/franka_emika_ws/src
+CMAKE_SOURCE_DIR = /home/panda/franka_emika_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lab/franka_emika_ws/build
+CMAKE_BINARY_DIR = /home/panda/franka_emika_ws/build
 
 # Utility rule file for def_proj_genpy.
 
@@ -74,10 +74,10 @@ def_proj_Panda/CMakeFiles/def_proj_genpy.dir/build: def_proj_genpy
 .PHONY : def_proj_Panda/CMakeFiles/def_proj_genpy.dir/build
 
 def_proj_Panda/CMakeFiles/def_proj_genpy.dir/clean:
-	cd /home/lab/franka_emika_ws/build/def_proj_Panda && $(CMAKE_COMMAND) -P CMakeFiles/def_proj_genpy.dir/cmake_clean.cmake
+	cd /home/panda/franka_emika_ws/build/def_proj_Panda && $(CMAKE_COMMAND) -P CMakeFiles/def_proj_genpy.dir/cmake_clean.cmake
 .PHONY : def_proj_Panda/CMakeFiles/def_proj_genpy.dir/clean
 
 def_proj_Panda/CMakeFiles/def_proj_genpy.dir/depend:
-	cd /home/lab/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lab/franka_emika_ws/src /home/lab/franka_emika_ws/src/def_proj_Panda /home/lab/franka_emika_ws/build /home/lab/franka_emika_ws/build/def_proj_Panda /home/lab/franka_emika_ws/build/def_proj_Panda/CMakeFiles/def_proj_genpy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/franka_emika_ws/src /home/panda/franka_emika_ws/src/def_proj_Panda /home/panda/franka_emika_ws/build /home/panda/franka_emika_ws/build/def_proj_Panda /home/panda/franka_emika_ws/build/def_proj_Panda/CMakeFiles/def_proj_genpy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : def_proj_Panda/CMakeFiles/def_proj_genpy.dir/depend
 

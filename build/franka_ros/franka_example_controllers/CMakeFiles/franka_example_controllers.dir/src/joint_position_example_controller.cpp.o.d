@@ -1,7 +1,7 @@
 franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/src/joint_position_example_controller.cpp.o: \
- /home/lab/franka_emika_ws/src/franka_ros/franka_example_controllers/src/joint_position_example_controller.cpp \
+ /home/panda/franka_emika_ws/src/franka_ros/franka_example_controllers/src/joint_position_example_controller.cpp \
  /usr/include/stdc-predef.h \
- /home/lab/franka_emika_ws/src/franka_ros/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller.h \
+ /home/panda/franka_emika_ws/src/franka_ros/franka_example_controllers/include/franka_example_controllers/joint_position_example_controller.h \
  /usr/include/c++/7/array /usr/include/c++/7/utility \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \

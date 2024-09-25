@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lab/franka_emika_ws/src
+CMAKE_SOURCE_DIR = /home/panda/franka_emika_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lab/franka_emika_ws/build
+CMAKE_BINARY_DIR = /home/panda/franka_emika_ws/build
 
 # Utility rule file for def_proj_generate_messages_nodejs.
 
@@ -66,29 +66,29 @@ include def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/compiler
 # Include the progress variables for this target.
 include def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/progress.make
 
-def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs: /home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js
-def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs: /home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js
-def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs: /home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js
+def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs: /home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js
+def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs: /home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js
+def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs: /home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js
 
-/home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js: /home/lab/franka_emika_ws/src/def_proj_Panda/srv/CalcStopDuration.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lab/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from def_proj/CalcStopDuration.srv"
-	cd /home/lab/franka_emika_ws/build/def_proj_Panda && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/lab/franka_emika_ws/src/def_proj_Panda/srv/CalcStopDuration.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p def_proj -o /home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv
+/home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js: /home/panda/franka_emika_ws/src/def_proj_Panda/srv/CalcStopDuration.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/panda/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from def_proj/CalcStopDuration.srv"
+	cd /home/panda/franka_emika_ws/build/def_proj_Panda && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/panda/franka_emika_ws/src/def_proj_Panda/srv/CalcStopDuration.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p def_proj -o /home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv
 
-/home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js: /home/lab/franka_emika_ws/src/def_proj_Panda/srv/CalcValidTraj.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lab/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from def_proj/CalcValidTraj.srv"
-	cd /home/lab/franka_emika_ws/build/def_proj_Panda && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/lab/franka_emika_ws/src/def_proj_Panda/srv/CalcValidTraj.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p def_proj -o /home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv
+/home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js: /home/panda/franka_emika_ws/src/def_proj_Panda/srv/CalcValidTraj.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/panda/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from def_proj/CalcValidTraj.srv"
+	cd /home/panda/franka_emika_ws/build/def_proj_Panda && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/panda/franka_emika_ws/src/def_proj_Panda/srv/CalcValidTraj.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p def_proj -o /home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv
 
-/home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js: /home/lab/franka_emika_ws/src/def_proj_Panda/srv/FlagStop.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/lab/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from def_proj/FlagStop.srv"
-	cd /home/lab/franka_emika_ws/build/def_proj_Panda && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/lab/franka_emika_ws/src/def_proj_Panda/srv/FlagStop.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p def_proj -o /home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv
+/home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js: /home/panda/franka_emika_ws/src/def_proj_Panda/srv/FlagStop.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/panda/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from def_proj/FlagStop.srv"
+	cd /home/panda/franka_emika_ws/build/def_proj_Panda && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/panda/franka_emika_ws/src/def_proj_Panda/srv/FlagStop.srv -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p def_proj -o /home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv
 
 def_proj_generate_messages_nodejs: def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs
-def_proj_generate_messages_nodejs: /home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js
-def_proj_generate_messages_nodejs: /home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js
-def_proj_generate_messages_nodejs: /home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js
+def_proj_generate_messages_nodejs: /home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js
+def_proj_generate_messages_nodejs: /home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js
+def_proj_generate_messages_nodejs: /home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js
 def_proj_generate_messages_nodejs: def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/build.make
 .PHONY : def_proj_generate_messages_nodejs
 
@@ -97,10 +97,10 @@ def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/build: def_proj_
 .PHONY : def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/build
 
 def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/clean:
-	cd /home/lab/franka_emika_ws/build/def_proj_Panda && $(CMAKE_COMMAND) -P CMakeFiles/def_proj_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/panda/franka_emika_ws/build/def_proj_Panda && $(CMAKE_COMMAND) -P CMakeFiles/def_proj_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/clean
 
 def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/depend:
-	cd /home/lab/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lab/franka_emika_ws/src /home/lab/franka_emika_ws/src/def_proj_Panda /home/lab/franka_emika_ws/build /home/lab/franka_emika_ws/build/def_proj_Panda /home/lab/franka_emika_ws/build/def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/franka_emika_ws/src /home/panda/franka_emika_ws/src/def_proj_Panda /home/panda/franka_emika_ws/build /home/panda/franka_emika_ws/build/def_proj_Panda /home/panda/franka_emika_ws/build/def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : def_proj_Panda/CMakeFiles/def_proj_generate_messages_nodejs.dir/depend
 

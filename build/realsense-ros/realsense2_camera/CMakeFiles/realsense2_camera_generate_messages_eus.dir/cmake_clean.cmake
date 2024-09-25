@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/manifest.l"
-  "/home/lab/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/msg/Extrinsics.l"
-  "/home/lab/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/msg/IMUInfo.l"
-  "/home/lab/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/msg/Metadata.l"
-  "/home/lab/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/srv/DeviceInfo.l"
+  "/home/panda/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/manifest.l"
+  "/home/panda/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/msg/Extrinsics.l"
+  "/home/panda/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/msg/IMUInfo.l"
+  "/home/panda/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/msg/Metadata.l"
+  "/home/panda/franka_emika_ws/devel/share/roseus/ros/realsense2_camera/srv/DeviceInfo.l"
   "CMakeFiles/realsense2_camera_generate_messages_eus"
 )
 

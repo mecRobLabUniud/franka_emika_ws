@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/include/realsense2_camera/DeviceInfo.h"
-  "/home/lab/franka_emika_ws/devel/include/realsense2_camera/Extrinsics.h"
-  "/home/lab/franka_emika_ws/devel/include/realsense2_camera/IMUInfo.h"
-  "/home/lab/franka_emika_ws/devel/include/realsense2_camera/Metadata.h"
+  "/home/panda/franka_emika_ws/devel/include/realsense2_camera/DeviceInfo.h"
+  "/home/panda/franka_emika_ws/devel/include/realsense2_camera/Extrinsics.h"
+  "/home/panda/franka_emika_ws/devel/include/realsense2_camera/IMUInfo.h"
+  "/home/panda/franka_emika_ws/devel/include/realsense2_camera/Metadata.h"
   "CMakeFiles/realsense2_camera_generate_messages_cpp"
 )
 

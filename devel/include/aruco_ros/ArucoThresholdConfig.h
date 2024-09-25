@@ -453,9 +453,9 @@ ArucoThresholdConfig::GroupDescription<ArucoThresholdConfig::DEFAULT, ArucoThres
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.detection_mode = 1;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ArucoThresholdConfig::AbstractParamDescriptionConstPtr(new ArucoThresholdConfig::ParamDescription<int>("detection_mode", "int", 0, "The detection mode , affects speed and reliability", "{'enum_description': 'detection_mode enum', 'enum': [{'srcline': 12, 'description': '', 'srcfile': '/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Normal'}, {'srcline': 13, 'description': '', 'srcfile': '/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Fast'}, {'srcline': 14, 'description': '', 'srcfile': '/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'Video_Fast'}]}", &ArucoThresholdConfig::detection_mode)));
+      Default.abstract_parameters.push_back(ArucoThresholdConfig::AbstractParamDescriptionConstPtr(new ArucoThresholdConfig::ParamDescription<int>("detection_mode", "int", 0, "The detection mode , affects speed and reliability", "{'enum_description': 'detection_mode enum', 'enum': [{'srcline': 12, 'description': '', 'srcfile': '/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Normal'}, {'srcline': 13, 'description': '', 'srcfile': '/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Fast'}, {'srcline': 14, 'description': '', 'srcfile': '/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'Video_Fast'}]}", &ArucoThresholdConfig::detection_mode)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ArucoThresholdConfig::AbstractParamDescriptionConstPtr(new ArucoThresholdConfig::ParamDescription<int>("detection_mode", "int", 0, "The detection mode , affects speed and reliability", "{'enum_description': 'detection_mode enum', 'enum': [{'srcline': 12, 'description': '', 'srcfile': '/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Normal'}, {'srcline': 13, 'description': '', 'srcfile': '/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Fast'}, {'srcline': 14, 'description': '', 'srcfile': '/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'Video_Fast'}]}", &ArucoThresholdConfig::detection_mode)));
+      __param_descriptions__.push_back(ArucoThresholdConfig::AbstractParamDescriptionConstPtr(new ArucoThresholdConfig::ParamDescription<int>("detection_mode", "int", 0, "The detection mode , affects speed and reliability", "{'enum_description': 'detection_mode enum', 'enum': [{'srcline': 12, 'description': '', 'srcfile': '/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Normal'}, {'srcline': 13, 'description': '', 'srcfile': '/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'Fast'}, {'srcline': 14, 'description': '', 'srcfile': '/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg', 'cconsttype': 'const int', 'value': 2, 'ctype': 'int', 'type': 'int', 'name': 'Video_Fast'}]}", &ArucoThresholdConfig::detection_mode)));
 //#line 246 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.convertParams();
 //#line 246 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -535,11 +535,11 @@ ArucoThresholdConfig::GroupDescription<ArucoThresholdConfig::DEFAULT, ArucoThres
     return statics;
   }
 
-//#line 12 "/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg"
+//#line 12 "/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg"
       const int ArucoThreshold_Normal = 0;
-//#line 13 "/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg"
+//#line 13 "/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg"
       const int ArucoThreshold_Fast = 1;
-//#line 14 "/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg"
+//#line 14 "/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/cfg/ArucoThreshold.cfg"
       const int ArucoThreshold_Video_Fast = 2;
 }
 

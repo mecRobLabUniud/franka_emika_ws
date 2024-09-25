@@ -1,4 +1,4 @@
-prefix=/home/lab/franka_emika_ws/devel
+prefix=/home/panda/franka_emika_ws/devel
 
 Name: franka_visualization
 Description: Description of franka_visualization

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/lib/aruco_ros/single"
-  "/home/lab/franka_emika_ws/devel/lib/aruco_ros/single.pdb"
+  "/home/panda/franka_emika_ws/devel/lib/aruco_ros/single"
+  "/home/panda/franka_emika_ws/devel/lib/aruco_ros/single.pdb"
   "CMakeFiles/single.dir/src/aruco_ros_utils.cpp.o"
   "CMakeFiles/single.dir/src/aruco_ros_utils.cpp.o.d"
   "CMakeFiles/single.dir/src/simple_single.cpp.o"

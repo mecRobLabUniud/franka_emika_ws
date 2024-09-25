@@ -67,14 +67,14 @@ set(franka_gripper_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(franka_gripper_SOURCE_PREFIX /home/lab/franka_emika_ws/src/franka_ros/franka_gripper)
-  set(franka_gripper_DEVEL_PREFIX /home/lab/franka_emika_ws/devel)
+  set(franka_gripper_SOURCE_PREFIX /home/panda/franka_emika_ws/src/franka_ros/franka_gripper)
+  set(franka_gripper_DEVEL_PREFIX /home/panda/franka_emika_ws/devel)
   set(franka_gripper_INSTALL_PREFIX "")
   set(franka_gripper_PREFIX ${franka_gripper_DEVEL_PREFIX})
 else()
   set(franka_gripper_SOURCE_PREFIX "")
   set(franka_gripper_DEVEL_PREFIX "")
-  set(franka_gripper_INSTALL_PREFIX /home/lab/franka_emika_ws/install)
+  set(franka_gripper_INSTALL_PREFIX /home/panda/franka_emika_ws/install)
   set(franka_gripper_PREFIX ${franka_gripper_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(franka_gripper_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/opt/ros/melodic/include/libfranka " STREQUAL " ")
+if(NOT "include;/home/panda/libfranka/include " STREQUAL " ")
   set(franka_gripper_INCLUDE_DIRS "")
-  set(_include_dirs "include;/opt/ros/melodic/include/libfranka")
+  set(_include_dirs "include;/home/panda/libfranka/include")
   if(NOT "https://github.com/frankaemika/franka_ros/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/frankaemika/franka_ros/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/franka_gripper " STREQUAL " ")
@@ -116,7 +116,7 @@ if(NOT "include;/opt/ros/melodic/include/libfranka " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "franka_gripper;/opt/ros/melodic/lib/libfranka.so.0.9.0")
+set(libraries "franka_gripper;/home/panda/libfranka/build/libfranka.so.0.8.0")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/lab/franka_emika_ws/install/lib;/home/lab/universal_robots_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/panda/franka_emika_ws/install/lib;/home/panda/franka_emika_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"aruco_ros\"
 
-CXX_INCLUDES = -I/home/lab/franka_emika_ws/src/aruco_ros/aruco_ros/include -isystem /home/lab/franka_emika_ws/devel/include -isystem /home/lab/franka_emika_ws/src/aruco_ros/aruco/include -isystem /opt/ros/melodic/include -isystem /opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv -isystem /usr/local/include/opencv4
+CXX_INCLUDES = -I/home/panda/franka_emika_ws/src/aruco_ros/aruco_ros/include -isystem /home/panda/franka_emika_ws/devel/include -isystem /home/panda/franka_emika_ws/src/aruco_ros/aruco/include -isystem /opt/ros/melodic/include -isystem /opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv -isystem /usr/local/include/opencv4
 
-CXX_FLAGS = -std=c++11
+CXX_FLAGS = -O3 -DNDEBUG -std=c++11
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DROS_BUILD_SHARED_LIBS=1 -Daruco_EXPORTS
 
-CXX_INCLUDES = -I/home/lab/franka_emika_ws/src/aruco_ros/aruco/include/aruco -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3
+CXX_INCLUDES = -I/home/panda/franka_emika_ws/src/aruco_ros/aruco/include/aruco -isystem /usr/local/include/opencv4 -isystem /usr/include/eigen3
 
-CXX_FLAGS = -fPIC -std=gnu++11
+CXX_FLAGS = -O3 -DNDEBUG -fPIC -std=gnu++11
 

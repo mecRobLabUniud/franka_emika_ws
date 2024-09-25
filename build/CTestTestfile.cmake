@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/lab/franka_emika_ws/src
-# Build directory: /home/lab/franka_emika_ws/build
+# Source directory: /home/panda/franka_emika_ws/src
+# Build directory: /home/panda/franka_emika_ws/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -13,6 +13,8 @@ subdirs("franka_ros/franka_msgs")
 subdirs("aruco_ros/aruco_msgs")
 subdirs("def_proj_Panda")
 subdirs("initializer")
+subdirs("path_planning")
+subdirs("ddynamic_reconfigure")
 subdirs("aruco_ros/aruco")
 subdirs("franka_ros/franka_gripper")
 subdirs("franka_ros/franka_visualization")

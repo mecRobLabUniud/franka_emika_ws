@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js"
-  "/home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js"
-  "/home/lab/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js"
+  "/home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcStopDuration.js"
+  "/home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/CalcValidTraj.js"
+  "/home/panda/franka_emika_ws/devel/share/gennodejs/ros/def_proj/srv/FlagStop.js"
   "CMakeFiles/def_proj_generate_messages_nodejs"
 )
 

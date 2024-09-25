@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/lib/libfranka_example_controllers.pdb"
-  "/home/lab/franka_emika_ws/devel/lib/libfranka_example_controllers.so"
+  "/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.pdb"
+  "/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so"
   "CMakeFiles/franka_example_controllers.dir/src/cartesian_impedance_example_controller.cpp.o"
   "CMakeFiles/franka_example_controllers.dir/src/cartesian_impedance_example_controller.cpp.o.d"
   "CMakeFiles/franka_example_controllers.dir/src/cartesian_pose_example_controller.cpp.o"

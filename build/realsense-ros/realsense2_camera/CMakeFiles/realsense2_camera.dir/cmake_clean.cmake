@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/lab/franka_emika_ws/devel/lib/librealsense2_camera.pdb"
-  "/home/lab/franka_emika_ws/devel/lib/librealsense2_camera.so"
+  "/home/panda/franka_emika_ws/devel/lib/librealsense2_camera.pdb"
+  "/home/panda/franka_emika_ws/devel/lib/librealsense2_camera.so"
   "CMakeFiles/realsense2_camera.dir/src/base_realsense_node.cpp.o"
   "CMakeFiles/realsense2_camera.dir/src/base_realsense_node.cpp.o.d"
   "CMakeFiles/realsense2_camera.dir/src/realsense_node_factory.cpp.o"

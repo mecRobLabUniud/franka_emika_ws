@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lab/franka_emika_ws/src
+CMAKE_SOURCE_DIR = /home/panda/franka_emika_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lab/franka_emika_ws/build
+CMAKE_BINARY_DIR = /home/panda/franka_emika_ws/build
 
 # Utility rule file for aruco_msgs_genlisp.
 
@@ -74,10 +74,10 @@ aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir/build: aruco_msgs_genlisp
 .PHONY : aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir/build
 
 aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir/clean:
-	cd /home/lab/franka_emika_ws/build/aruco_ros/aruco_msgs && $(CMAKE_COMMAND) -P CMakeFiles/aruco_msgs_genlisp.dir/cmake_clean.cmake
+	cd /home/panda/franka_emika_ws/build/aruco_ros/aruco_msgs && $(CMAKE_COMMAND) -P CMakeFiles/aruco_msgs_genlisp.dir/cmake_clean.cmake
 .PHONY : aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir/clean
 
 aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir/depend:
-	cd /home/lab/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lab/franka_emika_ws/src /home/lab/franka_emika_ws/src/aruco_ros/aruco_msgs /home/lab/franka_emika_ws/build /home/lab/franka_emika_ws/build/aruco_ros/aruco_msgs /home/lab/franka_emika_ws/build/aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/franka_emika_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/franka_emika_ws/src /home/panda/franka_emika_ws/src/aruco_ros/aruco_msgs /home/panda/franka_emika_ws/build /home/panda/franka_emika_ws/build/aruco_ros/aruco_msgs /home/panda/franka_emika_ws/build/aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : aruco_ros/aruco_msgs/CMakeFiles/aruco_msgs_genlisp.dir/depend
 

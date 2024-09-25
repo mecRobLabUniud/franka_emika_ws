@@ -14,7 +14,7 @@
 
     <!-- Launch base_rotation_matrix_subscriber node -->
 
-    <node pkg="def_proj_lips" name="base_rotation_matrix_subscriber" type="base_rotation_matrix_subscriber.py" output="screen">
+    <node pkg="def_proj_Panda" name="base_rotation_matrix_subscriber" type="base_rotation_matrix_subscriber.py" output="screen">
     </node>
 
 </launch>
