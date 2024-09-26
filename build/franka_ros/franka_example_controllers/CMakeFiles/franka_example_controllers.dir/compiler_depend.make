@@ -1419,19 +1419,19 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /usr/include/boost/thread/xtime.hpp \
   /usr/include/boost/any.hpp \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h \
-  /home/panda/libfranka/include/franka/model.h \
-  /home/panda/libfranka/include/franka/robot.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/model.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h \
   /usr/include/c++/7/mutex \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/bits/parse_numbers.h \
   /usr/include/c++/7/bits/std_mutex.h \
-  /home/panda/libfranka/include/franka/command_types.h \
-  /home/panda/libfranka/include/franka/control_types.h \
-  /home/panda/libfranka/include/franka/duration.h \
-  /home/panda/libfranka/include/franka/lowpass_filter.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
@@ -2573,12 +2573,12 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /opt/ros/melodic/include/ros/topic.h \
   /opt/ros/melodic/include/ros/node_handle.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_cartesian_command_interface.h \
   /opt/ros/melodic/include/pluginlib/class_list_macros.h \
@@ -3815,12 +3815,12 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /opt/ros/melodic/include/ros/node_handle.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_cartesian_command_interface.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h \
   /opt/ros/melodic/include/hardware_interface/joint_command_interface.h \
   /opt/ros/melodic/include/hardware_interface/joint_state_interface.h \
@@ -5373,14 +5373,14 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /usr/include/boost/thread/xtime.hpp \
   /usr/include/boost/any.hpp \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h \
-  /home/panda/libfranka/include/franka/model.h \
-  /home/panda/libfranka/include/franka/robot.h \
-  /home/panda/libfranka/include/franka/command_types.h \
-  /home/panda/libfranka/include/franka/control_types.h \
-  /home/panda/libfranka/include/franka/duration.h \
-  /home/panda/libfranka/include/franka/lowpass_filter.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/model.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
@@ -6908,12 +6908,12 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /opt/ros/melodic/include/ros/topic.h \
   /opt/ros/melodic/include/ros/node_handle.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_cartesian_command_interface.h \
   /opt/ros/melodic/include/pluginlib/class_list_macros.h \
@@ -8262,19 +8262,19 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /opt/ros/melodic/include/dynamic_reconfigure/ReconfigureRequest.h \
   /opt/ros/melodic/include/dynamic_reconfigure/ReconfigureResponse.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h \
-  /home/panda/libfranka/include/franka/model.h \
-  /home/panda/libfranka/include/franka/robot.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/model.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h \
   /usr/include/c++/7/mutex \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/bits/parse_numbers.h \
   /usr/include/c++/7/bits/std_mutex.h \
-  /home/panda/libfranka/include/franka/command_types.h \
-  /home/panda/libfranka/include/franka/control_types.h \
-  /home/panda/libfranka/include/franka/duration.h \
-  /home/panda/libfranka/include/franka/lowpass_filter.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h \
   /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h \
@@ -9554,15 +9554,15 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /opt/ros/melodic/include/ros/message_operations.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_cartesian_command_interface.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/duration.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h \
-  /home/panda/libfranka/include/franka/model.h \
-  /home/panda/libfranka/include/franka/robot.h \
-  /home/panda/libfranka/include/franka/command_types.h \
-  /home/panda/libfranka/include/franka/control_types.h \
-  /home/panda/libfranka/include/franka/lowpass_filter.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/model.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/trigger_rate.h \
@@ -12034,12 +12034,12 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /opt/ros/melodic/include/ros/topic.h \
   /opt/ros/melodic/include/ros/node_handle.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h \
   /opt/ros/melodic/include/hardware_interface/joint_command_interface.h \
   /opt/ros/melodic/include/hardware_interface/joint_state_interface.h \
@@ -13276,19 +13276,19 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /opt/ros/melodic/include/ros/topic.h \
   /opt/ros/melodic/include/ros/node_handle.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h \
-  /home/panda/libfranka/include/franka/model.h \
-  /home/panda/libfranka/include/franka/robot.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/model.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h \
   /usr/include/c++/7/mutex \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/bits/parse_numbers.h \
   /usr/include/c++/7/bits/std_mutex.h \
-  /home/panda/libfranka/include/franka/command_types.h \
-  /home/panda/libfranka/include/franka/control_types.h \
-  /home/panda/libfranka/include/franka/duration.h \
-  /home/panda/libfranka/include/franka/lowpass_filter.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h \
   /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h \
@@ -14623,12 +14623,12 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
   /usr/include/boost/chrono/ceil.hpp \
   /usr/include/boost/any.hpp \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h \
   /opt/ros/melodic/include/hardware_interface/hardware_interface.h \
   /opt/ros/melodic/include/hardware_interface/internal/resource_manager.h \
@@ -15324,6 +15324,8 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 
 /usr/include/boost/detail/container_fwd.hpp:
 
+/usr/include/c++/7/typeindex:
+
 /usr/include/boost/integer/static_log2.hpp:
 
 /usr/include/c++/7/bits/atomic_base.h:
@@ -15355,6 +15357,8 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 /usr/include/boost/mpl/aux_/preprocessed/gcc/equal_to.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/boost/move/detail/config_end.hpp:
 
 /usr/include/boost/detail/templated_streams.hpp:
 
@@ -15609,6 +15613,8 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 /usr/include/boost/mpl/limits/arity.hpp:
 
 /usr/include/boost/mpl/next.hpp:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h:
 
 /opt/ros/melodic/include/class_loader/exceptions.hpp:
 
@@ -16104,6 +16110,8 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 
 /usr/include/boost/iterator.hpp:
 
+/usr/include/c++/7/bits/char_traits.h:
+
 /usr/include/c++/7/bits/stream_iterator.h:
 
 /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
@@ -16201,6 +16209,8 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 /opt/ros/melodic/include/geometry_msgs/Vector3.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h:
 
 /usr/include/c++/7/bits/list.tcc:
 
@@ -16450,8 +16460,6 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 
 /usr/include/boost/utility/base_from_member.hpp:
 
-/home/panda/libfranka/include/franka/command_types.h:
-
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/boost/range/distance.hpp:
@@ -16623,8 +16631,6 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 /usr/include/c++/7/bits/exception_defines.h:
 
 /opt/ros/melodic/include/dynamic_reconfigure/StrParameter.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/boost/mpl/back_inserter.hpp:
 
@@ -17016,11 +17022,9 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 
 /usr/include/boost/predef/version_number.h:
 
-/usr/include/c++/7/typeindex:
-
-/home/panda/libfranka/include/franka/robot_state.h:
-
 /usr/include/boost/predef/architecture/pyramid.h:
+
+/usr/include/boost/predef/detail/test.h:
 
 /usr/include/boost/checked_delete.hpp:
 
@@ -17074,6 +17078,10 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 
 /usr/include/boost/predef/compiler/digitalmars.h:
 
+/usr/include/boost/none_t.hpp:
+
+/usr/include/boost/predef/library/c/gnu.h:
+
 /usr/include/boost/mpl/aux_/is_msvc_eti_arg.hpp:
 
 /opt/ros/melodic/include/ros/message_traits.h:
@@ -17121,6 +17129,10 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 /opt/ros/melodic/include/ros/service.h:
 
 /usr/include/boost/predef/compiler/sgi_mipspro.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h:
 
 /usr/include/boost/mpl/aux_/has_type.hpp:
 
@@ -17323,6 +17335,8 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 /usr/include/boost/mpl/assert.hpp:
 
 /usr/include/boost/mpl/aux_/config/gpu.hpp:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h:
 
 /usr/include/boost/mpl/aux_/arity_spec.hpp:
 
@@ -17608,8 +17622,6 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp:
 
-/home/panda/libfranka/include/franka/lowpass_filter.h:
-
 /usr/include/boost/mpl/aux_/advance_backward.hpp:
 
 /usr/include/boost/exception_ptr.hpp:
@@ -17643,8 +17655,6 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 /usr/include/boost/bind/bind_mf2_cc.hpp:
 
 /usr/include/boost/mpl/equal_to.hpp:
-
-/usr/include/boost/concept/usage.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/not_equal_to.hpp:
 
@@ -17925,6 +17935,8 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h:
 
 /usr/include/boost/preprocessor/seq/for_each_i.hpp:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h:
 
 /usr/include/boost/preprocessor/seq/seq.hpp:
 
@@ -18318,6 +18330,8 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 
 /usr/include/eigen3/Eigen/src/Core/IO.h:
 
+/home/panda/franka_emika_ws/src/libfranka/include/franka/model.h:
+
 /opt/ros/melodic/include/dynamic_reconfigure/ReconfigureResponse.h:
 
 /usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
@@ -18528,13 +18542,9 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 
 /usr/include/boost/thread/pthread/mutex.hpp:
 
-/usr/include/boost/move/detail/config_end.hpp:
+/usr/include/boost/concept/usage.hpp:
 
-/home/panda/libfranka/include/franka/model.h:
-
-/usr/include/c++/7/bits/char_traits.h:
-
-/home/panda/libfranka/include/franka/robot.h:
+/home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h:
 
 /usr/include/c++/7/mutex:
 
@@ -18550,17 +18560,7 @@ franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/
 
 /usr/include/c++/7/bits/std_mutex.h:
 
-/usr/include/boost/predef/detail/test.h:
-
-/home/panda/libfranka/include/franka/control_types.h:
-
-/home/panda/libfranka/include/franka/duration.h:
-
-/usr/include/boost/none_t.hpp:
-
-/usr/include/boost/predef/library/c/gnu.h:
-
-/home/panda/libfranka/include/franka/errors.h:
+/home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h:
 
 /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h:
 

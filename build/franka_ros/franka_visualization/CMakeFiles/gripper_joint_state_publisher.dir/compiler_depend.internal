@@ -4,7 +4,7 @@
 franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/src/gripper_joint_state_publisher.cpp.o
  /home/panda/franka_emika_ws/src/franka_ros/franka_visualization/src/gripper_joint_state_publisher.cpp
  /usr/include/stdc-predef.h
- /home/panda/libfranka/include/franka/exception.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/exception.h
  /usr/include/c++/7/stdexcept
  /usr/include/c++/7/exception
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h
@@ -151,14 +151,14 @@ franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/src
  /usr/include/asm-generic/errno-base.h
  /usr/include/c++/7/bits/functional_hash.h
  /usr/include/c++/7/bits/basic_string.tcc
- /home/panda/libfranka/include/franka/log.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/log.h
  /usr/include/c++/7/vector
  /usr/include/c++/7/bits/stl_construct.h
  /usr/include/c++/7/bits/stl_uninitialized.h
  /usr/include/c++/7/bits/stl_vector.h
  /usr/include/c++/7/bits/stl_bvector.h
  /usr/include/c++/7/bits/vector.tcc
- /home/panda/libfranka/include/franka/control_types.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h
  /usr/include/c++/7/array
  /usr/include/c++/7/utility
  /usr/include/c++/7/bits/stl_relops.h
@@ -173,7 +173,7 @@ franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/src
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/mathinline.h
- /home/panda/libfranka/include/franka/robot_state.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h
  /usr/include/c++/7/ostream
  /usr/include/c++/7/ios
  /usr/include/c++/7/bits/ios_base.h
@@ -194,14 +194,14 @@ franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/src
  /usr/include/c++/7/bits/locale_facets.tcc
  /usr/include/c++/7/bits/basic_ios.tcc
  /usr/include/c++/7/bits/ostream.tcc
- /home/panda/libfranka/include/franka/duration.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h
  /usr/include/c++/7/chrono
  /usr/include/c++/7/ratio
  /usr/include/c++/7/limits
  /usr/include/c++/7/ctime
  /usr/include/c++/7/bits/parse_numbers.h
- /home/panda/libfranka/include/franka/errors.h
- /home/panda/libfranka/include/franka/gripper.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/gripper.h
  /usr/include/c++/7/memory
  /usr/include/c++/7/bits/stl_tempbuf.h
  /usr/include/c++/7/bits/stl_raw_storage_iter.h
@@ -219,7 +219,7 @@ franka_ros/franka_visualization/CMakeFiles/gripper_joint_state_publisher.dir/src
  /usr/include/c++/7/bits/atomic_base.h
  /usr/include/c++/7/bits/atomic_lockfree_defines.h
  /usr/include/c++/7/backward/auto_ptr.h
- /home/panda/libfranka/include/franka/gripper_state.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/gripper_state.h
  /opt/ros/melodic/include/ros/ros.h
  /opt/ros/melodic/include/ros/time.h
  /opt/ros/melodic/include/ros/platform.h

@@ -370,13 +370,13 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_combinable_hw.cpp.o: /h
   /usr/include/c++/7/limits \
   /usr/include/c++/7/ctime \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /home/panda/libfranka/include/franka/exception.h \
-  /home/panda/libfranka/include/franka/log.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/exception.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/log.h \
   /usr/include/c++/7/vector \
   /usr/include/c++/7/bits/stl_vector.h \
   /usr/include/c++/7/bits/stl_bvector.h \
   /usr/include/c++/7/bits/vector.tcc \
-  /home/panda/libfranka/include/franka/control_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h \
   /usr/include/c++/7/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -388,7 +388,7 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_combinable_hw.cpp.o: /h
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/mathinline.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
   /usr/include/c++/7/ostream \
   /usr/include/c++/7/ios \
   /usr/include/c++/7/bits/ios_base.h \
@@ -409,8 +409,8 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_combinable_hw.cpp.o: /h
   /usr/include/c++/7/bits/locale_facets.tcc \
   /usr/include/c++/7/bits/basic_ios.tcc \
   /usr/include/c++/7/bits/ostream.tcc \
-  /home/panda/libfranka/include/franka/duration.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /opt/ros/melodic/include/actionlib/server/simple_action_server.h \
   /usr/include/boost/thread/condition.hpp \
   /usr/include/boost/thread/detail/config.hpp \
@@ -1560,12 +1560,12 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_combinable_hw.cpp.o: /h
   /opt/ros/melodic/include/actionlib/server/action_server_imp.h \
   /opt/ros/melodic/include/actionlib/server/simple_action_server_imp.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_hw.h \
-  /home/panda/libfranka/include/franka/rate_limiting.h \
-  /home/panda/libfranka/include/franka/robot.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/rate_limiting.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h \
   /usr/include/c++/7/mutex \
   /usr/include/c++/7/bits/std_mutex.h \
-  /home/panda/libfranka/include/franka/command_types.h \
-  /home/panda/libfranka/include/franka/lowpass_filter.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h \
   /opt/ros/melodic/include/hardware_interface/joint_command_interface.h \
   /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h \
   /opt/ros/melodic/include/hardware_interface/hardware_interface.h \
@@ -1601,7 +1601,7 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_combinable_hw.cpp.o: /h
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_cartesian_command_interface.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h \
-  /home/panda/libfranka/include/franka/model.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/resource_helpers.h \
@@ -3094,12 +3094,12 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_combined_hw.cpp.o: /hom
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /home/panda/libfranka/include/franka/exception.h \
-  /home/panda/libfranka/include/franka/log.h \
-  /home/panda/libfranka/include/franka/control_types.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
-  /home/panda/libfranka/include/franka/duration.h \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/exception.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/log.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /opt/ros/melodic/include/actionlib/server/simple_action_server.h \
   /usr/include/boost/thread/condition.hpp \
   /opt/ros/melodic/include/ros/ros.h \
@@ -3133,12 +3133,12 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_combined_hw.cpp.o: /hom
   /opt/ros/melodic/include/actionlib/server/action_server_imp.h \
   /opt/ros/melodic/include/actionlib/server/simple_action_server_imp.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_hw.h \
-  /home/panda/libfranka/include/franka/rate_limiting.h \
-  /home/panda/libfranka/include/franka/robot.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/rate_limiting.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h \
   /usr/include/c++/7/mutex \
   /usr/include/c++/7/bits/std_mutex.h \
-  /home/panda/libfranka/include/franka/command_types.h \
-  /home/panda/libfranka/include/franka/lowpass_filter.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h \
   /opt/ros/melodic/include/hardware_interface/joint_command_interface.h \
   /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h \
   /opt/ros/melodic/include/hardware_interface/joint_state_interface.h \
@@ -3166,7 +3166,7 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_combined_hw.cpp.o: /hom
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_cartesian_command_interface.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h \
-  /home/panda/libfranka/include/franka/model.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/resource_helpers.h \
@@ -3369,7 +3369,7 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_hw.cpp.o: /home/panda/f
   /usr/include/c++/7/bits/allocated_ptr.h \
   /usr/include/c++/7/ext/aligned_buffer.h \
   /usr/include/c++/7/bits/list.tcc \
-  /home/panda/libfranka/include/franka/control_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h \
   /usr/include/c++/7/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -3381,14 +3381,14 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_hw.cpp.o: /home/panda/f
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/mathinline.h \
-  /home/panda/libfranka/include/franka/duration.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
   /usr/include/c++/7/chrono \
   /usr/include/c++/7/ratio \
   /usr/include/c++/7/limits \
   /usr/include/c++/7/ctime \
   /usr/include/c++/7/bits/parse_numbers.h \
-  /home/panda/libfranka/include/franka/rate_limiting.h \
-  /home/panda/libfranka/include/franka/robot.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/rate_limiting.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h \
   /usr/include/c++/7/memory \
   /usr/include/c++/7/bits/stl_construct.h \
   /usr/include/c++/7/bits/stl_uninitialized.h \
@@ -3404,9 +3404,9 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_hw.cpp.o: /home/panda/f
   /usr/include/c++/7/system_error \
   /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h \
   /usr/include/c++/7/bits/std_mutex.h \
-  /home/panda/libfranka/include/franka/command_types.h \
-  /home/panda/libfranka/include/franka/lowpass_filter.h \
-  /home/panda/libfranka/include/franka/robot_state.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
   /usr/include/c++/7/ostream \
   /usr/include/c++/7/ios \
   /usr/include/c++/7/bits/ios_base.h \
@@ -3425,7 +3425,7 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_hw.cpp.o: /home/panda/f
   /usr/include/c++/7/bits/locale_facets.tcc \
   /usr/include/c++/7/bits/basic_ios.tcc \
   /usr/include/c++/7/bits/ostream.tcc \
-  /home/panda/libfranka/include/franka/errors.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
   /opt/ros/melodic/include/hardware_interface/joint_command_interface.h \
   /usr/include/c++/7/cassert \
   /usr/include/assert.h \
@@ -4350,7 +4350,7 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/franka_hw.cpp.o: /home/panda/f
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_cartesian_command_interface.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h \
-  /home/panda/libfranka/include/franka/model.h \
+  /home/panda/franka_emika_ws/src/libfranka/include/franka/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h \
   /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/resource_helpers.h
@@ -5970,8 +5970,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/thread/pthread/thread_data.hpp:
 
-/usr/include/boost/type_traits/add_reference.hpp:
-
 /usr/include/boost/mpl/aux_/find_if_pred.hpp:
 
 /usr/include/boost/type_traits/add_lvalue_reference.hpp:
@@ -6027,10 +6025,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:
-
-/usr/include/boost/preprocessor/stringize.hpp:
-
-/usr/include/boost/mpl/aux_/yes_no.hpp:
 
 /usr/include/boost/mpl/void_fwd.hpp:
 
@@ -6154,6 +6148,10 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/c++/7/bits/hash_bytes.h:
 
+/usr/include/boost/move/detail/config_end.hpp:
+
+/usr/include/boost/algorithm/string/case_conv.hpp:
+
 /usr/include/boost/mpl/aux_/preprocessor/enum.hpp:
 
 /usr/include/boost/type_traits/remove_const.hpp:
@@ -6183,6 +6181,8 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/mpl/limits/arity.hpp:
 
 /usr/include/boost/mpl/next.hpp:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h:
 
 /opt/ros/melodic/include/class_loader/exceptions.hpp:
 
@@ -6300,16 +6300,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/operators.hpp:
 
-/usr/include/boost/thread/cv_status.hpp:
-
-/usr/include/boost/function/function_template.hpp:
-
-/usr/include/boost/date_time/posix_time/posix_time_system.hpp:
-
-/usr/include/boost/mpl/aux_/advance_forward.hpp:
-
-/usr/include/boost/function.hpp:
-
 /usr/include/boost/type_traits/is_abstract.hpp:
 
 /usr/include/c++/7/cstdio:
@@ -6353,10 +6343,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/thread/lockable_traits.hpp:
 
 /usr/include/boost/type_traits/remove_pointer.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/boost/type_traits/detail/config.hpp:
 
 /usr/include/boost/preprocessor/control/deduce_d.hpp:
 
@@ -6461,6 +6447,10 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/c++/7/cassert:
 
 /usr/include/boost/predef/detail/_cassert.h:
+
+/usr/include/c++/7/sstream:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 /usr/include/boost/mpl/aux_/config/eti.hpp:
 
@@ -6638,6 +6628,8 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /home/panda/franka_emika_ws/devel/include/franka_msgs/SetForceTorqueCollisionBehaviorResponse.h:
 
+/usr/include/c++/7/bits/char_traits.h:
+
 /usr/include/c++/7/bits/stream_iterator.h:
 
 /usr/include/boost/type_traits/is_nothrow_move_constructible.hpp:
@@ -6683,6 +6675,8 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h:
 
 /usr/include/boost/static_assert.hpp:
 
@@ -6743,10 +6737,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/Poco/Platform.h:
 
 /opt/ros/melodic/include/ros/ros.h:
-
-/usr/include/c++/7/sstream:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
@@ -6924,10 +6914,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/mpl/void.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
-/usr/include/boost/predef/version_number.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/c++/7/typeinfo:
@@ -6956,6 +6942,16 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
+/usr/include/boost/preprocessor/stringize.hpp:
+
+/usr/include/boost/mpl/aux_/yes_no.hpp:
+
+/usr/include/boost/type_traits/add_reference.hpp:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/exception.h:
+
+/usr/include/boost/move/adl_move_swap.hpp:
+
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
@@ -6963,6 +6959,14 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/boost/thread/executors/generic_executor_ref.hpp:
+
+/usr/include/boost/type_traits/detail/config.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/boost/thread/cv_status.hpp:
+
+/usr/include/boost/function/function_template.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h:
 
@@ -6973,6 +6977,10 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/preprocessor/comma_if.hpp:
 
 /usr/include/boost/mpl/placeholders.hpp:
+
+/usr/include/boost/mpl/bind_fwd.hpp:
+
+/usr/include/boost/date_time/time_system_split.hpp:
 
 /usr/include/boost/config/detail/suffix.hpp:
 
@@ -7130,9 +7138,13 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/c++/7/initializer_list:
 
+/home/panda/franka_emika_ws/src/libfranka/include/franka/rate_limiting.h:
+
 /usr/include/c++/7/bits/exception_defines.h:
 
 /usr/include/boost/move/utility_core.hpp:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -7162,15 +7174,11 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/date_time/posix_time/conversion.hpp:
 
-/home/panda/libfranka/include/franka/log.h:
-
 /usr/include/boost/preprocessor/identity.hpp:
 
 /usr/include/c++/7/bits/concept_check.h:
 
 /usr/include/boost/utility/base_from_member.hpp:
-
-/home/panda/libfranka/include/franka/command_types.h:
 
 /usr/include/boost/predef/os/solaris.h:
 
@@ -7252,6 +7260,18 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
+/opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h:
+
+/usr/include/boost/predef/compiler/microtec.h:
+
+/usr/include/boost/predef/os/irix.h:
+
+/usr/include/stdio.h:
+
+/usr/include/boost/preprocessor/seq/size.hpp:
+
+/usr/include/c++/7/bits/locale_classes.tcc:
+
 /usr/include/boost/assert.hpp:
 
 /opt/ros/melodic/include/ros/single_subscriber_publisher.h:
@@ -7299,6 +7319,10 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/cerrno.hpp:
 
 /usr/include/c++/7/bits/stl_construct.h:
+
+/home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h:
+
+/usr/include/boost/mpl/aux_/config/gpu.hpp:
 
 /usr/include/c++/7/bits/uniform_int_dist.h:
 
@@ -7390,33 +7414,21 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/utility.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/boost/predef/version_number.h:
+
 /usr/include/boost/predef/library/c/zos.h:
 
 /usr/include/c++/7/bits/parse_numbers.h:
 
-/usr/include/boost/mpl/bind_fwd.hpp:
+/usr/include/boost/date_time/posix_time/posix_time_system.hpp:
 
-/usr/include/boost/date_time/time_system_split.hpp:
+/usr/include/boost/mpl/aux_/advance_forward.hpp:
 
-/home/panda/libfranka/include/franka/exception.h:
+/usr/include/boost/function.hpp:
 
-/usr/include/boost/numeric/conversion/detail/sign_mixture.hpp:
-
-/usr/include/boost/system/system_error.hpp:
-
-/usr/include/boost/mpl/aux_/config/integral.hpp:
-
-/opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h:
-
-/usr/include/boost/predef/compiler/microtec.h:
-
-/usr/include/boost/predef/os/irix.h:
-
-/usr/include/stdio.h:
-
-/usr/include/boost/preprocessor/seq/size.hpp:
-
-/usr/include/c++/7/bits/locale_classes.tcc:
+/home/panda/franka_emika_ws/src/libfranka/include/franka/log.h:
 
 /usr/include/boost/predef/other.h:
 
@@ -7448,7 +7460,7 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/bind.hpp:
 
-/home/panda/libfranka/include/franka/duration.h:
+/home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h:
 
 /usr/include/boost/type_traits/is_member_pointer.hpp:
 
@@ -7503,6 +7515,12 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/predef/compiler/compaq.h:
 
 /usr/include/boost/predef/library/std/msl.h:
+
+/usr/include/boost/numeric/conversion/detail/sign_mixture.hpp:
+
+/usr/include/boost/system/system_error.hpp:
+
+/usr/include/boost/mpl/aux_/config/integral.hpp:
 
 /usr/include/boost/iterator/iterator_concepts.hpp:
 
@@ -7633,8 +7651,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/move/detail/unique_ptr_meta_utils.hpp:
 
 /usr/include/boost/algorithm/string/find_iterator.hpp:
-
-/home/panda/libfranka/include/franka/control_types.h:
 
 /usr/include/boost/predef/detail/test.h:
 
@@ -7852,8 +7868,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/mpl/assert.hpp:
 
-/usr/include/boost/mpl/aux_/config/gpu.hpp:
-
 /usr/include/boost/mpl/aux_/arity_spec.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
@@ -8014,9 +8028,9 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/type_traits/add_volatile.hpp:
 
-/usr/include/log4cxx/helpers/objectimpl.h:
-
 /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h:
+
+/usr/include/log4cxx/helpers/objectimpl.h:
 
 /usr/include/boost/mpl/numeric_cast.hpp:
 
@@ -8082,8 +8096,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp:
 
-/home/panda/libfranka/include/franka/lowpass_filter.h:
-
 /usr/include/boost/exception_ptr.hpp:
 
 /opt/ros/melodic/include/ros/rate.h:
@@ -8121,8 +8133,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/bind/bind_mf2_cc.hpp:
 
 /usr/include/boost/mpl/equal_to.hpp:
-
-/usr/include/boost/concept/usage.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/not_equal_to.hpp:
 
@@ -8237,8 +8247,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/is_placeholder.hpp:
 
 /usr/include/boost/preprocessor/slot/slot.hpp:
-
-/home/panda/libfranka/include/franka/rate_limiting.h:
 
 /usr/include/boost/function/function_base.hpp:
 
@@ -8432,6 +8440,8 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/preprocessor/seq/for_each_i.hpp:
 
+/home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h:
+
 /usr/include/boost/preprocessor/seq/enum.hpp:
 
 /usr/include/boost/optional/detail/optional_reference_spec.hpp:
@@ -8582,8 +8592,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /usr/include/boost/predef/library/c/gnu.h:
 
-/home/panda/libfranka/include/franka/errors.h:
-
 /usr/include/boost/none_t.hpp:
 
 /usr/include/boost/functional/hash.hpp:
@@ -8591,8 +8599,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/boost/functional/hash/detail/float_functions.hpp:
 
 /usr/include/boost/integer/static_log2.hpp:
-
-/home/panda/libfranka/include/franka/robot_state.h:
 
 /usr/include/c++/7/typeindex:
 
@@ -8617,8 +8623,6 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 /usr/include/c++/7/cctype:
 
 /usr/include/boost/type_traits/has_nothrow_assign.hpp:
-
-/usr/include/boost/move/adl_move_swap.hpp:
 
 /usr/include/boost/optional/detail/optional_swap.hpp:
 
@@ -8776,9 +8780,9 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_hw.h:
 
-/usr/include/c++/7/bits/char_traits.h:
+/usr/include/boost/concept/usage.hpp:
 
-/home/panda/libfranka/include/franka/robot.h:
+/home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h:
 
 /usr/include/c++/7/mutex:
 
@@ -8846,11 +8850,7 @@ franka_ros/franka_hw/CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o: /home/pand
 
 /opt/ros/melodic/include/urdf/visibility_control.hpp:
 
-/usr/include/boost/move/detail/config_end.hpp:
-
-/usr/include/boost/algorithm/string/case_conv.hpp:
-
-/home/panda/libfranka/include/franka/model.h:
+/home/panda/franka_emika_ws/src/libfranka/include/franka/model.h:
 
 /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h:
 

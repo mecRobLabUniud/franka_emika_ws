@@ -1492,17 +1492,17 @@ franka_ros/franka_control/CMakeFiles/franka_control_node.dir/src/franka_control_
  /opt/ros/melodic/include/controller_manager_msgs/SwitchControllerRequest.h
  /opt/ros/melodic/include/controller_manager_msgs/SwitchControllerResponse.h
  /opt/ros/melodic/include/controller_manager/controller_loader_interface.h
- /home/panda/libfranka/include/franka/exception.h
- /home/panda/libfranka/include/franka/log.h
- /home/panda/libfranka/include/franka/control_types.h
- /home/panda/libfranka/include/franka/robot_state.h
- /home/panda/libfranka/include/franka/duration.h
- /home/panda/libfranka/include/franka/errors.h
- /home/panda/libfranka/include/franka/robot.h
- /home/panda/libfranka/include/franka/command_types.h
- /home/panda/libfranka/include/franka/lowpass_filter.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/exception.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/log.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/robot.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/command_types.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/lowpass_filter.h
  /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_hw.h
- /home/panda/libfranka/include/franka/rate_limiting.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/rate_limiting.h
  /opt/ros/melodic/include/hardware_interface/joint_command_interface.h
  /opt/ros/melodic/include/hardware_interface/internal/hardware_resource_manager.h
  /opt/ros/melodic/include/hardware_interface/joint_state_interface.h
@@ -1530,7 +1530,7 @@ franka_ros/franka_control/CMakeFiles/franka_control_node.dir/src/franka_control_
  /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_cartesian_command_interface.h
  /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h
  /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h
- /home/panda/libfranka/include/franka/model.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/model.h
  /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model.h
  /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/model_base.h
  /home/panda/franka_emika_ws/src/franka_ros/franka_hw/include/franka_hw/resource_helpers.h

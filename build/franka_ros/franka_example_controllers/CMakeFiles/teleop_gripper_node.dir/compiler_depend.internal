@@ -4,7 +4,7 @@
 franka_ros/franka_example_controllers/CMakeFiles/teleop_gripper_node.dir/src/teleop_gripper_node.cpp.o
  /home/panda/franka_emika_ws/src/franka_ros/franka_example_controllers/src/teleop_gripper_node.cpp
  /usr/include/stdc-predef.h
- /home/panda/libfranka/include/franka/gripper.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/gripper.h
  /usr/include/c++/7/cstdint
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h
  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h
@@ -173,7 +173,7 @@ franka_ros/franka_example_controllers/CMakeFiles/teleop_gripper_node.dir/src/tel
  /usr/include/c++/7/bits/atomic_base.h
  /usr/include/c++/7/bits/atomic_lockfree_defines.h
  /usr/include/c++/7/backward/auto_ptr.h
- /home/panda/libfranka/include/franka/gripper_state.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/gripper_state.h
  /usr/include/c++/7/ostream
  /usr/include/c++/7/ios
  /usr/include/c++/7/bits/ios_base.h
@@ -194,7 +194,7 @@ franka_ros/franka_example_controllers/CMakeFiles/teleop_gripper_node.dir/src/tel
  /usr/include/c++/7/bits/locale_facets.tcc
  /usr/include/c++/7/bits/basic_ios.tcc
  /usr/include/c++/7/bits/ostream.tcc
- /home/panda/libfranka/include/franka/duration.h
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h
  /usr/include/c++/7/chrono
  /usr/include/c++/7/ratio
  /usr/include/c++/7/limits
