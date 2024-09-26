@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(franka_hw_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/home/panda/libfranka/include " STREQUAL " ")
+if(NOT "include;/home/panda/franka_emika_ws/src/libfranka/include " STREQUAL " ")
   set(franka_hw_INCLUDE_DIRS "")
-  set(_include_dirs "include;/home/panda/libfranka/include")
+  set(_include_dirs "include;/home/panda/franka_emika_ws/src/libfranka/include")
   if(NOT "https://github.com/frankaemika/franka_ros/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/frankaemika/franka_ros/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/franka_hw " STREQUAL " ")
@@ -116,7 +116,7 @@ if(NOT "include;/home/panda/libfranka/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "franka_hw;franka_control_services;/home/panda/libfranka/build/libfranka.so.0.8.0")
+set(libraries "franka_hw;franka_control_services;/home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")

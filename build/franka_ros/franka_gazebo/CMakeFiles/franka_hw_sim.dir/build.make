@@ -177,7 +177,7 @@ franka_hw_sim_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/librosconsole_bridge.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so
-/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/libtf_conversions.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/libkdl_conversions.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
@@ -213,7 +213,7 @@ franka_hw_sim_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/liblapack.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
@@ -261,7 +261,7 @@ franka_hw_sim_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libavutil.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/libeigen_conversions.so
-/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/libcombined_robot_hw.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/liburdf.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so
@@ -270,8 +270,8 @@ franka_hw_sim_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/liburdfdom_world.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/librosconsole_bridge.so
-/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/libfranka/build/libfranka.so.0.8.0
-/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/libtf_conversions.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/libkdl_conversions.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
@@ -307,7 +307,7 @@ franka_hw_sim_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so: franka_ros/franka_gazebo/CMakeFiles/franka_hw_sim.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panda/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library /home/panda/franka_emika_ws/devel/lib/libfranka_hw_sim.so"
 	cd /home/panda/franka_emika_ws/build/franka_ros/franka_gazebo && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/franka_hw_sim.dir/link.txt --verbose=$(VERBOSE)

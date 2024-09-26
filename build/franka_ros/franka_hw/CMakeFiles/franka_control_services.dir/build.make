@@ -92,7 +92,7 @@ franka_control_services_EXTERNAL_OBJECTS =
 
 /home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so: franka_ros/franka_hw/CMakeFiles/franka_control_services.dir/src/services.cpp.o
 /home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so: franka_ros/franka_hw/CMakeFiles/franka_control_services.dir/build.make
-/home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so: /opt/ros/melodic/lib/libactionlib.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so: /opt/ros/melodic/lib/libcombined_robot_hw.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so: /opt/ros/melodic/lib/liburdf.so

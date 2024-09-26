@@ -94,7 +94,7 @@ def listener():
         if not arg == []:         
             R = arg[0] 
 
-            file = open('/home/panda/Desktop/demo/rotation_matrix.txt', 'w')
+            file = open('/home/panda/Documents/Data_Collision_Avoidance/rotation_matrix.txt', 'w')
 
             for i in range(4):
                 

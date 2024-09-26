@@ -92,11 +92,11 @@ franka_state_controller_EXTERNAL_OBJECTS =
 
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: franka_ros/franka_control/CMakeFiles/franka_state_controller.dir/src/franka_state_controller.cpp.o
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: franka_ros/franka_control/CMakeFiles/franka_state_controller.dir/build.make
-/home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /opt/ros/melodic/lib/libcontroller_manager.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /home/panda/franka_emika_ws/devel/lib/libfranka_hw.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so
-/home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /opt/ros/melodic/lib/libcombined_robot_hw.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /opt/ros/melodic/lib/liburdf.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so
@@ -137,7 +137,7 @@ franka_state_controller_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so: franka_ros/franka_control/CMakeFiles/franka_state_controller.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panda/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/panda/franka_emika_ws/devel/lib/libfranka_state_controller.so"
 	cd /home/panda/franka_emika_ws/build/franka_ros/franka_control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/franka_state_controller.dir/link.txt --verbose=$(VERBOSE)

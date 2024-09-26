@@ -92,7 +92,7 @@ teleop_gripper_node_EXTERNAL_OBJECTS =
 
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: franka_ros/franka_example_controllers/CMakeFiles/teleop_gripper_node.dir/src/teleop_gripper_node.cpp.o
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: franka_ros/franka_example_controllers/CMakeFiles/teleop_gripper_node.dir/build.make
-/home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /opt/ros/melodic/lib/libeigen_conversions.so
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/franka_emika_ws/devel/lib/libfranka_hw.so
@@ -106,7 +106,7 @@ teleop_gripper_node_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /opt/ros/melodic/lib/librosconsole_bridge.so
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so
-/home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /opt/ros/melodic/lib/libtf_conversions.so
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /opt/ros/melodic/lib/libkdl_conversions.so
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
@@ -142,8 +142,8 @@ teleop_gripper_node_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/libfranka/build/libfranka.so.0.8.0
-/home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node: franka_ros/franka_example_controllers/CMakeFiles/teleop_gripper_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panda/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/panda/franka_emika_ws/devel/lib/franka_example_controllers/teleop_gripper_node"
 	cd /home/panda/franka_emika_ws/build/franka_ros/franka_example_controllers && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/teleop_gripper_node.dir/link.txt --verbose=$(VERBOSE)

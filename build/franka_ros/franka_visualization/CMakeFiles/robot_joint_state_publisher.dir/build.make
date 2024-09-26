@@ -92,7 +92,7 @@ robot_joint_state_publisher_EXTERNAL_OBJECTS =
 
 /home/panda/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher: franka_ros/franka_visualization/CMakeFiles/robot_joint_state_publisher.dir/src/robot_joint_state_publisher.cpp.o
 /home/panda/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher: franka_ros/franka_visualization/CMakeFiles/robot_joint_state_publisher.dir/build.make
-/home/panda/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher: /opt/ros/melodic/lib/libroscpp.so
 /home/panda/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 /home/panda/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher: /opt/ros/melodic/lib/librosconsole.so

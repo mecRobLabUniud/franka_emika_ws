@@ -26,6 +26,15 @@ AVFORMAT_LIBRARY_avformat:FILEPATH=/usr/lib/x86_64-linux-gnu/libavformat.so
 //Path to a library.
 AVUTIL_LIBRARY_avutil:FILEPATH=/usr/lib/x86_64-linux-gnu/libavutil.so
 
+//Build with code coverage
+BUILD_COVERAGE:BOOL=OFF
+
+//Build documentation
+BUILD_DOCUMENTATION:BOOL=OFF
+
+//Build example code
+BUILD_EXAMPLES:BOOL=ON
+
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
@@ -34,6 +43,9 @@ BUILD_GTEST:BOOL=OFF
 
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
+
+//Build tests
+BUILD_TESTS:BOOL=ON
 
 //Use OpenMP
 BUILD_WITH_OPENMP:BOOL=OFF
@@ -221,8 +233,56 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
+//User executables (bin)
+CMAKE_INSTALL_BINDIR:PATH=bin
+
+//Read-only architecture-independent data (DATAROOTDIR)
+CMAKE_INSTALL_DATADIR:PATH=
+
+//Read-only architecture-independent data root (share)
+CMAKE_INSTALL_DATAROOTDIR:PATH=share
+
+//Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
+CMAKE_INSTALL_DOCDIR:PATH=
+
+//C header files (include)
+CMAKE_INSTALL_INCLUDEDIR:PATH=include
+
+//Info documentation (DATAROOTDIR/info)
+CMAKE_INSTALL_INFODIR:PATH=
+
+//Object code libraries (lib)
+CMAKE_INSTALL_LIBDIR:PATH=lib
+
+//Program executables (libexec)
+CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
+
+//Locale-dependent data (DATAROOTDIR/locale)
+CMAKE_INSTALL_LOCALEDIR:PATH=
+
+//Modifiable single-machine data (var)
+CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
+
+//Man documentation (DATAROOTDIR/man)
+CMAKE_INSTALL_MANDIR:PATH=
+
+//C header files for non-gcc (/usr/include)
+CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
+
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/home/panda/franka_emika_ws/install
+
+//Run-time variable data (LOCALSTATEDIR/run)
+CMAKE_INSTALL_RUNSTATEDIR:PATH=
+
+//System admin executables (sbin)
+CMAKE_INSTALL_SBINDIR:PATH=sbin
+
+//Modifiable architecture-independent data (com)
+CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
+
+//Read-only single-machine data (etc)
+CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -267,6 +327,21 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Project
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=0.8.0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=8
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -330,6 +405,24 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Enable to build RPM source packages
+CPACK_SOURCE_RPM:BOOL=OFF
+
+//Enable to build TBZ2 source packages
+CPACK_SOURCE_TBZ2:BOOL=ON
+
+//Enable to build TGZ source packages
+CPACK_SOURCE_TGZ:BOOL=ON
+
+//Enable to build TXZ source packages
+CPACK_SOURCE_TXZ:BOOL=ON
+
+//Enable to build TZ source packages
+CPACK_SOURCE_TZ:BOOL=ON
+
+//Enable to build ZIP source packages
+CPACK_SOURCE_ZIP:BOOL=OFF
+
 //Path to a file.
 CPPZMQ_INCLUDE_DIRS:PATH=/usr/include
 
@@ -366,6 +459,9 @@ DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 //Doxygen found
 DOXYGEN_FOUND:BOOL=TRUE
 
+//'dpkg' executable
+DPKG_PROG:FILEPATH=/usr/bin/dpkg
+
 //Path to a program.
 EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 
@@ -376,7 +472,7 @@ EMPY_SCRIPT:STRING=/usr/bin/empy
 Eigen3_DIR:PATH=/usr/lib/cmake/eigen3
 
 //No help, variable specified on the command line.
-Franka_DIR:PATH=/home/panda/libfranka/build
+Franka_DIR:PATH=/home/panda/franka_emika_ws/src/libfranka/build
 
 //Path to a file.
 FreeImage_INCLUDE_DIRS:PATH=/usr/include
@@ -696,6 +792,15 @@ PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2
 //Specify specific Python version to use ('major.minor' or 'major')
 PYTHON_VERSION:STRING=2
 
+//The directory containing a CMake configuration file for PocoFoundation.
+PocoFoundation_DIR:PATH=/usr/lib/cmake/Poco
+
+//The directory containing a CMake configuration file for PocoNet.
+PocoNet_DIR:PATH=/usr/lib/cmake/Poco
+
+//The directory containing a CMake configuration file for Poco.
+Poco_DIR:PATH=/usr/lib/cmake/Poco
+
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/home/panda/franka_emika_ws/build
 
@@ -747,6 +852,9 @@ SET_USER_BREAK_AT_STARTUP:BOOL=OFF
 //Name of the computer/site where compile is being run
 SITE:STRING=panda2
 
+//Treat warnings as errors
+STRICT:BOOL=OFF
+
 //Path to a library.
 SWSCALE_LIBRARY_swscale:FILEPATH=/usr/lib/x86_64-linux-gnu/libswscale.so
 
@@ -759,6 +867,9 @@ Simbody_LIBRARIES:STRING=/usr/lib/x86_64-linux-gnu/libSimTKsimbody.so;/usr/lib/x
 //Simbody static libraries
 Simbody_STATIC_LIBRARIES:STRING=Simbody_STATIC_LIBRARIES-NOTFOUND
 
+//Directory for third-party sources
+THIRDPARTY_SOURCES_DIR:PATH=/home/panda/franka_emika_ws/src/3rdparty
+
 //Path to a library.
 TINYXML2_LIBRARY_tinyxml2:FILEPATH=/usr/lib/x86_64-linux-gnu/libtinyxml2.so
 
@@ -770,6 +881,9 @@ UBUNTU_BIONIC:BOOL=TRUE
 
 //Path to a library.
 UUID_LIBRARY_uuid:FILEPATH=/usr/lib/x86_64-linux-gnu/libuuid.so
+
+//Path to a program.
+VALGRIND_PROG:FILEPATH=VALGRIND_PROG-NOTFOUND
 
 //Path to a library.
 YAML_LIBRARY_yaml:FILEPATH=/usr/lib/x86_64-linux-gnu/libyaml.so
@@ -945,6 +1059,12 @@ dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
 //The directory containing a CMake configuration file for eigen_conversions.
 eigen_conversions_DIR:PATH=/opt/ros/melodic/share/eigen_conversions/cmake
 
+//Dependencies for the target
+examples_common_LIB_DEPENDS:STATIC=general;Franka::Franka;general;Eigen3::Eigen3;
+
+//Dependencies for the target
+franka_LIB_DEPENDS:STATIC=general;Poco::Foundation;general;Poco::Net;general;Eigen3::Eigen3;
+
 //Value Computed by CMake
 franka_control_BINARY_DIR:STATIC=/home/panda/franka_emika_ws/build/franka_ros/franka_control
 
@@ -976,7 +1096,7 @@ franka_example_controllers_DIR:PATH=/home/panda/franka_emika_ws/devel/share/fran
 franka_example_controllers_IS_TOP_LEVEL:STATIC=OFF
 
 //Dependencies for the target
-franka_example_controllers_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libeigen_conversions.so;general;franka_hw;general;franka_control_services;general;/opt/ros/melodic/lib/libcombined_robot_hw.so;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;franka_gripper;general;/home/panda/libfranka/build/libfranka.so.0.8.0;general;/opt/ros/melodic/lib/libtf_conversions.so;general;/opt/ros/melodic/lib/libkdl_conversions.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+franka_example_controllers_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libeigen_conversions.so;general;franka_hw;general;franka_control_services;general;/opt/ros/melodic/lib/libcombined_robot_hw.so;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;franka_gripper;general;/home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0;general;/opt/ros/melodic/lib/libtf_conversions.so;general;/opt/ros/melodic/lib/libkdl_conversions.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //Value Computed by CMake
 franka_example_controllers_SOURCE_DIR:STATIC=/home/panda/franka_emika_ws/src/franka_ros/franka_example_controllers
@@ -1006,7 +1126,7 @@ franka_gripper_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodi
 franka_gripper_SOURCE_DIR:STATIC=/home/panda/franka_emika_ws/src/franka_ros/franka_gripper
 
 //Dependencies for the target
-franka_gripper_sim_LIB_DEPENDS:STATIC=general;BulletSoftBody;general;BulletDynamics;general;BulletCollision;general;LinearMath;general;/usr/lib/x86_64-linux-gnu/libSimTKsimbody.so;general;/usr/lib/x86_64-linux-gnu/libSimTKmath.so;general;/usr/lib/x86_64-linux-gnu/libSimTKcommon.so;general;/usr/lib/x86_64-linux-gnu/libblas.so;general;/usr/lib/x86_64-linux-gnu/liblapack.so;general;/usr/lib/x86_64-linux-gnu/libblas.so;general;pthread;general;rt;general;dl;general;m;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_client.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;-pthread;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-pthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;ignition-math4::ignition-math4;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;-pthread;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;general;ignition-math4::ignition-math4;general;ignition-transport4::ignition-transport4;general;ignition-msgs1::ignition-msgs1;general;ignition-common1::ignition-common1;general;ignition-fuel_tools1::ignition-fuel_tools1;general;/opt/ros/melodic/lib/libgazebo_ros_control.so;general;/opt/ros/melodic/lib/libdefault_robot_hw_sim.so;general;/opt/ros/melodic/lib/libkdl_parser.so;general;/opt/ros/melodic/lib/libcontrol_toolbox.so;general;/opt/ros/melodic/lib/libcontroller_manager.so;general;/opt/ros/melodic/lib/libtransmission_interface_parser.so;general;/opt/ros/melodic/lib/libtransmission_interface_loader.so;general;/opt/ros/melodic/lib/libtransmission_interface_loader_plugins.so;general;franka_example_controllers;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libeigen_conversions.so;general;franka_hw;general;franka_control_services;general;/opt/ros/melodic/lib/libcombined_robot_hw.so;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;franka_gripper;general;/home/panda/libfranka/build/libfranka.so.0.8.0;general;/opt/ros/melodic/lib/libtf_conversions.so;general;/opt/ros/melodic/lib/libkdl_conversions.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+franka_gripper_sim_LIB_DEPENDS:STATIC=general;BulletSoftBody;general;BulletDynamics;general;BulletCollision;general;LinearMath;general;/usr/lib/x86_64-linux-gnu/libSimTKsimbody.so;general;/usr/lib/x86_64-linux-gnu/libSimTKmath.so;general;/usr/lib/x86_64-linux-gnu/libSimTKcommon.so;general;/usr/lib/x86_64-linux-gnu/libblas.so;general;/usr/lib/x86_64-linux-gnu/liblapack.so;general;/usr/lib/x86_64-linux-gnu/libblas.so;general;pthread;general;rt;general;dl;general;m;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_client.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;-pthread;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-pthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;ignition-math4::ignition-math4;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;-pthread;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;general;ignition-math4::ignition-math4;general;ignition-transport4::ignition-transport4;general;ignition-msgs1::ignition-msgs1;general;ignition-common1::ignition-common1;general;ignition-fuel_tools1::ignition-fuel_tools1;general;/opt/ros/melodic/lib/libgazebo_ros_control.so;general;/opt/ros/melodic/lib/libdefault_robot_hw_sim.so;general;/opt/ros/melodic/lib/libkdl_parser.so;general;/opt/ros/melodic/lib/libcontrol_toolbox.so;general;/opt/ros/melodic/lib/libcontroller_manager.so;general;/opt/ros/melodic/lib/libtransmission_interface_parser.so;general;/opt/ros/melodic/lib/libtransmission_interface_loader.so;general;/opt/ros/melodic/lib/libtransmission_interface_loader_plugins.so;general;franka_example_controllers;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libeigen_conversions.so;general;franka_hw;general;franka_control_services;general;/opt/ros/melodic/lib/libcombined_robot_hw.so;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;franka_gripper;general;/home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0;general;/opt/ros/melodic/lib/libtf_conversions.so;general;/opt/ros/melodic/lib/libkdl_conversions.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //Value Computed by CMake
 franka_hw_BINARY_DIR:STATIC=/home/panda/franka_emika_ws/build/franka_ros/franka_hw
@@ -1024,7 +1144,7 @@ franka_hw_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib
 franka_hw_SOURCE_DIR:STATIC=/home/panda/franka_emika_ws/src/franka_ros/franka_hw
 
 //Dependencies for the target
-franka_hw_sim_LIB_DEPENDS:STATIC=general;BulletSoftBody;general;BulletDynamics;general;BulletCollision;general;LinearMath;general;/usr/lib/x86_64-linux-gnu/libSimTKsimbody.so;general;/usr/lib/x86_64-linux-gnu/libSimTKmath.so;general;/usr/lib/x86_64-linux-gnu/libSimTKcommon.so;general;/usr/lib/x86_64-linux-gnu/libblas.so;general;/usr/lib/x86_64-linux-gnu/liblapack.so;general;/usr/lib/x86_64-linux-gnu/libblas.so;general;pthread;general;rt;general;dl;general;m;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_client.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;-pthread;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-pthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;ignition-math4::ignition-math4;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;-pthread;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;general;ignition-math4::ignition-math4;general;ignition-transport4::ignition-transport4;general;ignition-msgs1::ignition-msgs1;general;ignition-common1::ignition-common1;general;ignition-fuel_tools1::ignition-fuel_tools1;general;/opt/ros/melodic/lib/libgazebo_ros_control.so;general;/opt/ros/melodic/lib/libdefault_robot_hw_sim.so;general;/opt/ros/melodic/lib/libkdl_parser.so;general;/opt/ros/melodic/lib/libcontrol_toolbox.so;general;/opt/ros/melodic/lib/libcontroller_manager.so;general;/opt/ros/melodic/lib/libtransmission_interface_parser.so;general;/opt/ros/melodic/lib/libtransmission_interface_loader.so;general;/opt/ros/melodic/lib/libtransmission_interface_loader_plugins.so;general;franka_example_controllers;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libeigen_conversions.so;general;franka_hw;general;franka_control_services;general;/opt/ros/melodic/lib/libcombined_robot_hw.so;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;franka_gripper;general;/home/panda/libfranka/build/libfranka.so.0.8.0;general;/opt/ros/melodic/lib/libtf_conversions.so;general;/opt/ros/melodic/lib/libkdl_conversions.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;general;Franka::Franka;general;orocos-kdl;
+franka_hw_sim_LIB_DEPENDS:STATIC=general;BulletSoftBody;general;BulletDynamics;general;BulletCollision;general;LinearMath;general;/usr/lib/x86_64-linux-gnu/libSimTKsimbody.so;general;/usr/lib/x86_64-linux-gnu/libSimTKmath.so;general;/usr/lib/x86_64-linux-gnu/libSimTKcommon.so;general;/usr/lib/x86_64-linux-gnu/libblas.so;general;/usr/lib/x86_64-linux-gnu/liblapack.so;general;/usr/lib/x86_64-linux-gnu/libblas.so;general;pthread;general;rt;general;dl;general;m;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_client.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;-pthread;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-pthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;ignition-math4::ignition-math4;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;-pthread;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;general;ignition-math4::ignition-math4;general;ignition-transport4::ignition-transport4;general;ignition-msgs1::ignition-msgs1;general;ignition-common1::ignition-common1;general;ignition-fuel_tools1::ignition-fuel_tools1;general;/opt/ros/melodic/lib/libgazebo_ros_control.so;general;/opt/ros/melodic/lib/libdefault_robot_hw_sim.so;general;/opt/ros/melodic/lib/libkdl_parser.so;general;/opt/ros/melodic/lib/libcontrol_toolbox.so;general;/opt/ros/melodic/lib/libcontroller_manager.so;general;/opt/ros/melodic/lib/libtransmission_interface_parser.so;general;/opt/ros/melodic/lib/libtransmission_interface_loader.so;general;/opt/ros/melodic/lib/libtransmission_interface_loader_plugins.so;general;franka_example_controllers;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libeigen_conversions.so;general;franka_hw;general;franka_control_services;general;/opt/ros/melodic/lib/libcombined_robot_hw.so;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;franka_gripper;general;/home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0;general;/opt/ros/melodic/lib/libtf_conversions.so;general;/opt/ros/melodic/lib/libkdl_conversions.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;general;Franka::Franka;general;orocos-kdl;
 
 //Value Computed by CMake
 franka_msgs_BINARY_DIR:STATIC=/home/panda/franka_emika_ws/build/franka_ros/franka_msgs
@@ -1048,7 +1168,7 @@ franka_ros_IS_TOP_LEVEL:STATIC=OFF
 franka_ros_SOURCE_DIR:STATIC=/home/panda/franka_emika_ws/src/franka_ros/franka_ros
 
 //Dependencies for the target
-franka_state_controller_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib/libcontroller_manager.so;general;franka_hw;general;franka_control_services;general;/home/panda/libfranka/build/libfranka.so.0.8.0;general;/opt/ros/melodic/lib/libcombined_robot_hw.so;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
+franka_state_controller_LIB_DEPENDS:STATIC=general;Franka::Franka;general;/opt/ros/melodic/lib/libcontroller_manager.so;general;franka_hw;general;franka_control_services;general;/home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0;general;/opt/ros/melodic/lib/libcombined_robot_hw.so;general;/opt/ros/melodic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/melodic/lib/librosconsole_bridge.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/librealtime_tools.so;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //Value Computed by CMake
 franka_visualization_BINARY_DIR:STATIC=/home/panda/franka_emika_ws/build/franka_ros/franka_visualization
@@ -1200,6 +1320,24 @@ kdl_parser_DIR:PATH=/opt/ros/melodic/share/kdl_parser/cmake
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libkdl_conversions.so
+
+//Value Computed by CMake
+libfranka-examples_BINARY_DIR:STATIC=/home/panda/franka_emika_ws/build/libfranka/examples
+
+//Value Computed by CMake
+libfranka-examples_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+libfranka-examples_SOURCE_DIR:STATIC=/home/panda/franka_emika_ws/src/libfranka/examples
+
+//Value Computed by CMake
+libfranka_BINARY_DIR:STATIC=/home/panda/franka_emika_ws/build
+
+//Value Computed by CMake
+libfranka_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+libfranka_SOURCE_DIR:STATIC=/home/panda/franka_emika_ws/src
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -1741,8 +1879,40 @@ CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/panda/franka_emika_ws/src
+//ADVANCED property for variable: CMAKE_INSTALL_BINDIR
+CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATADIR
+CMAKE_INSTALL_DATADIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATAROOTDIR
+CMAKE_INSTALL_DATAROOTDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DOCDIR
+CMAKE_INSTALL_DOCDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INCLUDEDIR
+CMAKE_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INFODIR
+CMAKE_INSTALL_INFODIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBDIR
+CMAKE_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBEXECDIR
+CMAKE_INSTALL_LIBEXECDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALEDIR
+CMAKE_INSTALL_LOCALEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALSTATEDIR
+CMAKE_INSTALL_LOCALSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_MANDIR
+CMAKE_INSTALL_MANDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_OLDINCLUDEDIR
+CMAKE_INSTALL_OLDINCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_RUNSTATEDIR
+CMAKE_INSTALL_RUNSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SBINDIR
+CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
+CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
+CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
@@ -1803,6 +1973,18 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_RPM
+CPACK_SOURCE_RPM-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TBZ2
+CPACK_SOURCE_TBZ2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TGZ
+CPACK_SOURCE_TGZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TXZ
+CPACK_SOURCE_TXZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_TZ
+CPACK_SOURCE_TZ-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CPACK_SOURCE_ZIP
+CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_DIR
 CURL_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CURL_INCLUDE_DIR
@@ -1917,6 +2099,12 @@ GTS_gts_INCLUDEDIR:INTERNAL=
 GTS_gts_LIBDIR:INTERNAL=
 GTS_gts_PREFIX:INTERNAL=
 GTS_gts_VERSION:INTERNAL=
+//Test HAVE_ASan
+HAVE_ASan:INTERNAL=1
+//Test HAVE_TSan
+HAVE_TSan:INTERNAL=1
+//Test HAVE_UBSan
+HAVE_UBSan:INTERNAL=1
 JSONCPP_CFLAGS:INTERNAL=-I/usr/include/jsoncpp
 JSONCPP_CFLAGS_I:INTERNAL=
 JSONCPP_CFLAGS_OTHER:INTERNAL=
@@ -2427,6 +2615,8 @@ _Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+//CMAKE_INSTALL_PREFIX during last run
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/home/panda/franka_emika_ws/install
 __pkg_config_arguments_AVCODEC:INTERNAL=libavcodec
 __pkg_config_arguments_AVDEVICE:INTERNAL=libavdevice >= 56.4.100
 __pkg_config_arguments_AVFORMAT:INTERNAL=libavformat

@@ -252,7 +252,7 @@ franka_example_controllers_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/src/dual_arm_cartesian_impedance_example_controller.cpp.o
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/src/teleop_joint_pd_example_controller.cpp.o
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/build.make
-/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /opt/ros/melodic/lib/libeigen_conversions.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/franka_emika_ws/devel/lib/libfranka_hw.so
@@ -266,7 +266,7 @@ franka_example_controllers_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /opt/ros/melodic/lib/librosconsole_bridge.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so
-/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /opt/ros/melodic/lib/libtf_conversions.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /opt/ros/melodic/lib/libkdl_conversions.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
@@ -302,8 +302,8 @@ franka_example_controllers_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/libfranka/build/libfranka.so.0.8.0
-/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so: franka_ros/franka_example_controllers/CMakeFiles/franka_example_controllers.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panda/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library /home/panda/franka_emika_ws/devel/lib/libfranka_example_controllers.so"
 	cd /home/panda/franka_emika_ws/build/franka_ros/franka_example_controllers && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/franka_example_controllers.dir/link.txt --verbose=$(VERBOSE)

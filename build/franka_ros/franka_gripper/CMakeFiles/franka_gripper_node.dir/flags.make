@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"franka_gripper\"
 
-CXX_INCLUDES = -I/home/panda/franka_emika_ws/devel/include -I/home/panda/franka_emika_ws/src/franka_ros/franka_gripper/include -isystem /opt/ros/melodic/include -isystem /opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /home/panda/libfranka/include
+CXX_INCLUDES = -I/home/panda/franka_emika_ws/devel/include -I/home/panda/franka_emika_ws/src/franka_ros/franka_gripper/include -isystem /opt/ros/melodic/include -isystem /opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /home/panda/franka_emika_ws/src/libfranka/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++14
 

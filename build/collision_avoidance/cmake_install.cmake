@@ -105,7 +105,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/collision_avoidance" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/collision_avoidance/catkin_generated/installspace/demo_stop_trajectory_traj.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/collision_avoidance" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/collision_avoidance/catkin_generated/installspace/demo_stop_event_traj.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

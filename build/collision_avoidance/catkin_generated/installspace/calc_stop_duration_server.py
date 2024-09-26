@@ -14,11 +14,11 @@ import time
 
 # Settings
 lbx = 0.01
-ubx = 0.5
+ubx = 0.4
 p1 = 1e6
 p2 = 1e5
 n = 10
-path_to_urdf = "/home/panda/Desktop/demo/panda_gaz.urdf"
+path_to_urdf = "/home/panda/franka_emika_ws/src/collision_avoidance/urdf/panda.urdf"
 root = "panda_link0"
 tip = "panda_link8"
 gravity_u2c = [0, 0, -9.81]                                                         # m/s^2                           
@@ -29,17 +29,21 @@ q_pp_lim = ca.DM([15, 7.5, 10, 12.5, 15, 20, 20])                               
 q_ppp_lim = ca.DM([7500, 3750, 5000, 6250, 7500, 10000, 10000])                     # rad/s^3
 tau_lim = ca.DM([87, 87, 87, 87, 12, 12, 12])                                       # Nm
 tau_p_lim = ca.DM([1000, 1000, 1000, 1000, 1000, 1000, 1000])                       # Nm/s
-toll = 0.8
+toll = 0.9
 
 sol = None
 stop_duration_prec = ubx
 
-def Cost(x, stop_duration_prec):
+
+
+def Cost(x):
+    global stop_duration_prec
 
     return x * p1 + ca.fabs(x - stop_duration_prec) * p2
 
-def TrajPoly5Symb(qi, qi_p, qi_pp, qf, qf_p, qf_pp, x, n):
 
+
+def TrajPoly5Symb(qi, qi_p, qi_pp, qf, qf_p, qf_pp, x, n):
     coeff = ca.SX.zeros(6,1)
 
     coeff[0] = qi
@@ -68,21 +72,19 @@ def TrajPoly5Symb(qi, qi_p, qi_pp, qf, qf_p, qf_pp, x, n):
     coeff[4] = coeff_1[1]
     coeff[5] = coeff_1[2]
 
-    # t = np.arange(0.0, x/n, x)
     t = ca.SX.zeros(n + 1, 1)
     for i in range(n + 1):
         t[i] = i * x / float(n)
 
     q = coeff[0] + coeff[1] * t + coeff[2] * t**2 + coeff[3] * t**3 + coeff[4] * t**4 + coeff[5] * t**5
-
     q_p = coeff[1] + 2 * coeff[2] * t + 3 * coeff[3] * t**2 + 4 * coeff[4] * t**3 + 5 * coeff[5] * t**4
-
     q_pp = 2 * coeff[2] + 6 * coeff[3] * t + 12 * coeff[4] * t**2 + 20 * coeff[5] * t**3
 
     return ca.horzcat(q, q_p, q_pp) 
 
-def Constraints(x, qi, qi_p, qi_pp):
 
+
+def Constraints(x, qi, qi_p, qi_pp):
     Q = ca.SX.zeros(n + 1, 7)
     Q_p = ca.SX.zeros(n + 1, 7)
     Q_pp = ca.SX.zeros(n + 1, 7)
@@ -109,14 +111,6 @@ def Constraints(x, qi, qi_p, qi_pp):
         tau[i,:] = id_sym(Q[i,:], Q_p[i,:], Q_pp[i,:])
         tau_p[i,:] = (tau[i,:] - tau[i - 1,:]) / (x / float(n))
 
-
-    # q_min = np.min(Q[:,i])
-    # q_max = np.max(Q[:,i])
-    # q_p_max = np.max(np.abs(Q_p[:,i]))
-    # q_pp_max = np.max(np.abs(Q_pp[:,i]))
-    # q_ppp_max = np.max(np.abs(Q_ppp[:,i]))
-    # tau_max = np.max(np.abs(tau[:,i]))
-    # tau_p_max = np.max(np.abs(tau_p[:,i]))
     q_min = ca.SX.zeros(7)
     q_max = ca.SX.zeros(7)
     q_p_max = ca.SX.zeros(7)
@@ -143,43 +137,40 @@ def Constraints(x, qi, qi_p, qi_pp):
 
     return ca.vertcat(c01, c02, c1, c2, c3, c4, c5)
 
+
+
 def CreateSolver():
-
     x = ca.SX.sym('x')
+    p = ca.SX.sym('p', 3, 7)
 
-    p = ca.SX.sym('p',4,7)
-
-    nlp = {'x':x, 'p':p, 'f':Cost(x, p[3,0]), 'g':Constraints(x, p[0,:], p[1,:], p[2,:])}
-
-    opts = {'ipopt':{'print_level':0, 'sb':'yes', 'max_iter':7}, 'print_time':0}
-
-    # opts = {'ipopt':{'max_iter':7}}
+    nlp = {'x':x, 'p':p, 'f':Cost(x), 'g':Constraints(x, p[0,:], p[1,:], p[2,:])}
+    opts = {'ipopt':{'print_level':0, 'sb':'yes', 'max_iter':10}, 'print_time':0}
 
     sol = ca.nlpsol('sol', 'ipopt', nlp, opts)
 
     return sol
 
-def HandleStopDurationOtt(req):
 
+
+def HandleStopDurationOtt(req):
     global stop_duration_prec
 
-    p = ca.DM([req.q, req.q_p, req.q_pp, [stop_duration_prec, stop_duration_prec, stop_duration_prec, stop_duration_prec, stop_duration_prec, stop_duration_prec, stop_duration_prec]])
+    p = ca.DM([req.q, req.q_p, req.q_pp])
     r = sol(x0 = stop_duration_prec, p = p, lbx = lbx, ubx = ubx, ubg = 0)
     
-    stop_duration = r['x'].__float__()
-    
+    stop_duration = r['x'].__float__()    
     stop_duration_prec = stop_duration
-
-    # print('Tempo ottimo calcolato in s: ' + str(stop_duration))
 
     return CalcStopDurationResponse(stop_duration)
 
-def CalcStopDurationOttServer():
 
+
+def CalcStopDurationOttServer():
     global sol
-    sol = CreateSolver()
 
     rospy.init_node('calc_stop_duration_server')
+
+    sol = CreateSolver()
 
     s = rospy.Service('calc_stop_duration', CalcStopDuration, HandleStopDurationOtt)
 
@@ -187,6 +178,7 @@ def CalcStopDurationOttServer():
 
     rospy.spin()
 
-if __name__ == "__main__":
 
+
+if __name__ == "__main__":
     CalcStopDurationOttServer()

@@ -92,7 +92,7 @@ franka_gripper_EXTERNAL_OBJECTS =
 
 /home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so: franka_ros/franka_gripper/CMakeFiles/franka_gripper.dir/src/franka_gripper.cpp.o
 /home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so: franka_ros/franka_gripper/CMakeFiles/franka_gripper.dir/build.make
-/home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so: /opt/ros/melodic/lib/libactionlib.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so: /opt/ros/melodic/lib/libroscpp.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_gripper.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so

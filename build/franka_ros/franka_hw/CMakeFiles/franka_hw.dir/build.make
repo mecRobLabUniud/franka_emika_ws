@@ -208,7 +208,7 @@ franka_hw_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw.so: /home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so
-/home/panda/franka_emika_ws/devel/lib/libfranka_hw.so: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/libfranka_hw.so: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw.so: /opt/ros/melodic/lib/libactionlib.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw.so: /opt/ros/melodic/lib/libcombined_robot_hw.so
 /home/panda/franka_emika_ws/devel/lib/libfranka_hw.so: /opt/ros/melodic/lib/liburdf.so

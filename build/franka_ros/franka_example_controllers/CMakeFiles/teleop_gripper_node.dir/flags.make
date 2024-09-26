@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"franka_example_controllers\"
 
-CXX_INCLUDES = -I/home/panda/franka_emika_ws/src/franka_ros/franka_hw/include -I/home/panda/franka_emika_ws/src/franka_ros/franka_gripper/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -isystem /home/panda/franka_emika_ws/devel/include -isystem /opt/ros/melodic/include -isystem /opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /home/panda/libfranka/include
+CXX_INCLUDES = -I/home/panda/franka_emika_ws/src/franka_ros/franka_hw/include -I/home/panda/franka_emika_ws/src/franka_ros/franka_gripper/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3 -isystem /home/panda/franka_emika_ws/devel/include -isystem /home/panda/franka_emika_ws/src/libfranka/include -isystem /opt/ros/melodic/include -isystem /opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++14
 

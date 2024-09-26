@@ -473,3 +473,48 @@ make[1]: Leaving directory '/home/panda/franka_emika_ws/build/CMakeFiles/CMakeTm
 
 
 
+Performing C++ SOURCE FILE Test HAVE_ASan succeeded with the following output:
+Change Dir: /home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_f44fc/fast && /usr/bin/make  -f CMakeFiles/cmTC_f44fc.dir/build.make CMakeFiles/cmTC_f44fc.dir/build
+make[1]: Entering directory '/home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f44fc.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_ASan  -g -O1 -fsanitize=address -o CMakeFiles/cmTC_f44fc.dir/src.cxx.o -c /home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f44fc
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f44fc.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_f44fc.dir/src.cxx.o -o cmTC_f44fc  -g -O1 -fsanitize=address 
+make[1]: Leaving directory '/home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_UBSan succeeded with the following output:
+Change Dir: /home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_13eb2/fast && /usr/bin/make  -f CMakeFiles/cmTC_13eb2.dir/build.make CMakeFiles/cmTC_13eb2.dir/build
+make[1]: Entering directory '/home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_13eb2.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_UBSan  -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined -o CMakeFiles/cmTC_13eb2.dir/src.cxx.o -c /home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_13eb2
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13eb2.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_13eb2.dir/src.cxx.o -o cmTC_13eb2  -g -O1 -fsanitize=undefined -fno-sanitize=alignment -fno-sanitize-recover=undefined 
+make[1]: Leaving directory '/home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_TSan succeeded with the following output:
+Change Dir: /home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9a9fa/fast && /usr/bin/make  -f CMakeFiles/cmTC_9a9fa.dir/build.make CMakeFiles/cmTC_9a9fa.dir/build
+make[1]: Entering directory '/home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9a9fa.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_TSan  -g -O1 -fsanitize=thread -o CMakeFiles/cmTC_9a9fa.dir/src.cxx.o -c /home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_9a9fa
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a9fa.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_9a9fa.dir/src.cxx.o -o cmTC_9a9fa  -g -O1 -fsanitize=thread 
+make[1]: Leaving directory '/home/panda/franka_emika_ws/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }

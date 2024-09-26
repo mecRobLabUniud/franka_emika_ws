@@ -976,8 +976,8 @@ franka_ros/franka_gripper/CMakeFiles/franka_gripper_node.dir/src/franka_gripper_
  /opt/ros/melodic/include/sensor_msgs/JointState.h \
  /opt/ros/melodic/include/ros/message_operations.h \
  /opt/ros/melodic/include/std_msgs/Header.h \
- /home/panda/libfranka/include/franka/gripper_state.h \
- /home/panda/libfranka/include/franka/duration.h \
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/gripper_state.h \
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/duration.h \
  /home/panda/franka_emika_ws/src/franka_ros/franka_gripper/include/franka_gripper/franka_gripper.h \
  /opt/ros/melodic/include/actionlib/server/simple_action_server.h \
  /usr/include/boost/thread/condition.hpp \
@@ -1243,12 +1243,12 @@ franka_ros/franka_gripper/CMakeFiles/franka_gripper_node.dir/src/franka_gripper_
  /opt/ros/melodic/include/control_msgs/GripperCommandResult.h \
  /opt/ros/melodic/include/control_msgs/GripperCommandActionFeedback.h \
  /opt/ros/melodic/include/control_msgs/GripperCommandFeedback.h \
- /home/panda/libfranka/include/franka/exception.h \
- /home/panda/libfranka/include/franka/log.h \
- /home/panda/libfranka/include/franka/control_types.h \
- /home/panda/libfranka/include/franka/robot_state.h \
- /home/panda/libfranka/include/franka/errors.h \
- /home/panda/libfranka/include/franka/gripper.h \
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/exception.h \
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/log.h \
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/control_types.h \
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/robot_state.h \
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/errors.h \
+ /home/panda/franka_emika_ws/src/libfranka/include/franka/gripper.h \
  /home/panda/franka_emika_ws/devel/include/franka_gripper/GraspAction.h \
  /home/panda/franka_emika_ws/devel/include/franka_gripper/GraspActionGoal.h \
  /home/panda/franka_emika_ws/devel/include/franka_gripper/GraspGoal.h \

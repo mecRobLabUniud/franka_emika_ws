@@ -131,7 +131,7 @@ franka_gripper_node_EXTERNAL_OBJECTS =
 /home/panda/franka_emika_ws/devel/lib/franka_gripper/franka_gripper_node: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 /home/panda/franka_emika_ws/devel/lib/franka_gripper/franka_gripper_node: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/panda/franka_emika_ws/devel/lib/franka_gripper/franka_gripper_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/panda/franka_emika_ws/devel/lib/franka_gripper/franka_gripper_node: /home/panda/libfranka/build/libfranka.so.0.8.0
+/home/panda/franka_emika_ws/devel/lib/franka_gripper/franka_gripper_node: /home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0
 /home/panda/franka_emika_ws/devel/lib/franka_gripper/franka_gripper_node: franka_ros/franka_gripper/CMakeFiles/franka_gripper_node.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panda/franka_emika_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/panda/franka_emika_ws/devel/lib/franka_gripper/franka_gripper_node"
 	cd /home/panda/franka_emika_ws/build/franka_ros/franka_gripper && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/franka_gripper_node.dir/link.txt --verbose=$(VERBOSE)
