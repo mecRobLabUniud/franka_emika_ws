@@ -27,23 +27,23 @@ You don't have to perform the marker calibration in case you haven't moved it
 Place the calibration tool (plastic cone with round base, grey or black) in the end effector with the screws
 Press the change mode button on the desk to enable free-ride mode (robot light should be white)
 To calibrate, write on terminal:
-'''shell script
+```shell script
 roslaunch collision_avoidance marker.launch 
-'''
+```
 Then follow the instructions
 
 Camera calibration:
 Connect the camera to an Usb 3.0 port (blue ones) of this PC
 To check that the marker is inside the range of view of the camera,write on terminal:
-'''shell script
+```shell script
 realsense-viewer
-'''
+```
 Switch on the streaming turning on the RGB Camera icon
 Adjust manually the camera until the marker is displayed and than you can close the program
 To calibrate, write on terminal:
-'''shell script
+```shell script
 roslaunch collision_avoidance calibrator.launch 
-'''
+```
 
 /////////////////////////////////:
         Virtual skeleton:
