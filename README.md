@@ -5,11 +5,11 @@ This workspace contains all the packages used for test and simulations regarding
 # Instructions to get ready with collision avoidance demos
 
 ## Setup
-Xavier PC, with yellow label (password written on it)
-This PC, with pink label (password written on it)
-Realsense camera with tripods
-Panda Robot
-Aruco marker
+* **Xavier PC** with yellow label (password written on it)
+* **This PC** with pink label (password written on it)
+* **Realsense camera with tripods**
+* **Panda Robot**
+* **Aruco marker**
 
 ## Initialize the robot
 Switch on the robot controller manually
@@ -148,10 +148,10 @@ Then follow the instructions
 # Instructions to get ready with minimum time-jerk trajectory tests
 
 ## Steup
-Windows PC, with orange label (password written on it)
-This PC, with pink label (password written on it)
-National Instruments sensors and modules # all inside the box
-Panda Robot
+* **Windows PC** with orange label (password written on it)
+* **This PC** with pink label (password written on it)
+* **National Instruments sensors and modules** all inside the box
+* **Panda Robot**
 
 ## Initialize the robot
 Switch on the robot controller manually
@@ -184,7 +184,7 @@ On this PC, to obtain super user permissions, write on terminal:
 ```shell script
 sudo -s
 ```
-# On this PC, to launch the control program, write on terminal:
+On this PC, to launch the control program, write on terminal:
 ```shell script
 roslaunch path_planning start_test.launch
 ```
