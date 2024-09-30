@@ -1,1 +1,5 @@
-src/libfranka/build/
+src/libfranka/build*/
+src/libfranka/cmake-build-*/
+src/libfranka//3rdparty/*
+src/libfranka/.vs*/
+src/libfranka/install*/
