@@ -172,7 +172,7 @@ On this PC, to check the connection, write on terminal:
 ping 172.16.1.1
 ```
 
-# Minimum Time_jerk Tests
+# Minimum Time-jerk Tests
 
 Make sure that the National Instrument modules are connected to the Windows PC through the USB cable and to the electric line
 Connect also keyboard and mouse if not already connected to Windows PC
