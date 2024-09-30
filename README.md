@@ -1,4 +1,4 @@
-#Franka Emika workspace
+# Franka Emika workspace
 
 This workspace contains all the packages used for test and simulations regarding Franka Emika Panda Robot 
 
@@ -45,28 +45,34 @@ To calibrate, write on terminal:
 roslaunch collision_avoidance calibrator.launch 
 ```
 
-/////////////////////////////////:
-        Virtual skeleton:
-/////////////////////////////////:
+# /////////////////////////////////
+#        Virtual skeleton
+# /////////////////////////////////
 
-Demo Stop Event:
-# To start the demo, write on terminal:
+## Demo Stop Event:
+To start the demo, write on terminal:
+```shell script
 roslaunch collision_avoidance demo.launch virt:=true
-# Then follow the instructions
+```
+Then follow the instructions
 
-Demo Impedance Control:
-# To start the demo, write on terminal:
+# Demo Impedance Control:
+To start the demo, write on terminal:
+```shell script
 cd
 cd libfranka/build/examples/
 ./demo_impedance_control_traj 172.16.0.2 virt
-# Then follow the instructions
+```
+Then follow the instructions
 
-Demo Admittance Control:
-# To start the demo, write on terminal:
+# Demo Admittance Control:
+To start the demo, write on terminal:
+```shell script
 cd
 cd libfranka/build/examples/
 ./demo_admittance_control_traj 172.16.0.2 virt
-# Then follow the instructions
+```
+Then follow the instructions
 
 
 /////////////////////////////////:
