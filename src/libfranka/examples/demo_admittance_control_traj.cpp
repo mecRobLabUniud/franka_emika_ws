@@ -385,13 +385,6 @@ int main(int argc, char** argv){
                   }
                 }
 
-                if (outfile_dist.is_open()){
-                  outfile_dist << "\t" << "<keypoint time='" << t_exe << "'>" << std::endl;
-                  outfile_dist << "\t\t" << "<point id='0'>" << ee_pos[0] << " " << ee_pos[1] << " " << ee_pos[2] << "</point>" << std::endl;
-                  outfile_dist << "\t\t" << "<point id='1'>" << repul_final[0] << " " << repul_final[1] << " " << repul_final[2] << "</point>" << std::endl;
-                  outfile_dist << "\t" << "</keypoint>" << std::endl;
-                }
-
                 //pos_repul << repul_final[0], repul_final[1], repul_final[2];
                 pos_repul << 0.4, 0.4, 0.3;
 
@@ -401,6 +394,14 @@ int main(int argc, char** argv){
           }
         }
       }
+
+      if (outfile_dist.is_open()){
+        outfile_dist << "\t" << "<keypoint time='" << t_exe << "'>" << std::endl;
+        outfile_dist << "\t\t" << "<point id='0'>" << ee_pos[0] << " " << ee_pos[1] << " " << ee_pos[2] << "</point>" << std::endl;
+        outfile_dist << "\t\t" << "<point id='1'>" << repul_final[0] << " " << repul_final[1] << " " << repul_final[2] << "</point>" << std::endl;
+        outfile_dist << "\t" << "</keypoint>" << std::endl;
+      }
+      
       std::cout << pos_repul[0] << pos_repul[1] << pos_repul[2] << std::endl;
       // compute repulsion force
       dist_repul << pos_repul - pos;

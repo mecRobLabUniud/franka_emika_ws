@@ -91,11 +91,6 @@ int main() {
 		outfile_skel << "<skeleton>" << std::endl;
 	}
 
-	std::ofstream outfile_dist("/home/panda/Documents/Data_Collision_Avoidance/dist_segment.xml");
-	if (outfile_dist.is_open()){
-		outfile_dist << "<distance>" << std::endl;
-	}
-
 	std::ofstream outfile_temp;
 
 	std::vector<std::vector<int>> skel_index;
@@ -191,26 +186,15 @@ int main() {
 				outfile_repul.close();
 			}
 
-			if (outfile_dist.is_open()){
-				outfile_dist << "\t" << "<keypoint time='" << t_curr << "'>" << std::endl;
-				outfile_dist << "\t\t" << "<point id='0'>" << ee_pos[0] << " " << ee_pos[1] << " " << ee_pos[2] << "</point>" << std::endl;
-				outfile_dist << "\t\t" << "<point id='1'>" << repul_final[0] << " " << repul_final[1] << " " << repul_final[2] << "</point>" << std::endl;
-				outfile_dist << "\t" << "</keypoint>" << std::endl;
-			}
-
 			repul_final << 10.0, 10.0, 10.0;
 		}
-
     }
 	
 	if (outfile_skel.is_open()){
 		outfile_skel << "</skeleton>" << std::endl;
 	}
-	if (outfile_dist.is_open()){
-		outfile_dist << "</distance>" << std::endl;
-	}
+	
 	outfile_skel.close();
-	outfile_dist.close();
 
 	return 0;
 }

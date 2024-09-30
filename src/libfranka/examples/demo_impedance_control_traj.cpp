@@ -295,8 +295,6 @@ int main(int argc, char** argv){
                                {{100.0, 100.0, 100.0, 100.0, 100.0, 100.0}},
                                {{100.0, 100.0, 100.0, 100.0, 100.0, 100.0}});
 
-    //std::fstream outfile_skel("/home/panda/Libraries/libfranka/doc/data/skeleton_coords.txt");
-
     // define callback for the torque control loop
     std::function<franka::Torques(const franka::RobotState&, franka::Duration)>
         impedance_control_callback = [&](const franka::RobotState& state,
@@ -394,13 +392,6 @@ int main(int argc, char** argv){
                   }
                 }
 
-                if (outfile_dist.is_open()){
-                  outfile_dist << "\t" << "<keypoint time='" << t_exe << "'>" << std::endl;
-                  outfile_dist << "\t\t" << "<point id='0'>" << ee_pos[0] << " " << ee_pos[1] << " " << ee_pos[2] << "</point>" << std::endl;
-                  outfile_dist << "\t\t" << "<point id='1'>" << repul_final[0] << " " << repul_final[1] << " " << repul_final[2] << "</point>" << std::endl;
-                  outfile_dist << "\t" << "</keypoint>" << std::endl;
-                }
-
                 pos_repul << repul_final[0], repul_final[1], repul_final[2];
 
                 break;
@@ -408,6 +399,13 @@ int main(int argc, char** argv){
             }
           }
         }
+      }
+
+      if (outfile_dist.is_open()){
+        outfile_dist << "\t" << "<keypoint time='" << t_exe << "'>" << std::endl;
+        outfile_dist << "\t\t" << "<point id='0'>" << ee_pos[0] << " " << ee_pos[1] << " " << ee_pos[2] << "</point>" << std::endl;
+        outfile_dist << "\t\t" << "<point id='1'>" << repul_final[0] << " " << repul_final[1] << " " << repul_final[2] << "</point>" << std::endl;
+        outfile_dist << "\t" << "</keypoint>" << std::endl;
       }
     
       // check if the inner security capsule has been breached
