@@ -34,8 +34,7 @@ def CallbackJointStates(data):
 
 
 if __name__ == '__main__':
-
-    rospy.init_node('TCP_execute_trajectory')
+    rospy.init_node('TCP_executor')
 
 
     HOST = "172.16.1.1"  # Standard loopback interface address (localhost)
@@ -72,9 +71,9 @@ if __name__ == '__main__':
                     # Reading data to files ------------------------
                     #path_name = f'/home/panda/Desktop/DATA_OTTIMIZZATORE/{data.decode()}'
                     path_name = f'/home/panda/Desktop/{data.decode()}'
-                    
+
                     t, q, q_p, q_pp, q_ppp, tau, tau_p = reader(path_name, 'q', '_test')
-                    
+
                     #print('Self collision check = ', scol_validator(q))     
                     #print('Kinematics and dynamics limits check = ', trj_validator(t, q, q_p, q_pp, q_ppp))
                     
@@ -120,7 +119,7 @@ if __name__ == '__main__':
                     
                     # Move to start configuration
                     control_publisher.publish(msg)
-
+                    print(msg)
                     # Wait the end of the trajectory
                     time.sleep(max(t_start))
 

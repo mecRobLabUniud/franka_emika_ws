@@ -16,7 +16,12 @@ import rospy
 from time import sleep
 from geometry_msgs.msg import PoseStamped
 
+marker_pos = []
+
+
 def callback(data, arg):
+    global marker_pos
+
     a = data.pose.position.x
     b = data.pose.position.y
     c = data.pose.position.z
@@ -25,8 +30,6 @@ def callback(data, arg):
     z_q = data.pose.orientation.z
     w_q = data.pose.orientation.w
 
-    # dati inseriti da print di marker_pos_calculator
-    marker_pos = [-0.37159989739893884, 0.01897127927626493, 0.02098280599081283]
     x = a
     y = c
     z = -b
@@ -84,11 +87,21 @@ def Rz(theta):
 
       
 def listener():
+    global marker_pos
+    
     rospy.init_node('listener', anonymous=True)
 
     arg = list()
             
     Reader = rospy.Subscriber('/aruco_single/pose', PoseStamped, callback, (arg))
+
+    # dati inseriti da print di marker_pos_calculator
+    file = open("/home/panda/Documents/Data_Collision_Avoidance/marker_pos.txt", 'r')
+    temp = file.read().split("\t")
+
+    marker_pos = [float(temp[0]), float(temp[1]), float(temp[2])]
+
+    file.close()
     
     while True: 
         if not arg == []:         
@@ -110,6 +123,8 @@ def listener():
 
             file.close()
             print(R)
+
+            Reader.unsubscribe()
 
             quit()
                         

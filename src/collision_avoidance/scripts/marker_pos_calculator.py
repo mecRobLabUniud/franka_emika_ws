@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
+import rospy
 import numpy as np
 import math
+import time
 from math import cos, sin, pi, atan2
 from copy import deepcopy
+from sensor_msgs.msg import JointState
+
+q_meas = []
+
+def CallbackJointStates(data):
+    global q_meas
+ 
+    q_meas = data.position
+    
+
 
 def compute_end_effector(DH, q):
     T_k = np.identity(4)
@@ -28,59 +40,81 @@ def compute_end_effector(DH, q):
 
 
 if __name__ == "__main__":
-    q_multi = np.array([[-0.052503843748625836, 0.6897211279521458, -0.12053761146919999, -2.307009646732263, 0.17733034705225423, 2.7102391534766936, 0.8096250286073321],
-                        [0.07552464062559527, 0.6803180845494856, 0.040927349743092076, -2.317529094500005, 0.1769062976451348, 2.710952746152878, 0.8096849585610131],
-                        [0.1276289547345091, 0.6093907501823077, 0.07926810990997536, -2.7679113046585164, 0.17641428204144727, 3.189057566404342, 0.8056189289339967],
-                        [-0.0072593103583883265, 0.6300199648770047, -0.1634515040541001, -2.753694295613193, 0.17566866370992143, 3.1896435261567433, 0.8056495370835893]])
+    rospy.init_node('marker_pos_calculator')
 
-    DH = np.array([[0,    -pi/2,  0, 0.333],
-                   [0,    -pi/2, pi, 0],
-                   [0.088, pi/2, pi, 0.316],
-                   [0.088, pi/2, pi, 0],
-                   [0,     pi/2, pi, 0.384],
-                   [0.088, pi/2, 0,  0],
-                   [0,     0,    0,  0.107]])
+    # Initialization subscriber node for /joint_states
+    sub_joint_states = rospy.Subscriber('/joint_states', JointState, CallbackJointStates)
 
-    p = []
+    q_multi = []
 
-    for i in range(len(q_multi)):
-        q = deepcopy(q_multi[i])
-        
-        R = compute_end_effector(DH, q)
+    time.sleep(1)
 
-        A = np.array([[1, 0, 0, 0   ],
-                      [0, 1, 0, 0   ],
-                      [0, 0, 1, 0.05],
-                      [0, 0, 0, 1   ]]) 
+    if input("\n\nDo you want to update marker position?(y/n)\n") == "y":
+        input("With the tip of the calibration tool, touch the corner n.1 of the marker and then press enter...")
+        q_multi.append(q_meas)
+        input("With the tip of the calibration tool, touch the corner n.2 of the marker and then press enter...")
+        q_multi.append(q_meas)
+        input("With the tip of the calibration tool, touch the corner n.3 of the marker and then press enter...")
+        q_multi.append(q_meas)
+        input("With the tip of the calibration tool, touch the corner n.4 of the marker and then press enter...")
+        q_multi.append(q_meas)
 
-        E = np.dot(R, A)
+        DH = np.array([[0,    -pi/2,  0, 0.333],
+                    [0,    -pi/2, pi, 0],
+                    [0.088, pi/2, pi, 0.316],
+                    [0.088, pi/2, pi, 0],
+                    [0,     pi/2, pi, 0.384],
+                    [0.088, pi/2, 0,  0],
+                    [0,     0,    0,  0.107]])
 
-        p.append([E[0][3], E[1][3], E[2][3]])
+        p = []
 
-    A1 =[]
-    A2 =[]
-    A3 =[]
-    A4 =[]
+        for i in range(len(q_multi)):
+            q = deepcopy(q_multi[i])
+            
+            R = compute_end_effector(DH, q)
 
-    for j in range(3):
-        A1.append((p[0][j] + p[1][j])/2)
-        A2.append((p[2][j] + p[3][j])/2)
-        A3.append((p[0][j] + p[3][j])/2)
-        A4.append((p[1][j] + p[2][j])/2)
+            A = np.array([[1, 0, 0, 0   ],
+                        [0, 1, 0, 0   ],
+                        [0, 0, 1, 0.05],
+                        [0, 0, 0, 1   ]]) 
 
-    C1 = []
-    C2 = []
+            E = np.dot(R, A)
 
-    for j in range(3):
-        C1.append((A1[j] + A2[j])/2)
-        C2.append((A3[j] + A4[j])/2)
+            p.append([E[0][3], E[1][3], E[2][3]])
 
-    C = []
+        A1 =[]
+        A2 =[]
+        A3 =[]
+        A4 =[]
 
-    for j in range(3):
-        C.append(-(C1[j] + C2[j])/2)   #inverto i segni per poter portare l'array come variabile marker_pos in base_rotation_matrix_subscriber.py 
+        for j in range(3):
+            A1.append((p[0][j] + p[1][j])/2)
+            A2.append((p[2][j] + p[3][j])/2)
+            A3.append((p[0][j] + p[3][j])/2)
+            A4.append((p[1][j] + p[2][j])/2)
 
-    print(C)
+        C1 = []
+        C2 = []
+
+        for j in range(3):
+            C1.append((A1[j] + A2[j])/2)
+            C2.append((A3[j] + A4[j])/2)
+
+        C = []
+
+        for j in range(3):
+            C.append(-(C1[j] + C2[j])/2)   #inverto i segni per poter portare l'array come variabile marker_pos in base_rotation_matrix_subscriber.py 
+
+        print("\n\nThis is the resulting relative position between the marker center point and the base of the robot\n")
+        print(C)
+
+        file = open("/home/panda/Documents/Data_Collision_Avoidance/marker_pos.txt", 'w')
+        file.write(f"{C[0]}\t{C[1]}\t{C[2]}")
+        file.close()
+
+    else:
+        quit()
        
     
 
