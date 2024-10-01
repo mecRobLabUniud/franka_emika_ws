@@ -1,6 +1,6 @@
 # Franka Emika workspace
 
-This workspace contains all the packages used for test and simulations regarding Franka Emika Panda Robot 
+This workspace contains all the packages used for test and simulations regarding Franka Emika Panda Robot.
 
 # Instructions to get ready with collision avoidance demos
 
@@ -12,34 +12,34 @@ This workspace contains all the packages used for test and simulations regarding
 * **Aruco marker**
 
 ## Initialize the robot
-Switch on the robot controller manually
-Set Ethernet(enp4s0) on the top-right corner of the screen to "Right robot"
-On Chrome, search the Desk page by digiting ip "172.16.0.2" in the URL search bar
-If the page would be recognized as unsecure, click option on advanced options ad proceed the same
-Click the "Unlock" icon under the section "Joints" in the right side of the page
-If the robot light is blue, robot is ready to work
-If the robot light is white, robot is in free-ride mode, and you got to unlock the change mode button on the desk
-To move robot in free-ride mode you got to grab the end effector and press at the same time the two buttons placed on it
-Then you can move the robot as yuo want by pulling and pushing it
+Switch on the robot controller manually.
+Set Ethernet(enp4s0) on the top-right corner of the screen to "Right robot".
+On Chrome, search the Desk page by digiting ip "172.16.0.2" in the URL search bar.
+If the page would be recognized as unsecure, click option on advanced options ad proceed the same.
+Click the "Unlock" icon under the section "Joints" in the right side of the page.
+If the robot light is blue, robot is ready to work.
+If the robot light is white, robot is in free-ride mode, and you got to unlock the change mode button on the desk.
+To move robot in free-ride mode you got to grab the end effector and press at the same time the two buttons placed on it.
+Then you can move the robot as yuo want by pulling and pushing it.
 
 ## Marker calibration
-You don't have to perform the marker calibration in case you haven't moved it
-Place the calibration tool (plastic cone with round base, grey or black) in the end effector with the screws
-Press the change mode button on the desk to enable free-ride mode (robot light should be white)
+You don't have to perform the marker calibration in case you haven't moved it.
+Place the calibration tool (plastic cone with round base, grey or black) in the end effector with the screws.
+Press the change mode button on the desk to enable free-ride mode (robot light should be white).
 To calibrate, write on terminal:
 ```shell script
 roslaunch collision_avoidance marker.launch 
 ```
-Then follow the instructions
+Then follow the instructions.
 
 Camera calibration:
-Connect the camera to an Usb 3.0 port (blue ones) of this PC
+Connect the camera to an Usb 3.0 port (blue ones) of this PC.
 To check that the marker is inside the range of view of the camera,write on terminal:
 ```shell script
 realsense-viewer
 ```
-Switch on the streaming turning on the RGB Camera icon
-Adjust manually the camera until the marker is displayed and than you can close the program
+Switch on the streaming turning on the RGB Camera icon.
+Adjust manually the camera until the marker is displayed and than you can close the program.
 To calibrate, write on terminal:
 ```shell script
 roslaunch collision_avoidance calibrator.launch 
@@ -52,7 +52,7 @@ To start the demo, write on terminal:
 ```shell script
 roslaunch collision_avoidance demo.launch virt:=true
 ```
-Then follow the instructions
+Then follow the instructions.
 
 ## Impedance Control Demo
 To start the demo, write on terminal:
@@ -61,7 +61,7 @@ cd
 cd libfranka/build/examples/
 ./demo_impedance_control_traj 172.16.0.2 virt
 ```
-Then follow the instructions
+Then follow the instructions.
 
 ## Admittance Control Demo
 To start the demo, write on terminal:
@@ -70,17 +70,17 @@ cd
 cd libfranka/build/examples/
 ./demo_admittance_control_traj 172.16.0.2 virt
 ```
-Then follow the instructions
+Then follow the instructions.
 
 
 # Real-time skeleton collision avoidance demos
 
 ## Connection between PCs
-Switch on the Xavier PC and connect the camera to the Usb 3.0 port placed near the ethernet port
-Connect also keyboard and mouse if not already connected to Xavier PC
-Connect one side of the ethernet cable to the port on the Xavier PC and the other side to the lower port on this PC
-On Xavier PC, set cabled connection on the top-right corner of the screen to "UDP connection"
-On this PC, set Ethernet(enp3s0) on the top-right corner of the screen to "UDP connection"
+Switch on the Xavier PC and connect the camera to the Usb 3.0 port placed near the ethernet port.
+Connect also keyboard and mouse if not already connected to Xavier PC.
+Connect one side of the ethernet cable to the port on the Xavier PC and the other side to the lower port on this PC.
+On Xavier PC, set cabled connection on the top-right corner of the screen to "UDP connection".
+On this PC, set Ethernet(enp3s0) on the top-right corner of the screen to "UDP connection".
 On this PC, to check the connection, write on terminal:
 ```shell script
 ping 172.16.10.1
@@ -96,7 +96,7 @@ If you want to display the streaming, write that on terminal instead:
 ```shell script
 ./build/examples/user_code/skeleton_tracker.bin disp 
 ```
-Make sure the program is correctly running (there could be a segmentation fault error if there's no one displayed on the screen)
+Make sure the program is correctly running (there could be a segmentation fault error if there's no one displayed on the screen).
 
 ## Demo Stop Event
 To start the data acquisition from camera, on this PC, write on terminal:
@@ -109,7 +109,7 @@ To start the demo, on this PC, write on another terminal:
 ```shell script
 roslaunch collision_avoidance demo.launch
 ```
-Then follow the instructions
+Then follow the instructions.
 
 ## Demo Impedance Control
 To start the data acquisition from camera, on this PC, write on terminal:
@@ -124,7 +124,7 @@ cd
 cd libfranka/build/examples/
 ./demo_impedance_control_traj 172.16.0.2
 ```
-Then follow the instructions
+Then follow the instructions.
 
 ## Demo Admittance Control
 To start the data acquisition from camera, on this PC, write on terminal:
@@ -139,7 +139,7 @@ cd
 cd libfranka/build/examples/
 ./demo_admittance_control_traj 172.16.0.2
 ```
-Then follow the instructions
+Then follow the instructions.
 
 
 
@@ -154,19 +154,19 @@ Then follow the instructions
 * **Panda Robot**
 
 ## Initialize the robot
-Switch on the robot controller manually
-Set Ethernet(enp4s0) on the top-right corner of the screen to "Right robot"
-On Chrome, search the Desk page by digiting ip "172.16.0.2" in the URL search bar
-Click the "Unlock" icon under the section "Joints" in the right side of the page
-If the robot light is blue, robot is ready to work
-If the robot light is white, robot is in free-ride mode, and you got to unlock the change mode button on the desk
-To move robot in free-ride mode you got to grab the end effector and press at the same time the two buttons placed on it
-Then you can move the robot as yuo want by pulling and pushing it
+Switch on the robot controller manually.
+Set Ethernet(enp4s0) on the top-right corner of the screen to "Right robot".
+On Chrome, search the Desk page by digiting ip "172.16.0.2" in the URL search bar.
+Click the "Unlock" icon under the section "Joints" in the right side of the page.
+If the robot light is blue, robot is ready to work.
+If the robot light is white, robot is in free-ride mode, and you got to unlock the change mode button on the desk.
+To move robot in free-ride mode you got to grab the end effector and press at the same time the two buttons placed on it.
+Then you can move the robot as yuo want by pulling and pushing it.
 
 
 ## Connection between PCs
-Connect one side of the ethernet cable to the port on the Windows PC and the other side to the lower port on this PC
-On this PC, set Ethernet(enp3s0) on the top-right corner of the screen to "UDP connection"
+Connect one side of the ethernet cable to the port on the Windows PC and the other side to the lower port on this PC.
+On this PC, set Ethernet(enp3s0) on the top-right corner of the screen to "UDP connection".
 On this PC, to check the connection, write on terminal:
 ```shell script
 ping 172.16.1.1
@@ -174,12 +174,12 @@ ping 172.16.1.1
 
 # Minimum time-jerk trajectories tests
 
-Make sure that the National Instrument modules are connected to the Windows PC through the USB cable and to the electric line
-Connect also keyboard and mouse if not already connected to Windows PC
-Both on Windows and this PC, add your trajectory files in the "Desktop/Data_Ottimizzatore/Histrogram/CUSTOM_TRAJ" folder
-Trajectory data must be organized in a certain way, otherwise programs will not find the correct path
-On the Windows PC launch "MAIN.vi" program from desktop with double click
-Select the trajectory you want to perform and all the other setups in the Front Panel, by means of the buttons
+Make sure that the National Instrument modules are connected to the Windows PC through the USB cable and to the electric line.
+Connect also keyboard and mouse if not already connected to Windows PC.
+Both on Windows and this PC, add your trajectory files in the "Desktop/Data_Ottimizzatore/Histrogram/CUSTOM_TRAJ" folder.
+Trajectory data must be organized in a certain way, otherwise programs will not find the correct path.
+On the Windows PC launch "MAIN.vi" program from desktop with double click.
+Select the trajectory you want to perform and all the other setups in the Front Panel, by means of the buttons.
 On this PC, to obtain super user permissions, write on terminal:
 ```shell script
 sudo -s
@@ -188,4 +188,4 @@ On this PC, to launch the control program, write on terminal:
 ```shell script
 roslaunch path_planning start_test.launch
 ```
-On Windows PC, to start the tests, press Run button on the top-left corner of the Front Panel
+On Windows PC, to start the tests, press Run button on the top-left corner of the Front Panel.
