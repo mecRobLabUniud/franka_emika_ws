@@ -44,6 +44,8 @@ if(BUILD_COVERAGE)
   set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} --coverage")
 endif()
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+
 ## Submodules
 add_subdirectory(common)
 
@@ -198,6 +200,7 @@ include(CPack)
 file(GLOB_RECURSE SOURCES
   src/*.cpp
   examples/*.cpp
+  examples/coord_handler.cpp
   common/*.cpp
 )
 file(GLOB_RECURSE HEADERS

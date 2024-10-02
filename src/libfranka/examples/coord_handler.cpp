@@ -25,6 +25,7 @@ Eigen::Matrix<float, 3, 1> nearest_point(Eigen::Vector3f end1, Eigen::Vector3f e
 }
 
 
+
 // Driver code
 int main() {
 	int sockfd;
@@ -72,8 +73,8 @@ int main() {
 
 	R_cam2base = R_base2cam.inverse();
 	std::cout << "Camera-to-robot base rotation matrix:" << std::endl;
-	std::cout << R_cam2base << std::endl;
-
+	std::cout << R_cam2base << std::endl;	
+	
 	std::cout << std::endl << "Waiting for data.." << std::endl;
 
 	//bodyparts:
@@ -109,6 +110,10 @@ int main() {
         n = recvfrom(sockfd, (float *)buffer, MAXLINE, MSG_WAITALL, ( struct sockaddr *) &cliaddr, &len);
         buffer[n] = '\0';
 
+		if (buffer[0] ==  1000.0){
+			break;
+		}
+		
 		if (do_once++ == 0){
 			t_0 = buffer[4];
 		}
