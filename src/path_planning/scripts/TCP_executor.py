@@ -46,27 +46,29 @@ if __name__ == '__main__':
         s.bind((HOST, PORT))
         s.listen()
 
-        print('Connessione...')
+        time.sleep(1)
+        print('\n\nWaiting for external input from "MAIN.vi" LabView application to start the tests')
+        print('\nConnection...')
         
         try:
             while True:            
                 conn, addr = s.accept()
                 
                 with conn:
-                    print(f"Connesso con {addr}")
+                    print(f"Connected with {addr}")
 
                     data = conn.recv(1024)
                     if data == b'Stop':
                         conn.close()
-                        print('Disconnesso')
+                        print('Disconnected')
                         s.close()
 
                         time.sleep(1)
                         
-                        print('Fine esecuzione test')
+                        print('Test execution finished')
                         break
 
-                    print('Movimento alla configurazione iniziale')
+                    print('Moving to the starting configuration')
 
                     # Reading data to files ------------------------
                     #path_name = f'/home/panda/Desktop/DATA_OTTIMIZZATORE/{data.decode()}'
@@ -119,7 +121,7 @@ if __name__ == '__main__':
                     
                     # Move to start configuration
                     control_publisher.publish(msg)
-                    print(msg)
+
                     # Wait the end of the trajectory
                     time.sleep(max(t_start))
 
@@ -148,7 +150,7 @@ if __name__ == '__main__':
 
                         time.sleep(0.2)
 
-                        print('Esecuzione traiettoria...')
+                        print('Trajectory execution...')
                         
                         # Move to configuration
                         control_publisher.publish(msg)
