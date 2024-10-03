@@ -1,7 +1,7 @@
 # Instructions to get ready with collision avoidance demos
 
 There are two possible solutions:
-* [**Virtual skeleton**](#Virtual skeleton collision avoidance demo)
+* [**Virtual skeleton**](#Virtual-skeleton-collision-avoidance-demo)
 * [**Real-time skeleton**](#Real-time skeleton collision avoidance demo)
 
 ## Setup
