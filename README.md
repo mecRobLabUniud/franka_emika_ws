@@ -10,7 +10,7 @@ This workspace contains all the packages used for tests and simulations regardin
     <img src="media/Panda.jpg"  width="400">
 </p>
 
-All the applications are developed in the University of Udine robotics laboratory, at the SMACT3 module of the LabVillage.
+All the applications were developed by the University of Udine robotics laboratory, at the SMACT3 module of the LabVillage.
 
 ## Related work:
 * [**Collision avoidance demo**](src/collision_avoidance/README.md)
