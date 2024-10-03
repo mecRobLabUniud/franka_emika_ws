@@ -1,5 +1,5 @@
 <div align="center">
-    src="media/LogoUniud.png"
+    <img src="media/LogoUniud.png">
 </div>
 
 # Franka Emika workspace
