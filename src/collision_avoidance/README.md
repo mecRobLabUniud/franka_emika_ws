@@ -2,7 +2,7 @@
 
 There are two possible solutions:
 * [**Virtual skeleton**](#Virtual-skeleton-collision-avoidance-demo)
-* [**Real-time skeleton**](#Real-time skeleton collision avoidance demo)
+* [**Real-time skeleton**](#Real-time-skeleton-collision-avoidance-demo)
 
 ## Setup
 * **Xavier PC** with yellow label (password written on it)
