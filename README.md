@@ -1,3 +1,7 @@
+<div align="center">
+    src="media/LogoUniud.png"
+</div>
+
 # Franka Emika workspace
 
 This workspace contains all the packages used for test and simulations regarding Franka Emika Panda Robot.
