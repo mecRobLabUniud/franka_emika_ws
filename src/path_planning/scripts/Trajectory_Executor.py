@@ -3,7 +3,6 @@
 
 import rospy
 from control_msgs.msg import FollowJointTrajectoryActionGoal
-from moveit_msgs.msg import ExecuteTrajectoryActionGoal
 from trajectory_msgs.msg import JointTrajectoryPoint
 from sensor_msgs.msg import JointState
 from copy import deepcopy
@@ -11,8 +10,6 @@ import time
 import numpy as np
 from write_read_plot import reader, writer
 import socket
-#from trajectory_validator import validator as trj_validator
-#from self_collisions_validator import validator as scol_validator
 
 
 # per bloccare processo:
@@ -55,10 +52,8 @@ if __name__ == '__main__':
                 conn, addr = s.accept()
                 
                 with conn:
-                    print(f"Connected with {addr}")
-
                     data = conn.recv(1024)
-                    if data == b'Stop':
+                    if data == b'STOP':
                         conn.close()
                         print('Disconnected')
                         s.close()
@@ -68,23 +63,20 @@ if __name__ == '__main__':
                         print('Test execution finished')
                         break
 
+                    print(f"Connected with {addr}")
                     print('Moving to the starting configuration')
-
+                    
                     # Reading data to files ------------------------
-                    #path_name = f'/home/panda/Desktop/DATA_OTTIMIZZATORE/{data.decode()}'
-                    path_name = f'/home/panda/Desktop/{data.decode()}'
-
-                    t, q, q_p, q_pp, q_ppp, tau, tau_p = reader(path_name, 'q', '_test')
-
-                    #print('Self collision check = ', scol_validator(q))     
-                    #print('Kinematics and dynamics limits check = ', trj_validator(t, q, q_p, q_pp, q_ppp))
+                    path_name = f'/home/panda/Documents/{data.decode()}'
+                    
+                    t, q, q_p, q_pp, q_ppp, tau, tau_p = reader(path_name, 'q', '')
                     
                     t_i = rospy.get_time()
                     t_exp = []
                     q_exp = []
                     q_p_exp = []
                     tau_exp = []
-
+                    
                     # Initialization subscriber node for /joint_states
                     sub_joint_states = rospy.Subscriber('/joint_states', JointState, CallbackJointStates)
                     
@@ -145,12 +137,12 @@ if __name__ == '__main__':
                         msg.goal.trajectory.points.append(deepcopy(point))
 
                     if data:
-                        conn.send(b'1')
+                        conn.send(b'START')
                         conn.close()
 
                         time.sleep(0.2)
 
-                        print('Trajectory execution...')
+                        print('Trajectory execution')
                         
                         # Move to configuration
                         control_publisher.publish(msg)
@@ -162,7 +154,7 @@ if __name__ == '__main__':
                         tau_exp = []
 
                         time.sleep(t[-1][0])
-
+                        
                         sub_joint_states.unregister()
                     
                         t_exp = np.array(t_exp)
