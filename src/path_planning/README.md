@@ -29,7 +29,8 @@ ping 172.16.1.1
 
 Make sure that the National Instrument modules are connected to the Windows PC through the USB cable and to the electric line.
 Connect also keyboard and mouse if not already connected to Windows PC.
-Both on Windows and this PC, add your trajectory files in the "Desktop/Data_Ottimizzatore/Histrogram/CUSTOM_TRAJ" folder.
+Both on Windows PC and this PC, add a folder with trajectory files (q.txt, q_p.txt, q_pp.txt and t.txt) in the "Documents/Data_Optimizer/Trajectories" folder.
+Then in "Documents/Data_Optimizer" path, you got to add the names of the folders you added previously in the "Input.txt" file.
 Trajectory data must be organized in a certain way, otherwise programs will not find the correct path.
 On the Windows PC launch "Exec_Tests.cmd" program from desktop with double click.
 On this PC, to obtain super user permissions, write on terminal:
