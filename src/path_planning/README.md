@@ -31,8 +31,7 @@ Make sure that the National Instrument modules are connected to the Windows PC t
 Connect also keyboard and mouse if not already connected to Windows PC.
 Both on Windows and this PC, add your trajectory files in the "Desktop/Data_Ottimizzatore/Histrogram/CUSTOM_TRAJ" folder.
 Trajectory data must be organized in a certain way, otherwise programs will not find the correct path.
-On the Windows PC launch "MAIN.vi" program from desktop with double click.
-Select the trajectory you want to perform and all the other setups in the Front Panel, by means of the buttons.
+On the Windows PC launch "Exec_Tests.cmd" program from desktop with double click.
 On this PC, to obtain super user permissions, write on terminal:
 ```shell script
 sudo -s
