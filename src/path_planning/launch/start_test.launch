@@ -16,7 +16,7 @@
 	    <arg name="load_gripper" value="$(arg load_gripper)" />
     </include>
     
-    <!-- Launch TCP_executor node -->
-    <node pkg="path_planning" name="TCP_executor" type="TCP_executor.py" output="screen">
+    <!-- Launch Trajectory_Executor node -->
+    <node pkg="path_planning" name="Trajectory_Executor" type="Trajectory_Executor.py" output="screen">
     </node>
 </launch>

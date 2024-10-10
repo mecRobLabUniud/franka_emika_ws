@@ -8,56 +8,204 @@ import numpy as np
 import csv
 import time 
 from copy import deepcopy
-import rtde_receive
+import os
 
 from trajectory_msgs.msg import JointTrajectoryPoint
 from control_msgs.msg import FollowJointTrajectoryActionGoal
 
 
-def define_trajectory():
+def reader(path_name, name, arg):
+    t = []
+    q = []
+    q_p = []
+    q_pp = []
+    q_ppp = []
+    tau = []
+    tau_p = []
 
-    # load times
-    csv_time = open('traj_data/time.csv')
-    csv_reader = csv.reader(csv_time)
-    times = []
-    for row in csv_reader:
-        time = float(row[0])
-        times.append(time)
+    # Open files -------------------------------
+    if os.path.exists(path_name + '/t' + arg + '.txt'):
+        fl_t = open(path_name + '/t' + arg + '.txt', 'r')
 
-    # load positions
-    csv_pos = open('traj_data/pos.csv')
-    csv_reader = csv.reader(csv_pos)
-    positions = []
-    for row in csv_reader:
-        positions_float = [float(item) for item in row]
-        positions.append(positions_float)   
+        for line in fl_t:
+            v_s = line.split('\t')
+            data = []
 
-    # load velocites
-    csv_vel = open('traj_data/vel.csv')
-    csv_reader = csv.reader(csv_vel)
-    velocities = []
-    for row in csv_reader:
-        velocities_float = [float(item) for item in row]
-        velocities.append(velocities_float)
+            for s in v_s:
+                data.append(float(s))
 
-    # load accelerations
-    csv_acc = open('traj_data/acc.csv')
-    csv_reader = csv.reader(csv_acc)
-    accelerations = []
-    for row in csv_reader:
-        accelerations_float = [float(item) for item in row]
-        accelerations.append(accelerations_float)
+            t.append(data)
 
-    # torques are undefined
-    efforts = list(repeat([],len(positions)))
+        fl_t.close()
 
-    return positions, velocities, accelerations, efforts, times
+    if os.path.exists(path_name + '/' + name + arg + '.txt'):
+        fl_q = open(path_name + '/' + name + arg + '.txt', 'r')
+
+        for line in fl_q:
+            v_s = line.split('\t')
+            data = []
+
+            for s in v_s:
+                data.append(float(s))
+
+            q.append(data)
+
+        fl_q.close()
+
+    if os.path.exists(path_name + '/' + name + '_p' + arg + '.txt'):
+        fl_q_p = open(path_name + '/' + name + '_p' + arg + '.txt', 'r')
+
+        for line in fl_q_p:
+            v_s = line.split('\t')
+            data = []
+
+            for s in v_s:
+                data.append(float(s))
+
+            q_p.append(data)
+
+        fl_q_p.close()
+
+    if os.path.exists(path_name + '/' + name + '_pp' + arg + '.txt'):
+        fl_q_pp = open(path_name + '/' + name + '_pp' + arg + '.txt', 'r')
+
+        for line in fl_q_pp:
+            v_s = line.split('\t')
+            data = []
+
+            for s in v_s:
+                data.append(float(s))
+
+            q_pp.append(data)
+
+        fl_q_pp.close()
+
+    if os.path.exists(path_name + '/' + name + '_ppp' + arg + '.txt'):
+        fl_q_ppp = open(path_name + '/' + name + '_ppp' + arg + '.txt', 'r')
+
+        for line in fl_q_ppp:
+            v_s = line.split('\t')
+            data = []
+
+            for s in v_s:
+                data.append(float(s))
+
+            q_ppp.append(data)
+
+        fl_q_ppp.close()
+
+    if os.path.exists(path_name + '/tau' + arg + '.txt'):
+        fl_tau = open(path_name + '/tau' + arg + '.txt', 'r')
+
+        for line in fl_tau:
+            v_s = line.split('\t')
+            data = []
+
+            for s in v_s:
+                data.append(float(s))
+
+            tau.append(data)
+
+        fl_tau.close()
+
+    if os.path.exists(path_name + '/tau_p' + arg + '.txt'):
+        fl_tau_p = open(path_name + '/tau_p' + arg + '.txt', 'r')
+
+        for line in fl_tau:
+            v_s = line.split('\t')
+            data = []
+
+            for s in v_s:
+                data.append(float(s))
+
+            tau_p.append(data)
+
+        fl_tau_p.close()
+
+    return t, q, q_p, q_pp, q_ppp, tau, tau_p
+
+
+def writer(path_name, t, q, q_p, q_pp, q_ppp, tau, tau_p, name, arg):
+    # Open files -------------------------------
+    if not t == []:
+        fl_t = open(path_name + '/t' + arg + '.txt', 'w')
+
+        for line in t:
+            fl_t.write(str(line[0]) + '\n')
+
+        fl_t.close()
+
+    if not q == []:
+        fl_q = open(path_name + '/' + name + arg + '.txt', 'w')
+
+        for line in q:
+            for i in range(len(line)-1):
+                fl_q.write(str(line[i]) + '\t')
+            
+            fl_q.write(str(line[len(line)-1]) + '\n')
+
+        fl_q.close()
+
+    if not q_p == []:
+        fl_q_p = open(path_name + '/' + name + '_p' + arg + '.txt', 'w')
+
+        for line in q_p:
+            for i in range(len(line)-1):
+                fl_q_p.write(str(line[i]) + '\t')
+            
+            fl_q_p.write(str(line[len(line)-1]) + '\n')
+
+        fl_q_p.close()
+
+    if not q_pp == []:
+        fl_q_pp = open(path_name + '/' + name + '_pp' + arg + '.txt', 'w')
+
+        for line in q_pp:
+            for i in range(len(line)-1):
+                fl_q_pp.write(str(line[i]) + '\t')
+            
+            fl_q_pp.write(str(line[len(line)-1]) + '\n')
+
+        fl_q_pp.close()
+
+    if not q_ppp == []:
+        fl_q_ppp = open(path_name + '/' + name + '_ppp' + arg + '.txt', 'w')
+
+        for line in q_ppp:
+            for i in range(len(line)-1):
+                fl_q_ppp.write(str(line[i]) + '\t')
+            
+            fl_q_ppp.write(str(line[len(line)-1]) + '\n')
+
+        fl_q_ppp.close()
+
+    if not tau == []:
+        fl_tau = open(path_name + '/tau' + arg + '.txt', 'w')
+
+        for line in tau:
+            for i in range(len(line)-1):
+                fl_tau.write(str(line[i]) + '\t')
+            
+            fl_tau.write(str(line[len(line)-1]) + '\n')
+
+        fl_tau.close()
+
+    if not tau_p == []:
+        fl_tau_p = open(path_name + '/tau_p' + arg + '.txt', 'w')
+
+        for line in tau_p:
+            for i in range(len(line)-1):
+                fl_tau_p.write(str(line[i]) + '\t')
+            
+            fl_tau_p.write(str(line[len(line)-1]) + '\n')
+
+        fl_tau_p.close()
 
 
 def execute_trajectory(control_publisher, times, positions, velocities, accelerations, efforts):
     joint_names = ["shoulder_pan_joint", "shoulder_lift_joint", "elbow_joint", "wrist_1_joint", "wrist_2_joint", "wrist_3_joint"]
 
-    msg = ExecuteTrajectoryActionGoal()
+    msg = FollowJointTrajectoryActionGoal()
      
     msg.header.stamp = rospy.Time.now()
     msg.header.frame_id = ''
@@ -84,16 +232,13 @@ if __name__ == '__main__':
     folded_home = [0.18016493320465088, -1.6301008663573207, -1.7113336324691772, -1.173974559908249, 1.2832341194152832, -1.969231430684225]
     
     # define trajectory
-    (positions, velocities, accelerations, efforts, times) = define_trajectory()
+    #(positions, velocities, accelerations, efforts, times) = define_trajectory()
+    (t, q, q_p, q_pp, q_ppp, tau, tau_p) = reader()
     
     times = np.array(times)
     
     # execute trajectory
-    control_publisher = rospy.Publisher('/scaled_pos_joint_traj_controller/follow_joint_trajectory/goal', FollowJointTrajectoryActionGoal, queue_size=10)
-
-    rtde_r = rtde_receive.RTDEReceiveInterface("172.16.0.2")
-
-    q_r = rtde_r.getTargetQ()
+    control_publisher = rospy.Publisher('/position_joint_trajectory_controller/follow_joint_trajectory/goal', FollowJointTrajectoryActionGoal, queue_size = 10)
 
     input('\nPremere invio per avviare il task')
     execute_trajectory(control_publisher, [0, 3], [q_r, positions[0]], [np.array([0, 0, 0, 0, 0, 0]),np.array([0, 0, 0, 0, 0, 0])], [np.array([0, 0, 0, 0, 0, 0]),np.array([0, 0, 0, 0, 0, 0])], [])
