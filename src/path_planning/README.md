@@ -22,23 +22,23 @@ Connect one side of the ethernet cable to the port on the Windows PC and the oth
 On this PC, set Ethernet(enp3s0) on the top-right corner of the screen to "UDP connection".
 On this PC, to check the connection, write on terminal:
 ```shell script
-ping 172.16.1.1
+ping 172.16.1.10
 ```
 
 # Minimum time-jerk trajectories tests
 
 Make sure that the National Instrument modules are connected to the Windows PC through the USB cable and to the electric line.
-Connect also keyboard and mouse if not already connected to Windows PC.
-Both on Windows PC and this PC, add a folder with trajectory files (q.txt, q_p.txt, q_pp.txt and t.txt) in the "Documents/Data_Optimizer/Trajectories" folder.
-Then in "Documents/Data_Optimizer" path, you got to add the names of the folders you added previously in the "Input.txt" file.
-Trajectory data must be organized in a certain way, otherwise programs will not find the correct path.
-On the Windows PC launch "Exec_Tests.cmd" program from desktop with double click.
-On this PC, to obtain super user permissions, write on terminal:
-```shell script
-sudo -s
-```
+On Windows PC, add a folder with trajectory files (q.txt, q_p.txt, q_pp.txt and t.txt) in the "Documents/Data_Optimizer/Trajectories" folder.
+Then in "Documents/Data_Optimizer" path, you got to add the names of the folders you added previously in the "Input.txt" file, one in each row.
 On this PC, to launch the control program, write on terminal:
 ```shell script
 roslaunch path_planning start_test.launch
 ```
-On Windows PC, to start the tests, press Run button on the top-left corner of the Front Panel.
+On Windows PC, to start the whole process, double click "Exec_Tests.cmd" executable from desktop.
+This file will execute 4 actions:
+* Launch "data_sender.py", which will automatically pass to this PC all the trajectory data needed from Windows PC
+* Launch LabVIEW program for data acquisition. Action required, described below
+* Launch "data_receiver_.py", which will automatically pass to Windows PC all the joint states data acquired from this PC
+* Launch Matlab to process and plot all the signal acquired automatically
+
+On Windows PC, to start the tests when LabVIEW is on, press Run button (the white arrow) on the top-left corner of the Front Panel.
