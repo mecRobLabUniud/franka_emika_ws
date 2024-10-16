@@ -1,12 +1,17 @@
-#!/usr/bin/env python
-# coding=utf-8
+#! /usr/bin/env python3
 
-import matplotlib.pyplot as plt
+import sys
+import rospy
+from math import pi
+from itertools import repeat
+import numpy as np
+import csv
+import time 
+from copy import deepcopy
 import os
-import time
 
 
-def reader(path_name, name, arg):
+def reader(path_name, name="q", arg=""):
     t = []
     q = []
     q_p = []
@@ -21,10 +26,8 @@ def reader(path_name, name, arg):
 
         for line in fl_t:
             v_s = line.split('\t')
-            data = []
 
-            for s in v_s:
-                data.append(float(s))
+            data = float(v_s[0])
 
             t.append(data)
 
@@ -117,7 +120,8 @@ def reader(path_name, name, arg):
     return t, q, q_p, q_pp, q_ppp, tau, tau_p
 
 
-def writer(path_name, t, q, q_p, q_pp, q_ppp, tau, tau_p, name, arg):
+
+def writer(path_name, t, q, q_p, q_pp, q_ppp, tau, tau_p, name="q", arg=""):
     # Open files -------------------------------
     if not t == []:
         fl_t = open(path_name + '/t' + arg + '.txt', 'w')
@@ -193,84 +197,4 @@ def writer(path_name, t, q, q_p, q_pp, q_ppp, tau, tau_p, name, arg):
 
         fl_tau_p.close()
 
-
-def plotter(path_name, t, q, q_p, q_pp, q_ppp, tau, tau_p):
-    N, giunti = q.shape
-
-    # Creating plots --------------------------------
-    jnt = []
-    for j in range(giunti):
-        jnt.append('g' + str(j))
-
-    if not q == []:
-        for i in range(giunti):
-            plt.plot(t, q[:, i], label=jnt[i])
-
-        plt.xlabel("t [s]")
-        plt.ylabel("q [rad]")
-        plt.title("Positione")
-        plt.legend()
-        plt.savefig(path_name + '/Positions.png', format='png')
-        time.sleep(0.05)
-        plt.clf()  
-    
-    if not q_p == []:
-        for i in range(giunti):
-            plt.plot(t, q_p[:, i], label=jnt[i])
-
-        plt.xlabel("t [s]")
-        plt.ylabel("q_p [rad/s]")
-        plt.title("Velocita\'")
-        plt.legend()
-        plt.savefig(path_name + '/Velocities.png', format='png')
-        time.sleep(0.05)
-        plt.clf()
-
-    if not q_pp == []:
-        for i in range(giunti):
-            plt.plot(t, q_pp[:, i], label=jnt[i])
-
-        plt.xlabel("t [s]")
-        plt.ylabel("q_pp [rad/s^2]")
-        plt.title("Accelerazione")
-        plt.legend()
-        plt.savefig(path_name + '/Accelerations.png', format='png')
-        time.sleep(0.05)
-        plt.clf()
-
-    if not q_ppp == []:
-        for i in range(giunti):
-            plt.plot(t, q_ppp[:, i], label=jnt[i])
-
-        plt.xlabel("t [s]")
-        plt.ylabel("q_ppp [rad/s^3]")
-        plt.title("Jerk")
-        plt.legend()
-        plt.savefig(path_name + '/Jerk.png', format='png')
-        time.sleep(0.05)
-        plt.clf()
-
-    if not tau == []:
-        for i in range(giunti):
-            plt.plot(t, tau[:, i], label=jnt[i])
-
-        plt.xlabel("t [s]")
-        plt.ylabel("tau [Nm]")
-        plt.title("Coppia")
-        plt.legend()
-        plt.savefig(path_name + '/Effort.png', format='png')
-        time.sleep(0.05)
-        plt.clf() 
-
-    if not tau_p == []:
-        for i in range(giunti):
-            plt.plot(t, tau_p[:, i], label=jnt[i])
-
-        plt.xlabel("t [s]")
-        plt.ylabel("tau_p [Nm/s]")
-        plt.title("Derivata della coppia")
-        plt.legend()
-        plt.savefig(path_name + '/Effort derivative.png', format='png')
-        time.sleep(0.05)
-        plt.clf() 
 

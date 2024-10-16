@@ -17,6 +17,6 @@
     </include>
     
     <!-- Launch Trajectory_Executor node -->
-    <node pkg="path_planning" name="Trajectory_Executor" type="Trajectory_Executor.py" output="screen">
+    <node pkg="path_planning" name="trajectory_executor" type="trajectory_executor.py" output="screen">
     </node>
 </launch>
