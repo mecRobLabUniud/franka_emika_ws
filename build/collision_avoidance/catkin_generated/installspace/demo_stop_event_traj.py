@@ -28,6 +28,7 @@ t_exe = []
 status = []
 t_i = None
 outfile_q = None
+outfile_dist = None
 
 
 
@@ -189,7 +190,12 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
                 q_pp_c = deepcopy(q_pp[traj_index])
               
                 stop_duration = CalcStopDurationClient(deepcopy(q_c), deepcopy(q_p_c), deepcopy(q_pp_c)) 
-            print(stop_duration)
+            
+            outfile_dist.write(f"\t<keypoint time='{t_exe}'>")
+            outfile_dist.write(f"\t\t<point id='0'>{ee_pos[0]} {ee_pos[1]} {ee_pos[2]}</point>")
+            outfile_dist.write(f"\t\t<point id='1'>{repul_final[0]} {repul_final[1]} {repul_final[2]}</point>")
+            outfile_dist.write(f"\t</keypoint>")
+
             # Detect capsule collision
             if(FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)):
                 stop_flag = 1
@@ -276,10 +282,13 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
 
 
 def ExecuteTask(q_traj, traj_durations, control_publisher):
-    global outfile_q, t_i, status
+    global outfile_q, outfile_dist, t_i, status
 
     outfile_q = open("/home/panda/Documents/Data_Collision_Avoidance/demo_stop_event_control/q_robot.xml", 'w')
     outfile_q.write("<q>\n")
+
+    outfile_dist = open("/home/panda/Documents/Data_Collision_Avoidance/demo_stop_event_control/dist_segment.xml", 'w')
+    outfile_dist.write("<distance>\n")
 
     # Initialization subscriber node for /joint_states
     sub_joint_states = rospy.Subscriber('/joint_states', JointState, CallbackJointStates)

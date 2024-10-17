@@ -58,18 +58,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/executor.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/trajectory_executor.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/TCP_executor.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/Panda_trajectory_planner.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/traj_poly_5.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/spline_solver_ikine.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/data_IO.py")
 endif()
 

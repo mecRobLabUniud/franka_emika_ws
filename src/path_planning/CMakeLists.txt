@@ -161,10 +161,9 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-  executor.py
-  TCP_executor.py
-  traj_poly_5.py
-  spline_solver_ikine.py
+  scripts/trajectory_executor.py
+  scripts/Panda_trajectory_planner.py
+  scripts/data_IO.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
