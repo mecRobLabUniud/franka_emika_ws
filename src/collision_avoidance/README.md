@@ -1,16 +1,5 @@
 # Instructions to get ready with collision avoidance demos
 
-<p  align="center">
-  <video width="500" autoplay>
-    <source src="../../media/Stop_traj_comparison.mp4" type="video/mp4">
-    <source src="../../media/Stop_traj_comparison.ogg" type="video/ogg">
-  </video>
-</p>
-
-
-[![Example](https://github.com/federicolozer/franka_emika_ws/media/Panda.jpg)](https://github.com/federicolozer/franka_emika_ws/blob/main/media/Stop_traj_comparison.mp4)
-
-
 There are two possible solutions:
 * [**Virtual skeleton**](#Virtual-skeleton-collision-avoidance-demo)
 * [**Real-time skeleton**](#Real-time-skeleton-collision-avoidance-demo)
