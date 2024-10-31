@@ -3,6 +3,7 @@
 <p  align="center">
   <video width="500" autoplay>
     <source src="../../media/Stop_traj_comparison.mp4" type="video/mp4">
+    <source src="../../media/Stop_traj_comparison.ogg" type="video/ogg">
   </video>
 </p>
 
