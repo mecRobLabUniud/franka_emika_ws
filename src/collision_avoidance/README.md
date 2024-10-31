@@ -32,7 +32,7 @@ roslaunch collision_avoidance marker.launch
 ```
 Then follow the instructions.
 
-Camera calibration:\
+## Camera calibration
 Connect the camera to an Usb 3.0 port (blue ones) of this PC.\
 To check that the marker is inside the range of view of the camera,write on terminal:
 ```shell script
