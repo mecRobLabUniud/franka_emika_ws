@@ -8,7 +8,7 @@
 </p>
 
 
-https://github.com/user-attachments/assets/6e180963-f970-446b-9873-4e84d9dd7af3
+https://github.com/federicolozer/franka_emika_ws/media/Stop_traj_comparison.mp4
 
 
 There are two possible solutions:
