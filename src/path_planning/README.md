@@ -1,6 +1,6 @@
 # Instructions to get ready with minimum time-jerk trajectory tests
 
-## Steup
+## Setup
 * **Windows PC** with orange label (password written on it)
 * **This PC** with pink label (password written on it)
 * **National Instruments sensors and modules** all inside the box
