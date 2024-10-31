@@ -8,7 +8,7 @@
 </p>
 
 
-[![Example] https://github.com/federicolozer/franka_emika_ws/media/Panda.jpg](https://github.com/federicolozer/franka_emika_ws/blob/main/media/Stop_traj_comparison.mp4)
+[![Example] (https://github.com/federicolozer/franka_emika_ws/media/Panda.jpg)](https://github.com/federicolozer/franka_emika_ws/blob/main/media/Stop_traj_comparison.mp4)
 
 
 There are two possible solutions:
