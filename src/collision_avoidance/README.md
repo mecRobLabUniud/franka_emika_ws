@@ -57,8 +57,7 @@ Then follow the instructions.
 ## Impedance Control Demo
 To start the demo, write on terminal:
 ```shell script
-cd
-cd libfranka/build/examples/
+cd ~/franka_emika_ws/src/libfranka/build/examples/
 ./demo_impedance_control_traj 172.16.0.2 virt
 ```
 Then follow the instructions.
@@ -66,8 +65,7 @@ Then follow the instructions.
 ## Admittance Control Demo
 To start the demo, write on terminal:
 ```shell script
-cd
-cd libfranka/build/examples/
+cd ~/franka_emika_ws/src/libfranka/build/examples/
 ./demo_admittance_control_traj 172.16.0.2 virt
 ```
 Then follow the instructions.
@@ -89,7 +87,7 @@ ping 172.16.10.1
 ## Camera streaming
 To start the streaming, on Xavier PC, write on terminal:
 ```shell script
-cd Libraries/openpose
+cd ~/Libraries/openpose
 ./build/examples/user_code/skeleton_tracker.bin
 ```
 If you want to display the streaming, write that on terminal instead:
@@ -101,8 +99,7 @@ Make sure the program is correctly running (there could be a segmentation fault 
 ## Stop Event Demo
 To start the data acquisition from camera, on this PC, write on terminal:
 ```shell script
-cd
-cd libfranka/build/examples/
+cd ~/franka_emika_ws/src/libfranka/build/examples/
 ./coord_handler
 ```
 To start the demo, on this PC, write on another terminal:
@@ -114,14 +111,12 @@ Then follow the instructions.
 ## Impedance Control Demo
 To start the data acquisition from camera, on this PC, write on terminal:
 ```shell script
-cd
-cd libfranka/build/examples/
+cd ~/franka_emika_ws/src/libfranka/build/examples/
 ./coord_handler
 ```
 To start the demo, on this PC, write on another terminal:
 ```shell script
-cd
-cd libfranka/build/examples/
+cd ~/franka_emika_ws/src/libfranka/build/examples/
 ./demo_impedance_control_traj 172.16.0.2
 ```
 Then follow the instructions.
@@ -129,14 +124,12 @@ Then follow the instructions.
 ## Admittance Control Demo
 To start the data acquisition from camera, on this PC, write on terminal:
 ```shell script
-cd
-cd libfranka/build/examples/
+cd ~/franka_emika_ws/src/libfranka/build/examples/
 ./coord_handler
 ```
 To start the demo, on this PC, write on another terminal:
 ```shell script
-cd
-cd libfranka/build/examples/
+cd ~/franka_emika_ws/src/libfranka/build/examples/
 ./demo_admittance_control_traj 172.16.0.2
 ```
 Then follow the instructions.
