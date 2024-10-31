@@ -1,5 +1,11 @@
 # Instructions to get ready with collision avoidance demos
 
+<p>
+  <video width=500 autoplay>
+    <source src="../../media/Stop_traj_comparison.mp4" type="video/mp4">
+  </video>
+</p>
+
 There are two possible solutions:
 * [**Virtual skeleton**](#Virtual-skeleton-collision-avoidance-demo)
 * [**Real-time skeleton**](#Real-time-skeleton-collision-avoidance-demo)
