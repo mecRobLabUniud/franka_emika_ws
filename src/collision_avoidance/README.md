@@ -7,6 +7,10 @@
   </video>
 </p>
 
+
+https://github.com/user-attachments/assets/6e180963-f970-446b-9873-4e84d9dd7af3
+
+
 There are two possible solutions:
 * [**Virtual skeleton**](#Virtual-skeleton-collision-avoidance-demo)
 * [**Real-time skeleton**](#Real-time-skeleton-collision-avoidance-demo)
