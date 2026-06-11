@@ -1,7 +1,7 @@
 # CMake generated Testfile for 
 # Source directory: /usr/src/googletest/googlemock
-# Build directory: /home/panda/franka_emika_ws/build/gtest/googlemock
+# Build directory: /home/lab/Desktop/franka_emika_ws/build/gtest/googlemock
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-subdirs("gtest")
+subdirs("../googletest")

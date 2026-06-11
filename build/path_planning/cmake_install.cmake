@@ -1,8 +1,8 @@
-# Install script for directory: /home/panda/franka_emika_ws/src/path_planning
+# Install script for directory: /home/lab/Desktop/franka_emika_ws/src/path_planning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/panda/franka_emika_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/lab/Desktop/franka_emika_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -37,35 +37,30 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/path_planning.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/lab/Desktop/franka_emika_ws/build/path_planning/catkin_generated/installspace/path_planning.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning/cmake" TYPE FILE FILES
-    "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/path_planningConfig.cmake"
-    "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/path_planningConfig-version.cmake"
+    "/home/lab/Desktop/franka_emika_ws/build/path_planning/catkin_generated/installspace/path_planningConfig.cmake"
+    "/home/lab/Desktop/franka_emika_ws/build/path_planning/catkin_generated/installspace/path_planningConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning" TYPE FILE FILES "/home/panda/franka_emika_ws/src/path_planning/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning" TYPE FILE FILES "/home/lab/Desktop/franka_emika_ws/src/path_planning/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/trajectory_executor.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/lab/Desktop/franka_emika_ws/build/path_planning/catkin_generated/installspace/trajectory_executor.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/Panda_trajectory_planner.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/lab/Desktop/franka_emika_ws/build/path_planning/catkin_generated/installspace/Panda_trajectory_planner.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/panda/franka_emika_ws/build/path_planning/catkin_generated/installspace/data_IO.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/path_planning" TYPE PROGRAM FILES "/home/lab/Desktop/franka_emika_ws/build/path_planning/catkin_generated/installspace/data_IO.py")
 endif()
 

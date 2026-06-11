@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -102,16 +102,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::ErrorRecoveryAction_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::ErrorRecoveryAction_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::ErrorRecoveryAction_<ContainerAllocator> >
   : TrueType
   { };
@@ -119,6 +109,16 @@ struct IsMessage< ::franka_msgs::ErrorRecoveryAction_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::ErrorRecoveryAction_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::ErrorRecoveryAction_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::ErrorRecoveryAction_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -297,14 +297,17 @@ struct Printer< ::franka_msgs::ErrorRecoveryAction_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_msgs::ErrorRecoveryAction_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "action_goal: ";
-    s << std::endl;
     Printer< ::franka_msgs::ErrorRecoveryActionGoal_<ContainerAllocator> >::stream(s, indent + "  ", v.action_goal);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "action_result: ";
-    s << std::endl;
     Printer< ::franka_msgs::ErrorRecoveryActionResult_<ContainerAllocator> >::stream(s, indent + "  ", v.action_result);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "action_feedback: ";
-    s << std::endl;
     Printer< ::franka_msgs::ErrorRecoveryActionFeedback_<ContainerAllocator> >::stream(s, indent + "  ", v.action_feedback);
   }
 };

@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -102,16 +102,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::HomingActionResult_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::HomingActionResult_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::HomingActionResult_<ContainerAllocator> >
   : TrueType
   { };
@@ -119,6 +109,16 @@ struct IsMessage< ::franka_gripper::HomingActionResult_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::HomingActionResult_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::HomingActionResult_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::HomingActionResult_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -266,14 +266,17 @@ struct Printer< ::franka_gripper::HomingActionResult_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_gripper::HomingActionResult_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "header: ";
-    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "status: ";
-    s << std::endl;
     Printer< ::actionlib_msgs::GoalStatus_<ContainerAllocator> >::stream(s, indent + "  ", v.status);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "result: ";
-    s << std::endl;
     Printer< ::franka_gripper::HomingResult_<ContainerAllocator> >::stream(s, indent + "  ", v.result);
   }
 };

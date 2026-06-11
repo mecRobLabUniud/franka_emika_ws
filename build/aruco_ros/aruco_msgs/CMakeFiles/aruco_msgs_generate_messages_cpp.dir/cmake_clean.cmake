@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/include/aruco_msgs/Marker.h"
-  "/home/panda/franka_emika_ws/devel/include/aruco_msgs/MarkerArray.h"
+  "/home/lab/Desktop/franka_emika_ws/devel/include/aruco_msgs/Marker.h"
+  "/home/lab/Desktop/franka_emika_ws/devel/include/aruco_msgs/MarkerArray.h"
   "CMakeFiles/aruco_msgs_generate_messages_cpp"
 )
 

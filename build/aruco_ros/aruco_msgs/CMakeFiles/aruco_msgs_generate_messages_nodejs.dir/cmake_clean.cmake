@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/share/gennodejs/ros/aruco_msgs/msg/Marker.js"
-  "/home/panda/franka_emika_ws/devel/share/gennodejs/ros/aruco_msgs/msg/MarkerArray.js"
+  "/home/lab/Desktop/franka_emika_ws/devel/share/gennodejs/ros/aruco_msgs/msg/Marker.js"
+  "/home/lab/Desktop/franka_emika_ws/devel/share/gennodejs/ros/aruco_msgs/msg/MarkerArray.js"
   "CMakeFiles/aruco_msgs_generate_messages_nodejs"
 )
 

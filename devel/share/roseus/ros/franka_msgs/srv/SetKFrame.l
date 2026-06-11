@@ -74,8 +74,8 @@
    (setq _error (string __error))
    self)
   (:success
-   (&optional __success)
-   (if __success (setq _success __success)) _success)
+   (&optional (__success :null))
+   (if (not (eq __success :null)) (setq _success __success)) _success)
   (:error
    (&optional __error)
    (if __error (setq _error __error)) _error)

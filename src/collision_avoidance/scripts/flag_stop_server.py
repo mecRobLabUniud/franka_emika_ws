@@ -40,6 +40,7 @@ max_robot_speed = 2
 skeleton = []
 t1 = None
 do_once = True
+flag_stop = False
 
 
 
@@ -517,7 +518,7 @@ def receive_skeleton():
     global skeleton
 
     while True:
-        with open("/home/panda/Documents/Data_Collision_Avoidance/skeleton_temp.txt", 'r') as temp:
+        with open("/home/lab/Documents/data_collision_avoidance/skeleton_temp.txt", 'r') as temp:
             keypoint = []
             data = temp.read()
             for line in data.split("\n"):
@@ -595,13 +596,17 @@ def FlagStopServer(T_stop, q, q_p, q_pp):
 
 
 def HandleFlagStop(req):
-    global t_start, t1, do_once
+    global t_start, t1, do_once, flag_stop
 
     if do_once == True:
         t_start = time.time()
         do_once = False
 
-    flag_stop = FlagStopServer(req.T_stop, req.q, req.q_p, req.q_pp)
+    # flag_stop = FlagStopServer(req.T_stop, req.q, req.q_p, req.q_pp)
+
+    # flag_stop = False
+
+    print("Flag stop: ", flag_stop)
     
     return FlagStopResponse(flag_stop)
     
@@ -618,9 +623,25 @@ def FlagStopServer1():
 
 
 
+def simulate_stop():
+    global t_start, t_exe, flag_stop
+
+    while True:
+        t_exe = time.time() - t_start
+        if t_exe > 5.0:
+            print("Simulating stop event...")
+            t_exe = 0.0
+            t_start = time.time()
+            flag_stop = True
+            time.sleep(1)
+            flag_stop = False
+        continue
+
+
+
 if __name__ == "__main__":
     rospy.init_node('flag_stop_server') 
-    virt = rospy.get_param("~virt")
+    # virt = rospy.get_param("~virt")
 
     DH = np.array([[0,    -pi/2,  0, 0.333],
                    [0,    -pi/2, pi, 0],
@@ -630,17 +651,20 @@ if __name__ == "__main__":
                    [0.088, pi/2, 0,  0],
                    [0,     0,    0,  0.2]])
     
-    if virt:
-        with open("/home/panda/Documents/Data_Collision_Avoidance/skeleton_coords.xml", 'r') as skel:
-            data = skel.read()
-            skel_data = BeautifulSoup(data, "xml")
-            skel_list = skel_data.find_all('keypoint')
+    # if virt:
+    #     with open("/home/panda/Documents/Data_Collision_Avoidance/skeleton_coords.xml", 'r') as skel:
+    #         data = skel.read()
+    #         skel_data = BeautifulSoup(data, "xml")
+    #         skel_list = skel_data.find_all('keypoint')
+# 
+    #     t1 = threading.Thread(target = load_skeleton)
+    #     t1.start()
+    # else:
+    #     t1 = threading.Thread(target = receive_skeleton)
+    #     t1.start()
 
-        t1 = threading.Thread(target = load_skeleton)
-        t1.start()
-    else:
-        t1 = threading.Thread(target = receive_skeleton)
-        t1.start()
+    t1 = threading.Thread(target = simulate_stop)
+    t1.start()
     
     FlagStopServer1()
     t1.join()

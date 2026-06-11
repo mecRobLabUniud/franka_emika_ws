@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/include/franka_example_controllers/JointTorqueComparison.h"
+  "/home/lab/Desktop/franka_emika_ws/devel/include/franka_example_controllers/JointTorqueComparison.h"
   "CMakeFiles/franka_example_controllers_generate_messages_cpp"
 )
 

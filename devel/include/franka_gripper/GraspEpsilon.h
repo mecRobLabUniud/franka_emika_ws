@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -93,22 +93,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::GraspEpsilon_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::GraspEpsilon_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::GraspEpsilon_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::GraspEpsilon_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::GraspEpsilon_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::GraspEpsilon_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -192,8 +192,12 @@ struct Printer< ::franka_gripper::GraspEpsilon_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_gripper::GraspEpsilon_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "inner: ";
     Printer<double>::stream(s, indent + "  ", v.inner);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "outer: ";
     Printer<double>::stream(s, indent + "  ", v.outer);
   }

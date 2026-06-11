@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 """ This simple script creates an interactive marker for changing desired centering pose of
     two the dual_panda_cartesian_impedance_example_controller. It features also resetting the
     marker to current centering pose between the left and the right endeffector.

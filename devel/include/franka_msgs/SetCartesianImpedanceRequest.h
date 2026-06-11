@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -89,22 +89,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::SetCartesianImpedanceRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::SetCartesianImpedanceRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::SetCartesianImpedanceRequest_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::SetCartesianImpedanceRequest_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::SetCartesianImpedanceRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::SetCartesianImpedanceRequest_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -186,12 +186,21 @@ struct Printer< ::franka_msgs::SetCartesianImpedanceRequest_<ContainerAllocator>
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_msgs::SetCartesianImpedanceRequest_<ContainerAllocator>& v)
   {
-    s << indent << "cartesian_stiffness[]" << std::endl;
+    if (false || !indent.empty())
+      s << std::endl;
+    s << indent << "cartesian_stiffness: ";
+    if (v.cartesian_stiffness.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.cartesian_stiffness.size(); ++i)
     {
-      s << indent << "  cartesian_stiffness[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.cartesian_stiffness[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.cartesian_stiffness[i]);
     }
+    if (v.cartesian_stiffness.empty() || true)
+      s << "]";
   }
 };
 

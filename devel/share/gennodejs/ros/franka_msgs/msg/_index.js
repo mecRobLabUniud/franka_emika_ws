@@ -1,24 +1,24 @@
 
 "use strict";
 
-let FrankaState = require('./FrankaState.js');
 let Errors = require('./Errors.js');
-let ErrorRecoveryActionGoal = require('./ErrorRecoveryActionGoal.js');
+let FrankaState = require('./FrankaState.js');
+let ErrorRecoveryGoal = require('./ErrorRecoveryGoal.js');
+let ErrorRecoveryResult = require('./ErrorRecoveryResult.js');
 let ErrorRecoveryAction = require('./ErrorRecoveryAction.js');
+let ErrorRecoveryActionGoal = require('./ErrorRecoveryActionGoal.js');
 let ErrorRecoveryActionFeedback = require('./ErrorRecoveryActionFeedback.js');
 let ErrorRecoveryFeedback = require('./ErrorRecoveryFeedback.js');
-let ErrorRecoveryGoal = require('./ErrorRecoveryGoal.js');
 let ErrorRecoveryActionResult = require('./ErrorRecoveryActionResult.js');
-let ErrorRecoveryResult = require('./ErrorRecoveryResult.js');
 
 module.exports = {
-  FrankaState: FrankaState,
   Errors: Errors,
-  ErrorRecoveryActionGoal: ErrorRecoveryActionGoal,
+  FrankaState: FrankaState,
+  ErrorRecoveryGoal: ErrorRecoveryGoal,
+  ErrorRecoveryResult: ErrorRecoveryResult,
   ErrorRecoveryAction: ErrorRecoveryAction,
+  ErrorRecoveryActionGoal: ErrorRecoveryActionGoal,
   ErrorRecoveryActionFeedback: ErrorRecoveryActionFeedback,
   ErrorRecoveryFeedback: ErrorRecoveryFeedback,
-  ErrorRecoveryGoal: ErrorRecoveryGoal,
   ErrorRecoveryActionResult: ErrorRecoveryActionResult,
-  ErrorRecoveryResult: ErrorRecoveryResult,
 };

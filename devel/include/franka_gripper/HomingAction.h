@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -102,16 +102,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::HomingAction_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::HomingAction_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::HomingAction_<ContainerAllocator> >
   : TrueType
   { };
@@ -119,6 +109,16 @@ struct IsMessage< ::franka_gripper::HomingAction_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::HomingAction_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::HomingAction_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::HomingAction_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -299,14 +299,17 @@ struct Printer< ::franka_gripper::HomingAction_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_gripper::HomingAction_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "action_goal: ";
-    s << std::endl;
     Printer< ::franka_gripper::HomingActionGoal_<ContainerAllocator> >::stream(s, indent + "  ", v.action_goal);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "action_result: ";
-    s << std::endl;
     Printer< ::franka_gripper::HomingActionResult_<ContainerAllocator> >::stream(s, indent + "  ", v.action_result);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "action_feedback: ";
-    s << std::endl;
     Printer< ::franka_gripper::HomingActionFeedback_<ContainerAllocator> >::stream(s, indent + "  ", v.action_feedback);
   }
 };

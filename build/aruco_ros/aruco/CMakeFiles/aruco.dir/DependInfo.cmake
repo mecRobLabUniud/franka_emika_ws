@@ -1,25 +1,35 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/cameraparameters.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/cameraparameters.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/cvdrawingutils.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/cvdrawingutils.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/debug.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/debug.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/dictionary.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/dictionary.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/ippe.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/ippe.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/marker.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/marker.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markerdetector.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerdetector.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markerlabeler.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerlabeler.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markerlabelers/dictionary_based.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerlabelers/dictionary_based.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markerlabelers/svmmarkers.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerlabelers/svmmarkers.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markermap.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markermap.cpp.o"
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/src/aruco/posetracker.cpp" "/home/lab/Desktop/franka_emika_ws/build/aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/posetracker.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "ROS_BUILD_SHARED_LIBS=1"
+  "aruco_EXPORTS"
   )
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/cameraparameters.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/cameraparameters.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/cameraparameters.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/cvdrawingutils.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/cvdrawingutils.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/cvdrawingutils.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/debug.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/debug.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/debug.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/dictionary.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/dictionary.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/dictionary.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/ippe.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/ippe.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/ippe.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/marker.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/marker.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/marker.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markerdetector.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerdetector.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerdetector.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markerlabeler.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerlabeler.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerlabeler.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markerlabelers/dictionary_based.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerlabelers/dictionary_based.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerlabelers/dictionary_based.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markerlabelers/svmmarkers.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerlabelers/svmmarkers.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markerlabelers/svmmarkers.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/markermap.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markermap.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/markermap.cpp.o.d"
-  "/home/panda/franka_emika_ws/src/aruco_ros/aruco/src/aruco/posetracker.cpp" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/posetracker.cpp.o" "gcc" "aruco_ros/aruco/CMakeFiles/aruco.dir/src/aruco/posetracker.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/lab/Desktop/franka_emika_ws/src/aruco_ros/aruco/include/aruco"
+  "/usr/include/opencv4"
+  "/usr/local/include/eigen3"
   )
 
 # Targets to which this target links.

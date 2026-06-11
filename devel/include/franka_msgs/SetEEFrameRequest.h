@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -89,22 +89,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::SetEEFrameRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::SetEEFrameRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::SetEEFrameRequest_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::SetEEFrameRequest_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::SetEEFrameRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::SetEEFrameRequest_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -186,12 +186,21 @@ struct Printer< ::franka_msgs::SetEEFrameRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_msgs::SetEEFrameRequest_<ContainerAllocator>& v)
   {
-    s << indent << "NE_T_EE[]" << std::endl;
+    if (false || !indent.empty())
+      s << std::endl;
+    s << indent << "NE_T_EE: ";
+    if (v.NE_T_EE.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.NE_T_EE.size(); ++i)
     {
-      s << indent << "  NE_T_EE[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.NE_T_EE[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.NE_T_EE[i]);
     }
+    if (v.NE_T_EE.empty() || true)
+      s << "]";
   }
 };
 

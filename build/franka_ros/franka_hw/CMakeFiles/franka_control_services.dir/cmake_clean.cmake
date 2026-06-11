@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/lib/libfranka_control_services.pdb"
-  "/home/panda/franka_emika_ws/devel/lib/libfranka_control_services.so"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/libfranka_control_services.pdb"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/libfranka_control_services.so"
   "CMakeFiles/franka_control_services.dir/src/services.cpp.o"
-  "CMakeFiles/franka_control_services.dir/src/services.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

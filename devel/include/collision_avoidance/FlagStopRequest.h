@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -42,13 +42,13 @@ struct FlagStopRequest_
    typedef double _T_stop_type;
   _T_stop_type T_stop;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _q_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _q_type;
   _q_type q;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _q_p_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _q_p_type;
   _q_p_type q_p;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _q_pp_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _q_pp_type;
   _q_pp_type q_pp;
 
 
@@ -105,16 +105,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::collision_avoidance::FlagStopRequest_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::collision_avoidance::FlagStopRequest_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::collision_avoidance::FlagStopRequest_<ContainerAllocator> >
   : TrueType
   { };
@@ -122,6 +112,16 @@ struct IsMessage< ::collision_avoidance::FlagStopRequest_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::collision_avoidance::FlagStopRequest_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::collision_avoidance::FlagStopRequest_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::collision_avoidance::FlagStopRequest_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -208,26 +208,55 @@ struct Printer< ::collision_avoidance::FlagStopRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::collision_avoidance::FlagStopRequest_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "T_stop: ";
     Printer<double>::stream(s, indent + "  ", v.T_stop);
-    s << indent << "q[]" << std::endl;
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "q: ";
+    if (v.q.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.q.size(); ++i)
     {
-      s << indent << "  q[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.q[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.q[i]);
     }
-    s << indent << "q_p[]" << std::endl;
+    if (v.q.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "q_p: ";
+    if (v.q_p.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.q_p.size(); ++i)
     {
-      s << indent << "  q_p[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.q_p[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.q_p[i]);
     }
-    s << indent << "q_pp[]" << std::endl;
+    if (v.q_p.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "q_pp: ";
+    if (v.q_pp.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.q_pp.size(); ++i)
     {
-      s << indent << "  q_pp[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.q_pp[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.q_pp[i]);
     }
+    if (v.q_pp.empty() || true)
+      s << "]";
   }
 };
 

@@ -125,8 +125,8 @@
    (setq _flag_stop __flag_stop)
    self)
   (:flag_stop
-   (&optional __flag_stop)
-   (if __flag_stop (setq _flag_stop __flag_stop)) _flag_stop)
+   (&optional (__flag_stop :null))
+   (if (not (eq __flag_stop :null)) (setq _flag_stop __flag_stop)) _flag_stop)
   (:serialization-length
    ()
    (+

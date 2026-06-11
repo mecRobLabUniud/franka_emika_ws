@@ -1,135 +1,89 @@
 #!/usr/bin/env python3
 
 """
-Il programma salva su documento di testo la matrice di rotazione per ottenere la terna base
-Bisogna prima lanciare due nodi:
-- roslaunch realsense2_camera rs_camera.launch (wrapper della telecamera)
-- roslaunch aruco_ros single.launch (libreria aruco che sfrutta OpenCV per identificare il marker)
+Il programma calcola e salva la trasformazione omogenea dalla Base Robot alla Telecamera.
+Catena cinematica: Base <--- Marker <--- Camera
 """
 
-from mpl_toolkits import mplot3d
-import matplotlib.pyplot as plt
-from matplotlib import cm
 import numpy as np
-from math import cos, sin, pi, atan2
 import rospy
-from time import sleep
 from geometry_msgs.msg import PoseStamped
+import tf.transformations as tf_trans # Usiamo la libreria standard di ROS per le trasformazioni
 
-marker_pos = []
+marker_pos_base_frame = []
 
-
-def callback(data, arg):
-    global marker_pos
-
-    a = data.pose.position.x
-    b = data.pose.position.y
-    c = data.pose.position.z
-    x_q = data.pose.orientation.x
-    y_q = data.pose.orientation.y
-    z_q = data.pose.orientation.z
-    w_q = data.pose.orientation.w
-
-    x = a
-    y = c
-    z = -b
-
-    euler = quaternion_to_euler(w_q, x_q, y_q, z_q)
-
-    R = Rx(-pi/2)*Rz(euler[0])*Ry(euler[1])*Rx(euler[2])*Rz(-pi/2)
-    V = np.array([[0, 0, 0]])
-    F = np.array([[x], [y], [z], [1]])
-        
-    R = np.concatenate((R, V), axis = 0)
-    R = np.concatenate((R, F), axis = 1)
-
-    K = np.array([[1, 0, 0, marker_pos[0]],
-                  [0, 1, 0, marker_pos[1]],
-                  [0, 0, 1, marker_pos[2]],
-                  [0, 0, 0, 1            ]])
-
-    R = R*K
-
-    sleep(1)
-
-    arg.append(R)
-   
-   
-
-def quaternion_to_euler(w, x, y, z):    
-    r21 = 2*(x*y + w*z)
-    r11 = 2*(w**2 + x**2) - 1    
-    r31 = 2*(x*z - w*y)
-    r32 = 2*(y*z + w*x)
-    r33 = 2*(w**2 + z**2) - 1
-
-    X = (atan2(r21, r11))
-    Y = (atan2(-r31, (r32**2 + r33**2)**0.5))
-    Z = (atan2(r32, r33))
+def get_matrix_from_pose(p, q):
+    """ Converte posizione e quaternione in matrice 4x4 """
+    # Traslazione
+    trans_mat = tf_trans.translation_matrix([p.x, p.y, p.z])
+    # Rotazione (da quaternione)
+    rot_mat = tf_trans.quaternion_matrix([q.x, q.y, q.z, q.w])
     
-    return X, Y, Z
+    # Moltiplicazione: Traslazione * Rotazione
+    # Nota: tf_trans crea matrici 4x4 piene
+    T = np.dot(trans_mat, rot_mat)
+    return T
+
+def callback(data):
+    global marker_pos_base_frame
     
-
-def Rx(theta):
-    return np.matrix([[ 1, 0         , 0         ],
-                      [ 0, cos(theta),-sin(theta)],
-                      [ 0, sin(theta), cos(theta)]])
- 
-def Ry(theta):
-    return np.matrix([[ cos(theta), 0, sin(theta)],
-                      [ 0         , 1, 0         ],
-                      [-sin(theta), 0, cos(theta)]])
- 
-def Rz(theta):
-    return np.matrix([[ cos(theta), -sin(theta), 0 ],
-                      [ sin(theta), cos(theta) , 0 ],
-                      [ 0         , 0          , 1 ]])
-
-      
-def listener():
-    global marker_pos
+    # 1. Otteniamo la trasformazione Marker rispetto alla Camera (C_T_M)
+    # Questa arriva direttamente dal topic di aruco
+    C_T_M = get_matrix_from_pose(data.pose.position, data.pose.orientation)
     
-    rospy.init_node('listener', anonymous=True)
+    # 2. Costruiamo la trasformazione Base rispetto al Marker (M_T_B)
+    # Sappiamo che l'orientamento è identico (Matrice Identità)
+    # marker_pos_base_frame è il vettore posizione della Base visto dal Marker
+    M_T_B = np.identity(4)
+    M_T_B[0, 3] = marker_pos_base_frame[0]
+    M_T_B[1, 3] = marker_pos_base_frame[1]
+    M_T_B[2, 3] = marker_pos_base_frame[2]
+    
+    # 3. Calcoliamo la Base rispetto alla Camera (C_T_B)
+    # Formula: C_T_B = C_T_M * M_T_B
+    C_T_B = np.dot(C_T_M, M_T_B)
+    
+    # 4. Calcoliamo la Camera rispetto alla Base (B_T_C)
+    # È l'inversa di C_T_B
+    B_T_C = np.linalg.inv(C_T_B)
 
-    arg = list()
+    # Output e Salvataggio
+    print("Matrice calcolata (Camera rispetto a Base Robot):")
+    print(B_T_C)
+    
+    file_path = '/home/lab/Documents/data_collision_avoidance/rotation_matrix.txt'
+    
+    # Salvataggio in formato leggibile (tab separated)
+    with open(file_path, 'w') as file:
+        for i in range(4):
+            line = f"{B_T_C[i,0]:.6f}\t{B_T_C[i,1]:.6f}\t{B_T_C[i,2]:.6f}\t{B_T_C[i,3]:.6f}\n"
+            file.write(line)
             
-    Reader = rospy.Subscriber('/aruco_single/pose', PoseStamped, callback, (arg))
-
-    # dati inseriti da print di marker_pos_calculator
-    file = open("/home/panda/Documents/Data_Collision_Avoidance/marker_pos.txt", 'r')
-    temp = file.read().split("\t")
-
-    marker_pos = [float(temp[0]), float(temp[1]), float(temp[2])]
-
-    file.close()
+    print(f"Salvato in {file_path}")
     
-    while True: 
-        if not arg == []:         
-            R = arg[0] 
+    # Chiudiamo il nodo dopo aver salvato una volta
+    rospy.signal_shutdown("Calibrazione completata.")
 
-            file = open('/home/panda/Documents/Data_Collision_Avoidance/rotation_matrix.txt', 'w')
+def listener():
+    global marker_pos_base_frame
+    
+    rospy.init_node('base_rotation_matrix_listener', anonymous=True)
 
-            for i in range(4):
-                
-                file.write(str(R[i, 0]))
-                file.write('\t')
-                file.write(str(R[i, 1]))
-                file.write('\t')
-                file.write(str(R[i, 2]))
-                file.write('\t')
-                file.write(str(R[i, 3]))
-                file.write('\t')
-                file.write('\n')
+    # Lettura file posizione marker
+    try:
+        with open("/home/lab/Documents/data_collision_avoidance/marker_pos.txt", 'r') as file:
+            temp = file.read().strip().split("\t")
+            # Assicuriamoci di leggere float
+            marker_pos_base_frame = [float(x) for x in temp if x]
+            print(f"Posizione Base rispetto a Marker letta: {marker_pos_base_frame}")
+    except Exception as e:
+        rospy.LogError(f"Errore lettura file marker_pos: {e}")
+        return
 
-            file.close()
-            print(R)
+    # Subscriber
+    rospy.Subscriber('/aruco_single/pose', PoseStamped, callback)
+    
+    rospy.spin()
 
-            Reader.unsubscribe()
-
-            quit()
-                        
-              
-       
 if __name__ == '__main__':
-    
     listener()

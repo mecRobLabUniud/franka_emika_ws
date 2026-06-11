@@ -191,10 +191,10 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
               
                 stop_duration = CalcStopDurationClient(deepcopy(q_c), deepcopy(q_p_c), deepcopy(q_pp_c)) 
             
-            outfile_dist.write(f"\t<keypoint time='{t_exe}'>")
-            outfile_dist.write(f"\t\t<point id='0'>{ee_pos[0]} {ee_pos[1]} {ee_pos[2]}</point>")
-            outfile_dist.write(f"\t\t<point id='1'>{repul_final[0]} {repul_final[1]} {repul_final[2]}</point>")
-            outfile_dist.write(f"\t</keypoint>")
+            # outfile_dist.write(f"\t<keypoint time='{t_exe}'>")
+            # outfile_dist.write(f"\t\t<point id='0'>{ee_pos[0]} {ee_pos[1]} {ee_pos[2]}</point>")
+            # outfile_dist.write(f"\t\t<point id='1'>{repul_final[0]} {repul_final[1]} {repul_final[2]}</point>")
+            # outfile_dist.write(f"\t</keypoint>")
 
             # Detect capsule collision
             if(FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)):
@@ -284,10 +284,10 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
 def ExecuteTask(q_traj, traj_durations, control_publisher):
     global outfile_q, outfile_dist, t_i, status
 
-    outfile_q = open("/home/panda/Documents/Data_Collision_Avoidance/demo_stop_event_control/q_robot.xml", 'w')
+    outfile_q = open("/home/lab/Documents/data_collision_avoidance/demo_stop_event_control/q_robot.xml", 'w')
     outfile_q.write("<q>\n")
 
-    outfile_dist = open("/home/panda/Documents/Data_Collision_Avoidance/demo_stop_event_control/dist_segment.xml", 'w')
+    outfile_dist = open("/home/lab/Documents/data_collision_avoidance/demo_stop_event_control/dist_segment.xml", 'w')
     outfile_dist.write("<distance>\n")
 
     # Initialization subscriber node for /joint_states
@@ -316,7 +316,7 @@ if __name__ == '__main__':
     # Initialization node
     rospy.init_node('execute_trajectory')
 
-    file = open("/home/panda/Desktop/demo/collision_avoidance/p_traj.txt", 'r')
+    file = open("/home/lab/Documents/data_collision_avoidance/p_traj.txt", 'r')
 
     p_traj = []
     for line in file:
@@ -328,7 +328,7 @@ if __name__ == '__main__':
     
     file.close()
 
-    file = open("/home/panda/Desktop/demo/collision_avoidance/t_traj.txt", 'r')
+    file = open("/home/lab/Documents/data_collision_avoidance/t_traj.txt", 'r')
 
     t_traj = []
     for line in file:

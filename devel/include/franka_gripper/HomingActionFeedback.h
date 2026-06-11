@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -102,16 +102,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::HomingActionFeedback_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::HomingActionFeedback_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::HomingActionFeedback_<ContainerAllocator> >
   : TrueType
   { };
@@ -119,6 +109,16 @@ struct IsMessage< ::franka_gripper::HomingActionFeedback_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::HomingActionFeedback_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::HomingActionFeedback_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::HomingActionFeedback_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -265,14 +265,17 @@ struct Printer< ::franka_gripper::HomingActionFeedback_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_gripper::HomingActionFeedback_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "header: ";
-    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "status: ";
-    s << std::endl;
     Printer< ::actionlib_msgs::GoalStatus_<ContainerAllocator> >::stream(s, indent + "  ", v.status);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "feedback: ";
-    s << std::endl;
     Printer< ::franka_gripper::HomingFeedback_<ContainerAllocator> >::stream(s, indent + "  ", v.feedback);
   }
 };

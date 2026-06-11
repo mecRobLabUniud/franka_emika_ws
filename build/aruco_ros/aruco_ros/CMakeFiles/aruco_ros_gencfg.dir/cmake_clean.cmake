@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/include/aruco_ros/ArucoThresholdConfig.h"
-  "/home/panda/franka_emika_ws/devel/lib/python2.7/dist-packages/aruco_ros/cfg/ArucoThresholdConfig.py"
-  "/home/panda/franka_emika_ws/devel/share/aruco_ros/docs/ArucoThresholdConfig-usage.dox"
-  "/home/panda/franka_emika_ws/devel/share/aruco_ros/docs/ArucoThresholdConfig.dox"
-  "/home/panda/franka_emika_ws/devel/share/aruco_ros/docs/ArucoThresholdConfig.wikidoc"
+  "/home/lab/Desktop/franka_emika_ws/devel/include/aruco_ros/ArucoThresholdConfig.h"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/python3/dist-packages/aruco_ros/cfg/ArucoThresholdConfig.py"
+  "/home/lab/Desktop/franka_emika_ws/devel/share/aruco_ros/docs/ArucoThresholdConfig-usage.dox"
+  "/home/lab/Desktop/franka_emika_ws/devel/share/aruco_ros/docs/ArucoThresholdConfig.dox"
+  "/home/lab/Desktop/franka_emika_ws/devel/share/aruco_ros/docs/ArucoThresholdConfig.wikidoc"
   "CMakeFiles/aruco_ros_gencfg"
 )
 

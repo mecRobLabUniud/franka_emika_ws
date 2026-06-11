@@ -15,7 +15,7 @@ import os
 
 # per bloccare processo: kill -9 $(lsof -ti tcp:1024)
 
-HOST = "172.16.1.1"
+HOST = "172.16.1.11"
 PORT = 1024
 
 path = "/home/panda/Documents/Data_Optimizer/"

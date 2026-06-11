@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -562,16 +562,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::FrankaState_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::FrankaState_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::FrankaState_<ContainerAllocator> >
   : TrueType
   { };
@@ -579,6 +569,16 @@ struct IsMessage< ::franka_msgs::FrankaState_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::FrankaState_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::FrankaState_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::FrankaState_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -813,254 +813,611 @@ struct Printer< ::franka_msgs::FrankaState_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_msgs::FrankaState_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "header: ";
-    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    s << indent << "cartesian_collision[]" << std::endl;
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "cartesian_collision: ";
+    if (v.cartesian_collision.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.cartesian_collision.size(); ++i)
     {
-      s << indent << "  cartesian_collision[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.cartesian_collision[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.cartesian_collision[i]);
     }
-    s << indent << "cartesian_contact[]" << std::endl;
+    if (v.cartesian_collision.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "cartesian_contact: ";
+    if (v.cartesian_contact.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.cartesian_contact.size(); ++i)
     {
-      s << indent << "  cartesian_contact[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.cartesian_contact[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.cartesian_contact[i]);
     }
-    s << indent << "q[]" << std::endl;
+    if (v.cartesian_contact.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "q: ";
+    if (v.q.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.q.size(); ++i)
     {
-      s << indent << "  q[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.q[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.q[i]);
     }
-    s << indent << "q_d[]" << std::endl;
+    if (v.q.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "q_d: ";
+    if (v.q_d.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.q_d.size(); ++i)
     {
-      s << indent << "  q_d[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.q_d[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.q_d[i]);
     }
-    s << indent << "dq[]" << std::endl;
+    if (v.q_d.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "dq: ";
+    if (v.dq.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.dq.size(); ++i)
     {
-      s << indent << "  dq[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.dq[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.dq[i]);
     }
-    s << indent << "dq_d[]" << std::endl;
+    if (v.dq.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "dq_d: ";
+    if (v.dq_d.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.dq_d.size(); ++i)
     {
-      s << indent << "  dq_d[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.dq_d[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.dq_d[i]);
     }
-    s << indent << "ddq_d[]" << std::endl;
+    if (v.dq_d.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "ddq_d: ";
+    if (v.ddq_d.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.ddq_d.size(); ++i)
     {
-      s << indent << "  ddq_d[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.ddq_d[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.ddq_d[i]);
     }
-    s << indent << "theta[]" << std::endl;
+    if (v.ddq_d.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "theta: ";
+    if (v.theta.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.theta.size(); ++i)
     {
-      s << indent << "  theta[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.theta[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.theta[i]);
     }
-    s << indent << "dtheta[]" << std::endl;
+    if (v.theta.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "dtheta: ";
+    if (v.dtheta.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.dtheta.size(); ++i)
     {
-      s << indent << "  dtheta[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.dtheta[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.dtheta[i]);
     }
-    s << indent << "tau_J[]" << std::endl;
+    if (v.dtheta.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "tau_J: ";
+    if (v.tau_J.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.tau_J.size(); ++i)
     {
-      s << indent << "  tau_J[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.tau_J[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.tau_J[i]);
     }
-    s << indent << "dtau_J[]" << std::endl;
+    if (v.tau_J.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "dtau_J: ";
+    if (v.dtau_J.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.dtau_J.size(); ++i)
     {
-      s << indent << "  dtau_J[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.dtau_J[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.dtau_J[i]);
     }
-    s << indent << "tau_J_d[]" << std::endl;
+    if (v.dtau_J.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "tau_J_d: ";
+    if (v.tau_J_d.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.tau_J_d.size(); ++i)
     {
-      s << indent << "  tau_J_d[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.tau_J_d[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.tau_J_d[i]);
     }
-    s << indent << "K_F_ext_hat_K[]" << std::endl;
+    if (v.tau_J_d.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "K_F_ext_hat_K: ";
+    if (v.K_F_ext_hat_K.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.K_F_ext_hat_K.size(); ++i)
     {
-      s << indent << "  K_F_ext_hat_K[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.K_F_ext_hat_K[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.K_F_ext_hat_K[i]);
     }
-    s << indent << "elbow[]" << std::endl;
+    if (v.K_F_ext_hat_K.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "elbow: ";
+    if (v.elbow.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.elbow.size(); ++i)
     {
-      s << indent << "  elbow[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.elbow[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.elbow[i]);
     }
-    s << indent << "elbow_d[]" << std::endl;
+    if (v.elbow.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "elbow_d: ";
+    if (v.elbow_d.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.elbow_d.size(); ++i)
     {
-      s << indent << "  elbow_d[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.elbow_d[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.elbow_d[i]);
     }
-    s << indent << "elbow_c[]" << std::endl;
+    if (v.elbow_d.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "elbow_c: ";
+    if (v.elbow_c.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.elbow_c.size(); ++i)
     {
-      s << indent << "  elbow_c[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.elbow_c[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.elbow_c[i]);
     }
-    s << indent << "delbow_c[]" << std::endl;
+    if (v.elbow_c.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "delbow_c: ";
+    if (v.delbow_c.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.delbow_c.size(); ++i)
     {
-      s << indent << "  delbow_c[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.delbow_c[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.delbow_c[i]);
     }
-    s << indent << "ddelbow_c[]" << std::endl;
+    if (v.delbow_c.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "ddelbow_c: ";
+    if (v.ddelbow_c.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.ddelbow_c.size(); ++i)
     {
-      s << indent << "  ddelbow_c[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.ddelbow_c[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.ddelbow_c[i]);
     }
-    s << indent << "joint_collision[]" << std::endl;
+    if (v.ddelbow_c.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "joint_collision: ";
+    if (v.joint_collision.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.joint_collision.size(); ++i)
     {
-      s << indent << "  joint_collision[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.joint_collision[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.joint_collision[i]);
     }
-    s << indent << "joint_contact[]" << std::endl;
+    if (v.joint_collision.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "joint_contact: ";
+    if (v.joint_contact.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.joint_contact.size(); ++i)
     {
-      s << indent << "  joint_contact[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.joint_contact[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.joint_contact[i]);
     }
-    s << indent << "O_F_ext_hat_K[]" << std::endl;
+    if (v.joint_contact.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "O_F_ext_hat_K: ";
+    if (v.O_F_ext_hat_K.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.O_F_ext_hat_K.size(); ++i)
     {
-      s << indent << "  O_F_ext_hat_K[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.O_F_ext_hat_K[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.O_F_ext_hat_K[i]);
     }
-    s << indent << "O_dP_EE_d[]" << std::endl;
+    if (v.O_F_ext_hat_K.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "O_dP_EE_d: ";
+    if (v.O_dP_EE_d.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.O_dP_EE_d.size(); ++i)
     {
-      s << indent << "  O_dP_EE_d[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.O_dP_EE_d[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.O_dP_EE_d[i]);
     }
-    s << indent << "O_dP_EE_c[]" << std::endl;
+    if (v.O_dP_EE_d.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "O_dP_EE_c: ";
+    if (v.O_dP_EE_c.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.O_dP_EE_c.size(); ++i)
     {
-      s << indent << "  O_dP_EE_c[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.O_dP_EE_c[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.O_dP_EE_c[i]);
     }
-    s << indent << "O_ddP_EE_c[]" << std::endl;
+    if (v.O_dP_EE_c.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "O_ddP_EE_c: ";
+    if (v.O_ddP_EE_c.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.O_ddP_EE_c.size(); ++i)
     {
-      s << indent << "  O_ddP_EE_c[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.O_ddP_EE_c[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.O_ddP_EE_c[i]);
     }
-    s << indent << "tau_ext_hat_filtered[]" << std::endl;
+    if (v.O_ddP_EE_c.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "tau_ext_hat_filtered: ";
+    if (v.tau_ext_hat_filtered.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.tau_ext_hat_filtered.size(); ++i)
     {
-      s << indent << "  tau_ext_hat_filtered[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.tau_ext_hat_filtered[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.tau_ext_hat_filtered[i]);
     }
+    if (v.tau_ext_hat_filtered.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "m_ee: ";
     Printer<double>::stream(s, indent + "  ", v.m_ee);
-    s << indent << "F_x_Cee[]" << std::endl;
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "F_x_Cee: ";
+    if (v.F_x_Cee.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.F_x_Cee.size(); ++i)
     {
-      s << indent << "  F_x_Cee[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.F_x_Cee[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.F_x_Cee[i]);
     }
-    s << indent << "I_ee[]" << std::endl;
+    if (v.F_x_Cee.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "I_ee: ";
+    if (v.I_ee.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.I_ee.size(); ++i)
     {
-      s << indent << "  I_ee[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.I_ee[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.I_ee[i]);
     }
+    if (v.I_ee.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "m_load: ";
     Printer<double>::stream(s, indent + "  ", v.m_load);
-    s << indent << "F_x_Cload[]" << std::endl;
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "F_x_Cload: ";
+    if (v.F_x_Cload.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.F_x_Cload.size(); ++i)
     {
-      s << indent << "  F_x_Cload[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.F_x_Cload[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.F_x_Cload[i]);
     }
-    s << indent << "I_load[]" << std::endl;
+    if (v.F_x_Cload.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "I_load: ";
+    if (v.I_load.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.I_load.size(); ++i)
     {
-      s << indent << "  I_load[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.I_load[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.I_load[i]);
     }
+    if (v.I_load.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "m_total: ";
     Printer<double>::stream(s, indent + "  ", v.m_total);
-    s << indent << "F_x_Ctotal[]" << std::endl;
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "F_x_Ctotal: ";
+    if (v.F_x_Ctotal.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.F_x_Ctotal.size(); ++i)
     {
-      s << indent << "  F_x_Ctotal[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.F_x_Ctotal[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.F_x_Ctotal[i]);
     }
-    s << indent << "I_total[]" << std::endl;
+    if (v.F_x_Ctotal.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "I_total: ";
+    if (v.I_total.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.I_total.size(); ++i)
     {
-      s << indent << "  I_total[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.I_total[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.I_total[i]);
     }
-    s << indent << "O_T_EE[]" << std::endl;
+    if (v.I_total.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "O_T_EE: ";
+    if (v.O_T_EE.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.O_T_EE.size(); ++i)
     {
-      s << indent << "  O_T_EE[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.O_T_EE[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.O_T_EE[i]);
     }
-    s << indent << "O_T_EE_d[]" << std::endl;
+    if (v.O_T_EE.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "O_T_EE_d: ";
+    if (v.O_T_EE_d.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.O_T_EE_d.size(); ++i)
     {
-      s << indent << "  O_T_EE_d[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.O_T_EE_d[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.O_T_EE_d[i]);
     }
-    s << indent << "O_T_EE_c[]" << std::endl;
+    if (v.O_T_EE_d.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "O_T_EE_c: ";
+    if (v.O_T_EE_c.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.O_T_EE_c.size(); ++i)
     {
-      s << indent << "  O_T_EE_c[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.O_T_EE_c[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.O_T_EE_c[i]);
     }
-    s << indent << "F_T_EE[]" << std::endl;
+    if (v.O_T_EE_c.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "F_T_EE: ";
+    if (v.F_T_EE.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.F_T_EE.size(); ++i)
     {
-      s << indent << "  F_T_EE[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.F_T_EE[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.F_T_EE[i]);
     }
-    s << indent << "F_T_NE[]" << std::endl;
+    if (v.F_T_EE.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "F_T_NE: ";
+    if (v.F_T_NE.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.F_T_NE.size(); ++i)
     {
-      s << indent << "  F_T_NE[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.F_T_NE[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.F_T_NE[i]);
     }
-    s << indent << "NE_T_EE[]" << std::endl;
+    if (v.F_T_NE.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "NE_T_EE: ";
+    if (v.NE_T_EE.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.NE_T_EE.size(); ++i)
     {
-      s << indent << "  NE_T_EE[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.NE_T_EE[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.NE_T_EE[i]);
     }
-    s << indent << "EE_T_K[]" << std::endl;
+    if (v.NE_T_EE.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "EE_T_K: ";
+    if (v.EE_T_K.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.EE_T_K.size(); ++i)
     {
-      s << indent << "  EE_T_K[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.EE_T_K[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.EE_T_K[i]);
     }
+    if (v.EE_T_K.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "time: ";
     Printer<double>::stream(s, indent + "  ", v.time);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "control_command_success_rate: ";
     Printer<double>::stream(s, indent + "  ", v.control_command_success_rate);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "robot_mode: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.robot_mode);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "current_errors: ";
-    s << std::endl;
     Printer< ::franka_msgs::Errors_<ContainerAllocator> >::stream(s, indent + "  ", v.current_errors);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "last_motion_errors: ";
-    s << std::endl;
     Printer< ::franka_msgs::Errors_<ContainerAllocator> >::stream(s, indent + "  ", v.last_motion_errors);
   }
 };

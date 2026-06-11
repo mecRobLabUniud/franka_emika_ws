@@ -2,7 +2,7 @@
 
 message(STATUS "collision_avoidance: 0 messages, 2 services")
 
-set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(collision_avoidance_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
 add_custom_target(_collision_avoidance_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "collision_avoidance" "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "collision_avoidance" "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" ""
 )
 
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
 add_custom_target(_collision_avoidance_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "collision_avoidance" "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "collision_avoidance" "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" ""
 )
 
 #
@@ -36,13 +36,13 @@ add_custom_target(_collision_avoidance_generate_messages_check_deps_${_filename}
 
 ### Generating Services
 _generate_srv_cpp(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/collision_avoidance
 )
 _generate_srv_cpp(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/collision_avoidance
@@ -60,9 +60,9 @@ add_custom_target(collision_avoidance_generate_messages_cpp
 add_dependencies(collision_avoidance_generate_messages collision_avoidance_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_cpp _collision_avoidance_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_cpp _collision_avoidance_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -77,13 +77,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS collision_avoidance_generate_messag
 
 ### Generating Services
 _generate_srv_eus(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/collision_avoidance
 )
 _generate_srv_eus(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/collision_avoidance
@@ -101,9 +101,9 @@ add_custom_target(collision_avoidance_generate_messages_eus
 add_dependencies(collision_avoidance_generate_messages collision_avoidance_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_eus _collision_avoidance_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_eus _collision_avoidance_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -118,13 +118,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS collision_avoidance_generate_messag
 
 ### Generating Services
 _generate_srv_lisp(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/collision_avoidance
 )
 _generate_srv_lisp(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/collision_avoidance
@@ -142,9 +142,9 @@ add_custom_target(collision_avoidance_generate_messages_lisp
 add_dependencies(collision_avoidance_generate_messages collision_avoidance_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_lisp _collision_avoidance_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_lisp _collision_avoidance_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -159,13 +159,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS collision_avoidance_generate_messag
 
 ### Generating Services
 _generate_srv_nodejs(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/collision_avoidance
 )
 _generate_srv_nodejs(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/collision_avoidance
@@ -183,9 +183,9 @@ add_custom_target(collision_avoidance_generate_messages_nodejs
 add_dependencies(collision_avoidance_generate_messages collision_avoidance_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_nodejs _collision_avoidance_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_nodejs _collision_avoidance_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -200,13 +200,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS collision_avoidance_generate_messag
 
 ### Generating Services
 _generate_srv_py(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/collision_avoidance
 )
 _generate_srv_py(collision_avoidance
-  "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
+  "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/collision_avoidance
@@ -224,9 +224,9 @@ add_custom_target(collision_avoidance_generate_messages_py
 add_dependencies(collision_avoidance_generate_messages collision_avoidance_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/CalcStopDuration.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_py _collision_avoidance_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/panda/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
+get_filename_component(_filename "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/srv/FlagStop.srv" NAME_WE)
 add_dependencies(collision_avoidance_generate_messages_py _collision_avoidance_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -283,7 +283,7 @@ if(TARGET std_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/collision_avoidance)
-  install(CODE "execute_process(COMMAND \"/usr/bin/python2\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/collision_avoidance\")")
+  install(CODE "execute_process(COMMAND \"/usr/bin/python3\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/collision_avoidance\")")
   # install generated code
   install(
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/collision_avoidance

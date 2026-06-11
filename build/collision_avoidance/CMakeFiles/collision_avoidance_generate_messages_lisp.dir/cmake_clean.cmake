@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/share/common-lisp/ros/collision_avoidance/srv/CalcStopDuration.lisp"
-  "/home/panda/franka_emika_ws/devel/share/common-lisp/ros/collision_avoidance/srv/FlagStop.lisp"
+  "/home/lab/Desktop/franka_emika_ws/devel/share/common-lisp/ros/collision_avoidance/srv/CalcStopDuration.lisp"
+  "/home/lab/Desktop/franka_emika_ws/devel/share/common-lisp/ros/collision_avoidance/srv/FlagStop.lisp"
   "CMakeFiles/collision_avoidance_generate_messages_lisp"
 )
 

@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher"
-  "/home/panda/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher.pdb"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/franka_visualization/robot_joint_state_publisher.pdb"
   "CMakeFiles/robot_joint_state_publisher.dir/src/robot_joint_state_publisher.cpp.o"
-  "CMakeFiles/robot_joint_state_publisher.dir/src/robot_joint_state_publisher.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

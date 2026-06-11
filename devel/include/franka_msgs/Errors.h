@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -297,22 +297,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::Errors_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::Errors_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::Errors_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::Errors_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::Errors_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::Errors_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -464,76 +464,148 @@ struct Printer< ::franka_msgs::Errors_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_msgs::Errors_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "joint_position_limits_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.joint_position_limits_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_position_limits_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_position_limits_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "self_collision_avoidance_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.self_collision_avoidance_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "joint_velocity_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.joint_velocity_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_velocity_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_velocity_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "force_control_safety_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.force_control_safety_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "joint_reflex: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.joint_reflex);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_reflex: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_reflex);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "max_goal_pose_deviation_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.max_goal_pose_deviation_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "max_path_pose_deviation_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.max_path_pose_deviation_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_velocity_profile_safety_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_velocity_profile_safety_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "joint_position_motion_generator_start_pose_invalid: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.joint_position_motion_generator_start_pose_invalid);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "joint_motion_generator_position_limits_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.joint_motion_generator_position_limits_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "joint_motion_generator_velocity_limits_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.joint_motion_generator_velocity_limits_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "joint_motion_generator_velocity_discontinuity: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.joint_motion_generator_velocity_discontinuity);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "joint_motion_generator_acceleration_discontinuity: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.joint_motion_generator_acceleration_discontinuity);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_position_motion_generator_start_pose_invalid: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_position_motion_generator_start_pose_invalid);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_elbow_limit_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_elbow_limit_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_velocity_limits_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_velocity_limits_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_velocity_discontinuity: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_velocity_discontinuity);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_acceleration_discontinuity: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_acceleration_discontinuity);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_elbow_sign_inconsistent: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_elbow_sign_inconsistent);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_start_elbow_invalid: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_start_elbow_invalid);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_joint_position_limits_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_joint_position_limits_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_joint_velocity_limits_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_joint_velocity_limits_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_joint_velocity_discontinuity: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_joint_velocity_discontinuity);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_motion_generator_joint_acceleration_discontinuity: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_motion_generator_joint_acceleration_discontinuity);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "cartesian_position_motion_generator_invalid_frame: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.cartesian_position_motion_generator_invalid_frame);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "force_controller_desired_force_tolerance_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.force_controller_desired_force_tolerance_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "controller_torque_discontinuity: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.controller_torque_discontinuity);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "start_elbow_sign_inconsistent: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.start_elbow_sign_inconsistent);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "communication_constraints_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.communication_constraints_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "power_limit_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.power_limit_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "joint_p2p_insufficient_torque_for_planning: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.joint_p2p_insufficient_torque_for_planning);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "tau_j_range_violation: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.tau_j_range_violation);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "instability_detected: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.instability_detected);
   }

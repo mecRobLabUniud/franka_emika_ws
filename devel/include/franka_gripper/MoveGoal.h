@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -93,22 +93,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::MoveGoal_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_gripper::MoveGoal_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::MoveGoal_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::franka_gripper::MoveGoal_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::MoveGoal_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_gripper::MoveGoal_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -193,8 +193,12 @@ struct Printer< ::franka_gripper::MoveGoal_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_gripper::MoveGoal_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "width: ";
     Printer<double>::stream(s, indent + "  ", v.width);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "speed: ";
     Printer<double>::stream(s, indent + "  ", v.speed);
   }

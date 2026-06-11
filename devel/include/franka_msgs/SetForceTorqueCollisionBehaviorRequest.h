@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -119,22 +119,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::SetForceTorqueCollisionBehaviorRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::SetForceTorqueCollisionBehaviorRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::SetForceTorqueCollisionBehaviorRequest_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::SetForceTorqueCollisionBehaviorRequest_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::SetForceTorqueCollisionBehaviorRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::SetForceTorqueCollisionBehaviorRequest_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -222,30 +222,66 @@ struct Printer< ::franka_msgs::SetForceTorqueCollisionBehaviorRequest_<Container
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_msgs::SetForceTorqueCollisionBehaviorRequest_<ContainerAllocator>& v)
   {
-    s << indent << "lower_torque_thresholds_nominal[]" << std::endl;
+    if (false || !indent.empty())
+      s << std::endl;
+    s << indent << "lower_torque_thresholds_nominal: ";
+    if (v.lower_torque_thresholds_nominal.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.lower_torque_thresholds_nominal.size(); ++i)
     {
-      s << indent << "  lower_torque_thresholds_nominal[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.lower_torque_thresholds_nominal[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.lower_torque_thresholds_nominal[i]);
     }
-    s << indent << "upper_torque_thresholds_nominal[]" << std::endl;
+    if (v.lower_torque_thresholds_nominal.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "upper_torque_thresholds_nominal: ";
+    if (v.upper_torque_thresholds_nominal.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.upper_torque_thresholds_nominal.size(); ++i)
     {
-      s << indent << "  upper_torque_thresholds_nominal[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.upper_torque_thresholds_nominal[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.upper_torque_thresholds_nominal[i]);
     }
-    s << indent << "lower_force_thresholds_nominal[]" << std::endl;
+    if (v.upper_torque_thresholds_nominal.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "lower_force_thresholds_nominal: ";
+    if (v.lower_force_thresholds_nominal.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.lower_force_thresholds_nominal.size(); ++i)
     {
-      s << indent << "  lower_force_thresholds_nominal[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.lower_force_thresholds_nominal[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.lower_force_thresholds_nominal[i]);
     }
-    s << indent << "upper_force_thresholds_nominal[]" << std::endl;
+    if (v.lower_force_thresholds_nominal.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "upper_force_thresholds_nominal: ";
+    if (v.upper_force_thresholds_nominal.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.upper_force_thresholds_nominal.size(); ++i)
     {
-      s << indent << "  upper_force_thresholds_nominal[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.upper_force_thresholds_nominal[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.upper_force_thresholds_nominal[i]);
     }
+    if (v.upper_force_thresholds_nominal.empty() || true)
+      s << "]";
   }
 };
 

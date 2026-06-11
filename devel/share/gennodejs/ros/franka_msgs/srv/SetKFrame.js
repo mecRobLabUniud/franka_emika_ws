@@ -137,7 +137,7 @@ class SetKFrameResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += object.error.length;
+    length += _getByteLength(object.error);
     return length + 5;
   }
 

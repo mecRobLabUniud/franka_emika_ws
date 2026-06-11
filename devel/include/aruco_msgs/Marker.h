@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -107,16 +107,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::aruco_msgs::Marker_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::aruco_msgs::Marker_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::aruco_msgs::Marker_<ContainerAllocator> >
   : TrueType
   { };
@@ -124,6 +114,16 @@ struct IsMessage< ::aruco_msgs::Marker_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::aruco_msgs::Marker_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::aruco_msgs::Marker_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::aruco_msgs::Marker_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -260,14 +260,20 @@ struct Printer< ::aruco_msgs::Marker_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::aruco_msgs::Marker_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "header: ";
-    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "id: ";
     Printer<uint32_t>::stream(s, indent + "  ", v.id);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "pose: ";
-    s << std::endl;
     Printer< ::geometry_msgs::PoseWithCovariance_<ContainerAllocator> >::stream(s, indent + "  ", v.pose);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "confidence: ";
     Printer<double>::stream(s, indent + "  ", v.confidence);
   }

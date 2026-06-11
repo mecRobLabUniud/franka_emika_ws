@@ -7,6 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/lib:/home/panda/franka_emika_ws/devel/lib:/opt/ros/melodic/lib:/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/lib'
-export PATH='/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/bin:/opt/ros/melodic/bin:/opt/ros/melodic/share/euslisp/jskeus/eus//Linux64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
-export PWD='/home/panda/franka_emika_ws/build'
+export LD_LIBRARY_PATH='/home/lab/Documents/bunker_ros_sim/bunker_ros_sim/devel/lib:/home/lab/donaldo_ws/workspace_calibration_ros/catkin_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/usr/local/cuda-11.8/lib64:/usr/local/cuda-11.8/lib64'
+export PKG_CONFIG_PATH='/home/lab/Documents/bunker_ros_sim/bunker_ros_sim/devel/lib/pkgconfig:/home/lab/donaldo_ws/workspace_calibration_ros/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'
+export PWD='/home/lab/Desktop/franka_emika_ws/build'
+export PYTHONPATH='/home/lab/Documents/bunker_ros_sim/bunker_ros_sim/devel/lib/python3/dist-packages:/home/lab/donaldo_ws/workspace_calibration_ros/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages'

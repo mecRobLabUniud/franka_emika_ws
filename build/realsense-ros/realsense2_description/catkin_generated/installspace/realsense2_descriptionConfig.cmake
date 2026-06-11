@@ -67,14 +67,14 @@ set(realsense2_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(realsense2_description_SOURCE_PREFIX /home/panda/franka_emika_ws/src/realsense-ros/realsense2_description)
-  set(realsense2_description_DEVEL_PREFIX /home/panda/franka_emika_ws/devel)
+  set(realsense2_description_SOURCE_PREFIX /home/lab/Desktop/franka_emika_ws/src/realsense-ros/realsense2_description)
+  set(realsense2_description_DEVEL_PREFIX /home/lab/Desktop/franka_emika_ws/devel)
   set(realsense2_description_INSTALL_PREFIX "")
   set(realsense2_description_PREFIX ${realsense2_description_DEVEL_PREFIX})
 else()
   set(realsense2_description_SOURCE_PREFIX "")
   set(realsense2_description_DEVEL_PREFIX "")
-  set(realsense2_description_INSTALL_PREFIX /home/panda/franka_emika_ws/install)
+  set(realsense2_description_INSTALL_PREFIX /home/lab/Desktop/franka_emika_ws/install)
   set(realsense2_description_PREFIX ${realsense2_description_INSTALL_PREFIX})
 endif()
 
@@ -118,7 +118,7 @@ endif()
 
 set(libraries "")
 foreach(library ${libraries})
-  # keep build configuration keywords, target names and absolute libraries as-is
+  # keep build configuration keywords, generator expressions, target names, and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
     list(APPEND realsense2_description_LIBRARIES ${library})
   elseif(${library} MATCHES "^-l")
@@ -146,6 +146,8 @@ foreach(library ${libraries})
       target_link_options("${interface_target_name}" INTERFACE "${library}")
     endif()
     list(APPEND realsense2_description_LIBRARIES "${interface_target_name}")
+  elseif(${library} MATCHES "^\\$<")
+    list(APPEND realsense2_description_LIBRARIES ${library})
   elseif(TARGET ${library})
     list(APPEND realsense2_description_LIBRARIES ${library})
   elseif(IS_ABSOLUTE ${library})
@@ -154,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/panda/franka_emika_ws/install/lib;/home/panda/franka_emika_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/lab/Desktop/franka_emika_ws/install/lib;/home/lab/Desktop/franka_emika_ws/devel/lib;/home/lab/Documents/bunker_ros_sim/bunker_ros_sim/devel/lib;/home/lab/donaldo_ws/workspace_calibration_ros/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +213,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(realsense2_description_LIBRARIES ${realsense2_description_LIBRARIES})
 
   _list_append_unique(realsense2_description_LIBRARY_DIRS ${${realsense2_description_dep}_LIBRARY_DIRS})
-  list(APPEND realsense2_description_EXPORTED_TARGETS ${${realsense2_description_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(realsense2_description_EXPORTED_TARGETS ${${realsense2_description_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

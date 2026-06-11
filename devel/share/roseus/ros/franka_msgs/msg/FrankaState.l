@@ -35,6 +35,18 @@
 (intern "*ROBOT_MODE_AUTOMATIC_ERROR_RECOVERY*" (find-package "FRANKA_MSGS::FRANKASTATE"))
 (shadow '*ROBOT_MODE_AUTOMATIC_ERROR_RECOVERY* (find-package "FRANKA_MSGS::FRANKASTATE"))
 (defconstant franka_msgs::FrankaState::*ROBOT_MODE_AUTOMATIC_ERROR_RECOVERY* 6)
+
+(defun franka_msgs::FrankaState-to-symbol (const)
+  (cond
+        ((= const 0) 'franka_msgs::FrankaState::*ROBOT_MODE_OTHER*)
+        ((= const 1) 'franka_msgs::FrankaState::*ROBOT_MODE_IDLE*)
+        ((= const 2) 'franka_msgs::FrankaState::*ROBOT_MODE_MOVE*)
+        ((= const 3) 'franka_msgs::FrankaState::*ROBOT_MODE_GUIDING*)
+        ((= const 4) 'franka_msgs::FrankaState::*ROBOT_MODE_REFLEX*)
+        ((= const 5) 'franka_msgs::FrankaState::*ROBOT_MODE_USER_STOPPED*)
+        ((= const 6) 'franka_msgs::FrankaState::*ROBOT_MODE_AUTOMATIC_ERROR_RECOVERY*)
+        (t nil)))
+
 (defclass franka_msgs::FrankaState
   :super ros::object
   :slots (_header _cartesian_collision _cartesian_contact _q _q_d _dq _dq_d _ddq_d _theta _dtheta _tau_J _dtau_J _tau_J_d _K_F_ext_hat_K _elbow _elbow_d _elbow_c _delbow_c _ddelbow_c _joint_collision _joint_contact _O_F_ext_hat_K _O_dP_EE_d _O_dP_EE_c _O_ddP_EE_c _tau_ext_hat_filtered _m_ee _F_x_Cee _I_ee _m_load _F_x_Cload _I_load _m_total _F_x_Ctotal _I_total _O_T_EE _O_T_EE_d _O_T_EE_c _F_T_EE _F_T_NE _NE_T_EE _EE_T_K _time _control_command_success_rate _robot_mode _current_errors _last_motion_errors ))

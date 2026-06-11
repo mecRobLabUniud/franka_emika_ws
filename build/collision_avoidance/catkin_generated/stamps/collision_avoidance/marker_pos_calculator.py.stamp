@@ -109,7 +109,7 @@ if __name__ == "__main__":
         print("\n\nThis is the resulting relative position between the marker center point and the base of the robot\n")
         print(C)
 
-        file = open("/home/panda/Documents/Data_Collision_Avoidance/marker_pos.txt", 'w')
+        file = open("/home/lab/Documents/data_collision_avoidance/marker_pos.txt", 'w')
         file.write(f"{C[0]}\t{C[1]}\t{C[2]}")
         file.close()
 

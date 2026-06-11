@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -115,22 +115,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_example_controllers::JointTorqueComparison_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_example_controllers::JointTorqueComparison_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_example_controllers::JointTorqueComparison_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::franka_example_controllers::JointTorqueComparison_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_example_controllers::JointTorqueComparison_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_example_controllers::JointTorqueComparison_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -218,24 +218,53 @@ struct Printer< ::franka_example_controllers::JointTorqueComparison_<ContainerAl
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_example_controllers::JointTorqueComparison_<ContainerAllocator>& v)
   {
-    s << indent << "tau_error[]" << std::endl;
+    if (false || !indent.empty())
+      s << std::endl;
+    s << indent << "tau_error: ";
+    if (v.tau_error.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.tau_error.size(); ++i)
     {
-      s << indent << "  tau_error[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.tau_error[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.tau_error[i]);
     }
-    s << indent << "tau_commanded[]" << std::endl;
+    if (v.tau_error.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "tau_commanded: ";
+    if (v.tau_commanded.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.tau_commanded.size(); ++i)
     {
-      s << indent << "  tau_commanded[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.tau_commanded[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.tau_commanded[i]);
     }
-    s << indent << "tau_measured[]" << std::endl;
+    if (v.tau_commanded.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "tau_measured: ";
+    if (v.tau_measured.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.tau_measured.size(); ++i)
     {
-      s << indent << "  tau_measured[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.tau_measured[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.tau_measured[i]);
     }
+    if (v.tau_measured.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "root_mean_square_error: ";
     Printer<double>::stream(s, indent + "  ", v.root_mean_square_error);
   }

@@ -1,14 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/lib/franka_gazebo/franka_hw_sim_test"
-  "/home/panda/franka_emika_ws/devel/lib/franka_gazebo/franka_hw_sim_test.pdb"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/franka_gazebo/franka_hw_sim_test"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/franka_gazebo/franka_hw_sim_test.pdb"
   "CMakeFiles/franka_hw_sim_test.dir/fk_tests.cpp.o"
-  "CMakeFiles/franka_hw_sim_test.dir/fk_tests.cpp.o.d"
   "CMakeFiles/franka_hw_sim_test.dir/gravity_tests.cpp.o"
-  "CMakeFiles/franka_hw_sim_test.dir/gravity_tests.cpp.o.d"
   "CMakeFiles/franka_hw_sim_test.dir/jacobian_tests.cpp.o"
-  "CMakeFiles/franka_hw_sim_test.dir/jacobian_tests.cpp.o.d"
   "CMakeFiles/franka_hw_sim_test.dir/main.cpp.o"
-  "CMakeFiles/franka_hw_sim_test.dir/main.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

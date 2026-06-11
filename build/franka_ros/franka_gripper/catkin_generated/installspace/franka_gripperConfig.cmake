@@ -67,14 +67,14 @@ set(franka_gripper_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(franka_gripper_SOURCE_PREFIX /home/panda/franka_emika_ws/src/franka_ros/franka_gripper)
-  set(franka_gripper_DEVEL_PREFIX /home/panda/franka_emika_ws/devel)
+  set(franka_gripper_SOURCE_PREFIX /home/lab/Desktop/franka_emika_ws/src/franka_ros/franka_gripper)
+  set(franka_gripper_DEVEL_PREFIX /home/lab/Desktop/franka_emika_ws/devel)
   set(franka_gripper_INSTALL_PREFIX "")
   set(franka_gripper_PREFIX ${franka_gripper_DEVEL_PREFIX})
 else()
   set(franka_gripper_SOURCE_PREFIX "")
   set(franka_gripper_DEVEL_PREFIX "")
-  set(franka_gripper_INSTALL_PREFIX /home/panda/franka_emika_ws/install)
+  set(franka_gripper_INSTALL_PREFIX /home/lab/Desktop/franka_emika_ws/install)
   set(franka_gripper_PREFIX ${franka_gripper_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(franka_gripper_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/home/panda/franka_emika_ws/src/libfranka/include " STREQUAL " ")
+if(NOT "include;/usr/include " STREQUAL " ")
   set(franka_gripper_INCLUDE_DIRS "")
-  set(_include_dirs "include;/home/panda/franka_emika_ws/src/libfranka/include")
+  set(_include_dirs "include;/usr/include")
   if(NOT "https://github.com/frankaemika/franka_ros/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/frankaemika/franka_ros/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/franka_gripper " STREQUAL " ")
@@ -116,9 +116,9 @@ if(NOT "include;/home/panda/franka_emika_ws/src/libfranka/include " STREQUAL " "
   endforeach()
 endif()
 
-set(libraries "franka_gripper;/home/panda/franka_emika_ws/src/libfranka/build/libfranka.so.0.8.0")
+set(libraries "franka_gripper;/usr/lib/libfranka.so.0.8.0")
 foreach(library ${libraries})
-  # keep build configuration keywords, target names and absolute libraries as-is
+  # keep build configuration keywords, generator expressions, target names, and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
     list(APPEND franka_gripper_LIBRARIES ${library})
   elseif(${library} MATCHES "^-l")
@@ -146,6 +146,8 @@ foreach(library ${libraries})
       target_link_options("${interface_target_name}" INTERFACE "${library}")
     endif()
     list(APPEND franka_gripper_LIBRARIES "${interface_target_name}")
+  elseif(${library} MATCHES "^\\$<")
+    list(APPEND franka_gripper_LIBRARIES ${library})
   elseif(TARGET ${library})
     list(APPEND franka_gripper_LIBRARIES ${library})
   elseif(IS_ABSOLUTE ${library})
@@ -154,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/panda/franka_emika_ws/install/lib;/home/panda/franka_emika_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/lab/Desktop/franka_emika_ws/install/lib;/home/lab/Desktop/franka_emika_ws/devel/lib;/home/lab/Documents/bunker_ros_sim/bunker_ros_sim/devel/lib;/home/lab/donaldo_ws/workspace_calibration_ros/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +213,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(franka_gripper_LIBRARIES ${franka_gripper_LIBRARIES})
 
   _list_append_unique(franka_gripper_LIBRARY_DIRS ${${franka_gripper_dep}_LIBRARY_DIRS})
-  list(APPEND franka_gripper_EXPORTED_TARGETS ${${franka_gripper_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(franka_gripper_EXPORTED_TARGETS ${${franka_gripper_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "franka_gripper-msg-extras.cmake")

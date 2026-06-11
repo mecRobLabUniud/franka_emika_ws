@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/lib/aruco_ros/double"
-  "/home/panda/franka_emika_ws/devel/lib/aruco_ros/double.pdb"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/aruco_ros/double"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/aruco_ros/double.pdb"
   "CMakeFiles/double.dir/src/aruco_ros_utils.cpp.o"
-  "CMakeFiles/double.dir/src/aruco_ros_utils.cpp.o.d"
   "CMakeFiles/double.dir/src/simple_double.cpp.o"
-  "CMakeFiles/double.dir/src/simple_double.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

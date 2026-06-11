@@ -7,7 +7,7 @@ Ottimizzatore con TrajPoly5 e altri vincoli (tutti meno posizione e derivate del
 
 import rospy
 import casadi as ca
-from def_proj.srv import CalcStopDuration, CalcStopDurationResponse
+from collision_avoidance.srv import CalcStopDuration, CalcStopDurationResponse
 from copy import deepcopy
 import urdf2casadi.urdfparser as u2c
 import time
@@ -18,7 +18,7 @@ ubx = 0.4
 p1 = 1e6
 p2 = 1e5
 n = 10
-path_to_urdf = "/home/panda/franka_emika_ws/src/collision_avoidance/urdf/panda.urdf"
+path_to_urdf = "/home/lab/Desktop/franka_emika_ws/src/collision_avoidance/urdf/panda.urdf"
 root = "panda_link0"
 tip = "panda_link8"
 gravity_u2c = [0, 0, -9.81]                                                         # m/s^2                           

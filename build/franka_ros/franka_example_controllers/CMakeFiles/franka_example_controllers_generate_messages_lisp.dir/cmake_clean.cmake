@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/share/common-lisp/ros/franka_example_controllers/msg/JointTorqueComparison.lisp"
+  "/home/lab/Desktop/franka_emika_ws/devel/share/common-lisp/ros/franka_example_controllers/msg/JointTorqueComparison.lisp"
   "CMakeFiles/franka_example_controllers_generate_messages_lisp"
 )
 

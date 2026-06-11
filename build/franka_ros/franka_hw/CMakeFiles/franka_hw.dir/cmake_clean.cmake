@@ -1,18 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/lib/libfranka_hw.pdb"
-  "/home/panda/franka_emika_ws/devel/lib/libfranka_hw.so"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/libfranka_hw.pdb"
+  "/home/lab/Desktop/franka_emika_ws/devel/lib/libfranka_hw.so"
   "CMakeFiles/franka_hw.dir/src/control_mode.cpp.o"
-  "CMakeFiles/franka_hw.dir/src/control_mode.cpp.o.d"
   "CMakeFiles/franka_hw.dir/src/franka_combinable_hw.cpp.o"
-  "CMakeFiles/franka_hw.dir/src/franka_combinable_hw.cpp.o.d"
   "CMakeFiles/franka_hw.dir/src/franka_combined_hw.cpp.o"
-  "CMakeFiles/franka_hw.dir/src/franka_combined_hw.cpp.o.d"
   "CMakeFiles/franka_hw.dir/src/franka_hw.cpp.o"
-  "CMakeFiles/franka_hw.dir/src/franka_hw.cpp.o.d"
   "CMakeFiles/franka_hw.dir/src/resource_helpers.cpp.o"
-  "CMakeFiles/franka_hw.dir/src/resource_helpers.cpp.o.d"
   "CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o"
-  "CMakeFiles/franka_hw.dir/src/trigger_rate.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

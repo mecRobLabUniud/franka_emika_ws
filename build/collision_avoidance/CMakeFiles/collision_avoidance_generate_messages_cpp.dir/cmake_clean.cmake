@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/panda/franka_emika_ws/devel/include/collision_avoidance/CalcStopDuration.h"
-  "/home/panda/franka_emika_ws/devel/include/collision_avoidance/FlagStop.h"
+  "/home/lab/Desktop/franka_emika_ws/devel/include/collision_avoidance/CalcStopDuration.h"
+  "/home/lab/Desktop/franka_emika_ws/devel/include/collision_avoidance/FlagStop.h"
   "CMakeFiles/collision_avoidance_generate_messages_cpp"
 )
 

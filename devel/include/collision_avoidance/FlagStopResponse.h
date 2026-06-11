@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -87,22 +87,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::collision_avoidance::FlagStopResponse_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::collision_avoidance::FlagStopResponse_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::collision_avoidance::FlagStopResponse_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::collision_avoidance::FlagStopResponse_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::collision_avoidance::FlagStopResponse_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::collision_avoidance::FlagStopResponse_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -185,6 +185,8 @@ struct Printer< ::collision_avoidance::FlagStopResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::collision_avoidance::FlagStopResponse_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "flag_stop: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.flag_stop);
   }

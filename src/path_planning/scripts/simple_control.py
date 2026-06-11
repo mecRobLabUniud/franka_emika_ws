@@ -9,7 +9,7 @@ from sensor_msgs.msg import JointState
 from copy import deepcopy
 import time
 import numpy as np
-from write_read_plot import reader, writer
+from data_IO import reader, writer
 import socket
 #from trajectory_validator import validator as trj_validator
 #from self_collisions_validator import validator as scol_validator
@@ -50,10 +50,10 @@ if __name__ == '__main__':
     print('Movimento alla configurazione iniziale')
 
     # Reading data to files ------------------------
-    path_name = f'/home/panda/Desktop/TRAJ_EXP/Python'
+    path_name = f'/home/panda/Documents/temp'
     #path_name = f'/home/panda/Desktop/DATA_OTTIMIZZATORE/DATA_OTTIMIZZATORE-Histogram/SQUARE_TRAJ/'
 
-    t, q, q_p, q_pp, q_ppp, tau, tau_p = reader(path_name, 'q', '_test')
+    t, q, q_p, q_pp, q_ppp, tau, tau_p = reader(path_name, 'q', '')
     
     #print('Self collision check = ', scol_validator(q))     
     #print('Kinematics and dynamics limits check = ', trj_validator(t, q, q_p, q_pp, q_ppp))
@@ -161,8 +161,8 @@ if __name__ == '__main__':
     q_p_des = np.array(q_p_des)
     tau_des = np.array(tau_des)
     
-    writer('/home/panda/Desktop/TRAJ_EXP/Python/', t_exp, q_exp, q_p_exp, [], [], tau_exp, [], 'q', '_BASE_exp')
-    writer('/home/panda/Desktop/TRAJ_EXP/Python/', t_des, q_des, q_p_des, [], [], tau_des, [], 'q', '_BASE_des')
+    writer('/home/panda/Documents/temp/', t_exp, q_exp, q_p_exp, [], [], tau_exp, [], 'q', '_BASE_exp')
+    writer('/home/panda/Documents/temp/', t_des, q_des, q_p_des, [], [], tau_des, [], 'q', '_BASE_des')
 
 
             

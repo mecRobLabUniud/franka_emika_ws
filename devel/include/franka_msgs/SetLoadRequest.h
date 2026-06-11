@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -105,22 +105,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::SetLoadRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::franka_msgs::SetLoadRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::SetLoadRequest_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::franka_msgs::SetLoadRequest_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::SetLoadRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::franka_msgs::SetLoadRequest_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -206,20 +206,40 @@ struct Printer< ::franka_msgs::SetLoadRequest_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::franka_msgs::SetLoadRequest_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "mass: ";
     Printer<double>::stream(s, indent + "  ", v.mass);
-    s << indent << "F_x_center_load[]" << std::endl;
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "F_x_center_load: ";
+    if (v.F_x_center_load.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.F_x_center_load.size(); ++i)
     {
-      s << indent << "  F_x_center_load[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.F_x_center_load[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.F_x_center_load[i]);
     }
-    s << indent << "load_inertia[]" << std::endl;
+    if (v.F_x_center_load.empty() || true)
+      s << "]";
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "load_inertia: ";
+    if (v.load_inertia.empty() || true)
+      s << "[";
     for (size_t i = 0; i < v.load_inertia.size(); ++i)
     {
-      s << indent << "  load_inertia[" << i << "]: ";
-      Printer<double>::stream(s, indent + "  ", v.load_inertia[i]);
+      if (true && i > 0)
+        s << ", ";
+      else if (!true)
+        s << std::endl << indent << "  -";
+      Printer<double>::stream(s, true ? std::string() : indent + "    ", v.load_inertia[i]);
     }
+    if (v.load_inertia.empty() || true)
+      s << "]";
   }
 };
 

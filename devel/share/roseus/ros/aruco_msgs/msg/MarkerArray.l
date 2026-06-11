@@ -22,7 +22,7 @@
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
-    ((:markers __markers) (let (r) (dotimes (i 0) (push (instance aruco_msgs::Marker :init) r)) r))
+    ((:markers __markers) ())
     )
    (send-super :init)
    (setq _header __header)
