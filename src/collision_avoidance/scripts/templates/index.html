@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+</head>
+<body>    
+    <div style="display:flex; height:1000px">
+        <div style="width:65%; height:100%">
+            <h1 style="font-size:50px;">Skeleton tracking with Realsense cameras</h1>
+            <div id="plot" style="width:100%; height:100%;"></div>
+        </div>
+
+        <div style="width:30%; height:100%">
+            <div>
+                <img id="image1" src="" style="max-width:100%;">
+            </div>
+            <div>
+                <img id="image2" src="" style="max-width:100%;">
+            </div>
+            <div>
+                <img id="image3" src="" style="max-width:100%;">
+            </div>
+            <div>
+                <img id="image4" src="" style="max-width:100%;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ─────────────────────────────────────────────────────────────────────────────
+        // 3D plot setup
+        // ─────────────────────────────────────────────────────────────────────────────
+        const camera = {
+        eye: { x: 0.5, y: 1.5, z: 0.5 },
+        center: { x: 0, y: 0, z: 0.1 },
+        up: { x: 0, y: 0, z: 1 },
+        projection: { type: 'perspective' }
+        };
+
+        const scene = {
+        camera: camera,
+        aspectmode: 'cube', // 'cube' makes axes equal (x=y=z). Use 'data' to match data ranges.
+        xaxis: { title: 'X', backgroundcolor: '#fff', gridcolor: '#ddd', zerolinecolor: '#444' , range: [-2, 2], nticks: 5},
+        yaxis: { title: 'Y', backgroundcolor: '#fff', gridcolor: '#ddd', zerolinecolor: '#444' , range: [-2, 2], nticks: 5},
+        zaxis: { title: 'Z', backgroundcolor: '#fff', gridcolor: '#ddd', zerolinecolor: '#444' , range: [-2, 2], nticks: 5}
+        };
+
+        const size = 1200;
+        const layout = {
+        width: size+400,
+        height: size,
+        margin: { l: 20, r: 20, t: 20, b: 20 },
+        scene: scene,
+        scene_dragmode: 'orbit',
+        paper_bgcolor: '#ffffff',
+        plot_bgcolor: '#ffffff'
+        };     
+
+        const socket = io();   // single connection for everything
+
+        // ─────────────────────────────────────────────────────────────────────────────
+        // 3D plot update: receive new skeleton data and update the plot 
+        // ─────────────────────────────────────────────────────────────────────────────
+        let plotInitialized = false;
+
+        function update_plot() {
+            socket.on('update_plot', function(point) {
+                const trace = {
+                    x: point.x,
+                    y: point.y,
+                    z: point.z,
+                    mode: 'markers+lines',
+                    marker: {
+                        color: 'rgb(127, 127, 127)',
+                        size: 10,
+                        symbol: 'circle',
+                        opacity: 0.8},
+                    line: {
+                        color: 'rgb(204, 204, 204)',
+                        width: 5,
+                        opacity: 0.8},
+                    type: 'scatter3d'};
+
+                if (!plotInitialized) {
+                    Plotly.newPlot('plot', [trace], layout);
+                    plotInitialized = true;
+                } else {
+                    Plotly.react('plot', [trace], layout);
+                }
+            });
+        }
+
+        setTimeout(update_plot, 1/30 * 1000);
+
+
+        // ─────────────────────────────────────────────────────────────────────────────
+        // Streaming updates: receive new frames and update the corresponding image sources
+        // ─────────────────────────────────────────────────────────────────────────────
+        socket.on('update_stream1', function(data) {
+            document.getElementById('image1').src = data.frame;
+        });
+
+        socket.on('update_stream2', function(data) {
+            document.getElementById('image2').src = data.frame;
+        });
+
+        socket.on('update_stream3', function(data) {
+            document.getElementById('image3').src = data.frame;
+        });
+
+        socket.on('update_stream4', function(data) {
+            document.getElementById('image4').src = data.frame;
+        });
+    </script>
+</body>
+</html>

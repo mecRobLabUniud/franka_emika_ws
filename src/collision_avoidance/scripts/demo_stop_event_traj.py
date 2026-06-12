@@ -189,12 +189,7 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
                 q_p_c = deepcopy(q_p[traj_index])
                 q_pp_c = deepcopy(q_pp[traj_index])
               
-                stop_duration = CalcStopDurationClient(deepcopy(q_c), deepcopy(q_p_c), deepcopy(q_pp_c)) 
-            
-            # outfile_dist.write(f"\t<keypoint time='{t_exe}'>")
-            # outfile_dist.write(f"\t\t<point id='0'>{ee_pos[0]} {ee_pos[1]} {ee_pos[2]}</point>")
-            # outfile_dist.write(f"\t\t<point id='1'>{repul_final[0]} {repul_final[1]} {repul_final[2]}</point>")
-            # outfile_dist.write(f"\t</keypoint>")
+                stop_duration = 0.4 # CalcStopDurationClient(deepcopy(q_c), deepcopy(q_p_c), deepcopy(q_pp_c)) 
 
             # Detect capsule collision
             if(FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)):

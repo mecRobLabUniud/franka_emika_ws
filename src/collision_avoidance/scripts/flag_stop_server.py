@@ -13,6 +13,7 @@ import sys
 from bs4 import BeautifulSoup
 import threading
 import socket
+from utils.data_transmitter import DataTransmitter
 
 
 skel_index = []
@@ -41,6 +42,9 @@ skeleton = []
 t1 = None
 do_once = True
 flag_stop = False
+
+n_devices = 1
+dtr = DataTransmitter("receiver", n_devices, "MERGED", port=7000)
 
 
 
@@ -409,7 +413,7 @@ def distance_to_skeleton(skeleton, P2, Q2):
         P1 = np.array([float(skeleton[ind_1][0]), float(skeleton[ind_1][1]), float(skeleton[ind_1][2])])
         Q1 = np.array([float(skeleton[ind_2][0]), float(skeleton[ind_2][1]), float(skeleton[ind_2][2])])
 
-        if not (any(np.isnan(P1)) == True or any(np.isnan(Q1)) == True):
+        if not (any(np.isnan(P1)) or any(np.isnan(Q1))):
             dist = distance_to_segment(P1, Q1, P2, Q2)
 
             distance = dist[0]
@@ -538,6 +542,9 @@ def receive_skeleton():
 def FlagStopServer(T_stop, q, q_p, q_pp): 
     global rv, robot_capsules, t_exe, skeleton, skel_index
 
+    merged_skeleton = dtr.receive_skeleton_data()[0]
+    skeleton = merged_skeleton
+
     flag_stop = False
 
     # Calculates robot capsules
@@ -602,11 +609,7 @@ def HandleFlagStop(req):
         t_start = time.time()
         do_once = False
 
-    # flag_stop = FlagStopServer(req.T_stop, req.q, req.q_p, req.q_pp)
-
-    # flag_stop = False
-
-    print("Flag stop: ", flag_stop)
+    flag_stop = FlagStopServer(req.T_stop, req.q, req.q_p, req.q_pp)
     
     return FlagStopResponse(flag_stop)
     
@@ -629,7 +632,6 @@ def simulate_stop():
     while True:
         t_exe = time.time() - t_start
         if t_exe > 5.0:
-            print("Simulating stop event...")
             t_exe = 0.0
             t_start = time.time()
             flag_stop = True
@@ -640,7 +642,7 @@ def simulate_stop():
 
 
 if __name__ == "__main__":
-    rospy.init_node('flag_stop_server') 
+    # rospy.init_node('flag_stop_server') 
     # virt = rospy.get_param("~virt")
 
     DH = np.array([[0,    -pi/2,  0, 0.333],
@@ -663,11 +665,14 @@ if __name__ == "__main__":
     #     t1 = threading.Thread(target = receive_skeleton)
     #     t1.start()
 
-    t1 = threading.Thread(target = simulate_stop)
-    t1.start()
+    # t1 = threading.Thread(target = simulate_stop)
+    # t1.start()
     
     FlagStopServer1()
-    t1.join()
+    # t1.join()
+
+    # while True:
+    #     FlagStopServer(0.4, [0.12120807, 0.15982, 0.6163 ,-2.6429, -0.2514682, 2.76292, -2.175745], [0,0,0,0,0,0,0], [0,0,0,0,0,0,0])
 
 
 
