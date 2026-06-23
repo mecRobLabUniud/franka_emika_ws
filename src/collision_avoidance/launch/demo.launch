@@ -17,14 +17,14 @@
     </include>
 
     <!-- Launch calc_stop_duration_for_server node -->
-    <node pkg="collision_avoidance" name="calc_stop_duration_server" type="calc_stop_duration_server.py">
-    </node>
+    <!--  <node pkg="collision_avoidance" name="calc_stop_duration_server" type="calc_stop_duration_server.py">
+    </node> -->
 
     <!-- Launch flag_stop_server node -->
     <!-- <node pkg="collision_avoidance" name="flag_stop_server" type="flag_stop_server.py" output="screen">
     </node> -->
 
     <!-- Launch demo_stop_event_traj node -->
-    <node pkg="collision_avoidance" name="demo_stop_event_traj" type="demo_stop_event_traj.py" output="screen">
-    </node>
+    <!--  <node pkg="collision_avoidance" name="demo_stop_event_traj" type="demo_stop_event_traj.py" output="screen">
+    </node> -->
 </launch>

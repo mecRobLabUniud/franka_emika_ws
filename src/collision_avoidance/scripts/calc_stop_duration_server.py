@@ -131,11 +131,11 @@ def Constraints(x, qi, qi_p, qi_pp):
     c02 = q_max - q_max_lim * toll
     c1 = q_p_max - q_p_lim * toll
     c2 = q_pp_max - q_pp_lim * toll
-    c3 = q_ppp_max - q_ppp_lim * toll
-    c4 = tau_max - tau_lim * toll
-    c5 = tau_p_max - tau_p_lim * toll
+    # c3 = q_ppp_max - q_ppp_lim * toll
+    # c4 = tau_max - tau_lim * toll
+    # c5 = tau_p_max - tau_p_lim * toll
 
-    return ca.vertcat(c01, c02, c1, c2, c3, c4, c5)
+    return ca.vertcat(c01, c02, c1, c2) # , c3, c4, c5)
 
 
 
@@ -144,7 +144,7 @@ def CreateSolver():
     p = ca.SX.sym('p', 3, 7)
 
     nlp = {'x':x, 'p':p, 'f':Cost(x), 'g':Constraints(x, p[0,:], p[1,:], p[2,:])}
-    opts = {'ipopt':{'print_level':0, 'sb':'yes', 'max_iter':10}, 'print_time':0}
+    opts = {'ipopt':{'print_level':0, 'sb':'yes', 'max_iter':20}, 'print_time':0}
 
     sol = ca.nlpsol('sol', 'ipopt', nlp, opts)
 

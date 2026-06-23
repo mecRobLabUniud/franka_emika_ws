@@ -17,7 +17,7 @@ import sys
 
 # Parameters
 traj_step = 0.01   # s
-time_iter = 0.05   # s
+time_iter = 0.016   # s
 toll_no_stop = 0.05   # rad
 q_p_lim = np.array([2.1750, 2.1750, 2.1750, 2.1750, 2.6100, 2.6100, 2.6100])    # rad/s
 q_pp_lim = np.array([15, 7.5, 10, 12.5, 15, 20, 20])                            # rad/s^2
@@ -85,18 +85,12 @@ def TrajPoly5(qi, qi_p, qi_pp, qf, qf_p, qf_pp, traj_duration, time_step):
     coeff[5] = coeff_1[2]
     
     t = np.linspace(0, traj_duration, int(traj_duration / time_step + 1))
-
-    # Position profile
     q = coeff[0] + coeff[1] * t + coeff[2] * t**2 + coeff[3] * t**3 + coeff[4] * t**4 + coeff[5] * t**5
-
-    # Velocity profile
     q_p = coeff[1] + 2 * coeff[2] * t + 3 * coeff[3] * t**2 + 4 * coeff[4] * t**3 + 5 * coeff[5] * t**4
-
-    # Acceleration profile
     q_pp = 2 * coeff[2] + 6 * coeff[3] * t + 12 * coeff[4] * t**2 + 20 * coeff[5] * t**3
 
     traj = np.vstack((q, q_p, q_pp))
-    
+
     return traj
 
 
@@ -189,7 +183,8 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
                 q_p_c = deepcopy(q_p[traj_index])
                 q_pp_c = deepcopy(q_pp[traj_index])
               
-                stop_duration = 0.4 # CalcStopDurationClient(deepcopy(q_c), deepcopy(q_p_c), deepcopy(q_pp_c)) 
+                stop_duration = CalcStopDurationClient(deepcopy(q_c), deepcopy(q_p_c), deepcopy(q_pp_c))
+                print(f"Optimal stop duration: {stop_duration} seconds")
 
             # Detect capsule collision
             if(FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)):
@@ -233,9 +228,12 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
             # Move to stop configuration
             control_publisher.publish(msg)
 
+            time.sleep(stop_duration + 0.1)
+
             # Wait the end of the trajectory or an error
             while (status == [] or status == [2]):           
                 FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)
+                time.sleep(time_iter)
                 continue
 
             if(status[-1] == 3):
@@ -288,26 +286,26 @@ def ExecuteTask(q_traj, traj_durations, control_publisher):
     # Initialization subscriber node for /joint_states
     sub_joint_states = rospy.Subscriber('/joint_states', JointState, CallbackJointStates)
 
-    t_i = rospy.get_time()
-    traj_duration_prev = 0
-    q_traj_prev = [0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785]
-    for i in range(len(traj_durations)):
-        q_traj_pair = []
-        q_traj_pair.append(deepcopy(q_traj_prev))
-        q_traj_pair.append(deepcopy(q_traj[i]))
-        ExecuteTrajectory(deepcopy(q_traj_pair), traj_durations[i] - traj_duration_prev, control_publisher)
+    while True:
+        t_i = rospy.get_time()
+        traj_duration_prev = 0
+        q_traj_prev = [0.0, -0.785, 0.0, -2.356, 0.0, 1.571, 0.785]
+        for i in range(len(traj_durations)):
+            q_traj_pair = []
+            q_traj_pair.append(deepcopy(q_traj_prev))
+            q_traj_pair.append(deepcopy(q_traj[i]))
+            ExecuteTrajectory(deepcopy(q_traj_pair), traj_durations[i] - traj_duration_prev, control_publisher)
 
-        traj_duration_prev = traj_durations[i]
-        q_traj_prev = q_traj[i]
+            traj_duration_prev = traj_durations[i]
+            q_traj_prev = q_traj[i]
 
     outfile_q.close()   
 
     # Close subscribers
     sub_joint_states.unregister()
-              
 
 
-if __name__ == '__main__':
+def main():
     # Initialization node
     rospy.init_node('execute_trajectory')
 
@@ -351,7 +349,7 @@ if __name__ == '__main__':
     time.sleep(0.4)
 
     print("This will move the robot to the home position")
-    input("Press Enter to continue...")
+    # input("Press Enter to continue...")
 
     # Write header message
     msg = FollowJointTrajectoryActionGoal()
@@ -380,7 +378,7 @@ if __name__ == '__main__':
     print("WARNING: Collision thresholds are set to high values. ")
     print("Make sure you have the user stop at hand!")
     print("This will start the joint control task")
-    input("Press Enter to continue...")
+    # input("Press Enter to continue...")
 
     t_i = rospy.get_time()
     
@@ -388,3 +386,8 @@ if __name__ == '__main__':
 
     print(f"Trajectory completed, {t_traj[-1]} seconds has passed, shutting down example")
 
+
+
+if __name__ == '__main__':
+    main()
+    

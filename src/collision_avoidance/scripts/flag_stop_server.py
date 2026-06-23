@@ -13,6 +13,8 @@ import sys
 from bs4 import BeautifulSoup
 import threading
 import socket
+import sys
+sys.path.append('/home/lab/Desktop/skeleton_tracking/scripts')
 from utils.data_transmitter import DataTransmitter
 
 
@@ -405,6 +407,7 @@ def distance_to_skeleton(skeleton, P2, Q2):
     count = 0
     do_once = 1
     min_distance = []
+    ind_h = None
 
     for i in range(len(skel_index)):
         ind_1 = skel_index[i][0]
@@ -542,8 +545,7 @@ def receive_skeleton():
 def FlagStopServer(T_stop, q, q_p, q_pp): 
     global rv, robot_capsules, t_exe, skeleton, skel_index
 
-    merged_skeleton = dtr.receive_skeleton_data()[0]
-    skeleton = merged_skeleton
+    skeleton = dtr.receive_skeleton_data()[0]
 
     flag_stop = False
 
@@ -551,7 +553,7 @@ def FlagStopServer(T_stop, q, q_p, q_pp):
     robot_capsules = compute_robot_capsules(q)   
 
     #len_h = [0.21, 0.355, 0.305, 0.355, 0.305, 0.65, 0.5, 0.5, 0.5, 0.5]
-    r_sw_h = [0.16, 0.05, 0.06, 0.05, 0.06, 0.15, 0.1, 0.08, 0.1, 0.08]
+    r_sw_h = [0.16, 0.05, 0.05, 0.06, 0.06, 0.15, 0.1, 0.1, 0.08, 0.08]
 
     
     if not skeleton == []:  
@@ -597,7 +599,7 @@ def FlagStopServer(T_stop, q, q_p, q_pp):
             else:
                 flag_stop = False
 
-    print(min_distance[0])
+            print("Distance: ", min_distance[0], " - Min distance: ", r_sw_h[ind_h] + r_sw_r[ind_r])
     return(flag_stop)
               
 
@@ -642,9 +644,6 @@ def simulate_stop():
 
 
 if __name__ == "__main__":
-    # rospy.init_node('flag_stop_server') 
-    # virt = rospy.get_param("~virt")
-
     DH = np.array([[0,    -pi/2,  0, 0.333],
                    [0,    -pi/2, pi, 0],
                    [0.088, pi/2, pi, 0.316],
@@ -653,26 +652,5 @@ if __name__ == "__main__":
                    [0.088, pi/2, 0,  0],
                    [0,     0,    0,  0.2]])
     
-    # if virt:
-    #     with open("/home/panda/Documents/Data_Collision_Avoidance/skeleton_coords.xml", 'r') as skel:
-    #         data = skel.read()
-    #         skel_data = BeautifulSoup(data, "xml")
-    #         skel_list = skel_data.find_all('keypoint')
-# 
-    #     t1 = threading.Thread(target = load_skeleton)
-    #     t1.start()
-    # else:
-    #     t1 = threading.Thread(target = receive_skeleton)
-    #     t1.start()
-
-    # t1 = threading.Thread(target = simulate_stop)
-    # t1.start()
-    
     FlagStopServer1()
-    # t1.join()
-
-    # while True:
-    #     FlagStopServer(0.4, [0.12120807, 0.15982, 0.6163 ,-2.6429, -0.2514682, 2.76292, -2.175745], [0,0,0,0,0,0,0], [0,0,0,0,0,0,0])
-
-
 
