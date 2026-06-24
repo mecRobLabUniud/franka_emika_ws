@@ -45,8 +45,7 @@ t1 = None
 do_once = True
 flag_stop = False
 
-n_devices = 1
-dtr = DataTransmitter("receiver", n_devices, "MERGED", port=7000)
+dtr = DataTransmitter("receiver", 10, "MERGED", port=7000)
 
 
 
