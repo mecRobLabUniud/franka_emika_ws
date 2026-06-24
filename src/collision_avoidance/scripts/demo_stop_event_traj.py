@@ -158,7 +158,7 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
         status = []
 
         # Initialization subscriber node for /position_joint_trajectory_controller/follow_joint_trajectory/result
-        sub_follow_joint_trajectory_result = rospy.Subscriber('/position_joint_trajectory_controller/follow_joint_trajectory/result', FollowJointTrajectoryActionResult, CallbackFollowJointTrajectoryResult, (status))
+        sub_follow_joint_trajectory_result = rospy.Subscriber('/effort_joint_trajectory_controller/follow_joint_trajectory/result', FollowJointTrajectoryActionResult, CallbackFollowJointTrajectoryResult, (status))
        
         # Move to configuration
         control_publisher.publish(msg)
@@ -229,17 +229,17 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
             # Move to stop configuration
             control_publisher.publish(msg)
 
-            time.sleep(stop_duration + 0.1)
+            # time.sleep(stop_duration + 0.1)
             # time.sleep(1)
 
-            while (FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)):   
-                continue
-
-            # # Wait the end of the trajectory or an error
-            # while (status == [] or status == [2]):           
-            #     FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)
-            #     time.sleep(time_iter)
+            # while (FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)):   
             #     continue
+
+            # Wait the end of the trajectory or an error
+            while (status == [] or status == [2]):           
+                FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)
+                time.sleep(time_iter)
+                continue
 
             if(status[-1] == 3):
                 print('Fine del movimento alla configurazione di stop')
@@ -348,7 +348,7 @@ def main():
         q_traj[i, :] = np.matrix(sol.q)     
 
     # Initialization publisher node for /position_joint_trajectory_controller/follow_joint_trajectory/goal
-    control_publisher = rospy.Publisher('/position_joint_trajectory_controller/follow_joint_trajectory/goal', FollowJointTrajectoryActionGoal, queue_size = 10)
+    control_publisher = rospy.Publisher('/effort_joint_trajectory_controller/follow_joint_trajectory/goal', FollowJointTrajectoryActionGoal, queue_size = 10)
 
     # Needed to wait for the end of the node publication (publication isn't snapshot)
     time.sleep(0.4)

@@ -29,7 +29,7 @@ q_pp_lim = ca.DM([15, 7.5, 10, 12.5, 15, 20, 20])                               
 q_ppp_lim = ca.DM([7500, 3750, 5000, 6250, 7500, 10000, 10000])                     # rad/s^3
 tau_lim = ca.DM([87, 87, 87, 87, 12, 12, 12])                                       # Nm
 tau_p_lim = ca.DM([1000, 1000, 1000, 1000, 1000, 1000, 1000])                       # Nm/s
-toll = 0.6
+toll = 0.9
 
 sol = None
 stop_duration_prec = ubx
