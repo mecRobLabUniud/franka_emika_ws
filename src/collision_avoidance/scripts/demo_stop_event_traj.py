@@ -176,7 +176,7 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
 
         while(len(status) == 0 and (not(stop_flag) or no_stop)): 
             # Calculate optimal stop duration
-            traj_duration_prec = rospy.get_time() - pub_time + time_iter
+            traj_duration_prec = rospy.get_time() - pub_time # + time_iter
             traj_index = int(traj_duration_prec / traj_step)
             if(traj_index < len(q)):
                 q_c = deepcopy(q[traj_index])
@@ -187,7 +187,8 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
                 print(f"Optimal stop duration: {stop_duration} seconds")
 
             # Detect capsule collision
-            if(FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)):
+            stop = FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)
+            if(stop):
                 stop_flag = 1
             
             if(len(q_meas) > 0):
@@ -228,13 +229,14 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
             # Move to stop configuration
             control_publisher.publish(msg)
 
-            time.sleep(stop_duration + 0.1)
+            # time.sleep(stop_duration + 0.1)
+            time.sleep(1)
 
-            # Wait the end of the trajectory or an error
-            while (status == [] or status == [2]):           
-                FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)
-                time.sleep(time_iter)
-                continue
+            # # Wait the end of the trajectory or an error
+            # while (status == [] or status == [2]):           
+            #     FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)
+            #     time.sleep(time_iter)
+            #     continue
 
             if(status[-1] == 3):
                 print('Fine del movimento alla configurazione di stop')
