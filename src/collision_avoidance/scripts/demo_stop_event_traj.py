@@ -229,8 +229,11 @@ def ExecuteTrajectory(q_traj, traj_duration, control_publisher):
             # Move to stop configuration
             control_publisher.publish(msg)
 
-            # time.sleep(stop_duration + 0.1)
-            time.sleep(1)
+            time.sleep(stop_duration + 0.1)
+            # time.sleep(1)
+
+            while (FlagStopClient(stop_duration, q_c, q_p_c, q_pp_c)):   
+                continue
 
             # # Wait the end of the trajectory or an error
             # while (status == [] or status == [2]):           
